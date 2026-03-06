@@ -16,7 +16,7 @@ const PlanCalculator = () => {
   const discountPercent = Math.round(((currentPlan.originalPrice - currentPlan.pricePerDay) / currentPlan.originalPrice) * 100);
 
   return (
-    <section className="w-full bg-[#1a2e1a] py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
+    <section className="w-full bg-brand-olive py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 relative z-10">
 
         {/* Left Side: Illustration & Title */}
