@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Trajan Pro", "Cinzel", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Proxima Nova", "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-brand-sage: #1a2e1a;
+  --color-brand-olive: #335533;
+  --color-brand-beige: #D7C7A2;
+  --color-brand-clay: #C8AFA3;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-white text-brand-olive tracking-[1px] font-light;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-serif font-medium tracking-[3px] uppercase leading-10 md:leading-12;
+  }
+
+  button {
+    @apply font-sans font-medium tracking-[2px] uppercase;
+  }
+}
