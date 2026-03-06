@@ -4,7 +4,7 @@ import heroBg from '../assets/hero_bg.jpg';
 const Hero = () => {
   return (
     <section
-      className="relative w-full h-[350px] md:min-h-[800px] flex items-center bg-[#fdfaf6] bg-cover bg-center bg-no-repeat overflow-hidden px-4 md:px-16 lg:px-24 py-8 md:py-16"
+      className="pt-28 relative w-full min-h-[350px] md:min-h-[800px] flex items-center bg-[#fdfaf6] bg-cover bg-center bg-no-repeat overflow-hidden px-4 md:px-16 lg:px-24 py-8 md:py-16"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
       <div className="max-w-7xl mx-auto w-full flex flex-col items-start justify-between relative z-10">

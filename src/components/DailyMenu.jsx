@@ -190,7 +190,7 @@ const DailyMenu = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#fdfaf6] py-16 md:py-24 px-4 md:px-16 relative overflow-hidden">
+    <section className="w-full bg-[#fdfaf6] py-12 md:py-16 px-4 md:px-16 relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
 

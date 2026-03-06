@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
 
-const TestimonialCard = ({ quote, author, role, avatar }) => (
-  <div className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white p-8 rounded-lg shadow-sm flex flex-col h-full transition-transform duration-300">
-    <div className="text-brand-sage mb-6">
-      <svg className="w-8 h-8 opacity-40" fill="currentColor" viewBox="0 0 32 32">
-        <path d="M10 8c-4.411 0-8 3.589-8 8s3.589 8 8 8c1.117 0 2.164-.236 3.121-.645C13.847 21.848 15 19.124 15 16v-8h-5zm12 0c-4.411 0-8 3.589-8 8s3.589 8 8 8c1.117 0 2.164-.236 3.121-.645C25.847 21.848 27 19.124 27 16v-8h-5z" />
-      </svg>
-    </div>
-    <p className="text-brand-olive text-sm md:text-base leading-relaxed mb-8 flex-grow italic">
-      "{quote}"
-    </p>
-    <div className="flex items-center gap-4 border-t border-brand-beige/20 pt-6">
-      <div className="w-12 h-12 rounded-full overflow-hidden bg-brand-beige/20 flex-shrink-0">
-        <img src={avatar} alt={author} className="w-full h-full object-cover" />
+const TestimonialCard = ({ quote, author, role, avatar, itemsPerView }) => (
+  <div
+    className="flex-shrink-0 px-3 md:px-4"
+    style={{ width: `${100 / itemsPerView}%` }}
+  >
+    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm flex flex-col h-full transition-all duration-500 hover:shadow-md border border-brand-beige/20">
+      <div className="text-brand-sage mb-4 md:mb-6">
+        <svg className="w-8 h-8 opacity-40 text-brand-sage" fill="currentColor" viewBox="0 0 32 32">
+          <path d="M10 8c-4.411 0-8 3.589-8 8s3.589 8 8 8c1.117 0 2.164-.236 3.121-.645C13.847 21.848 15 19.124 15 16v-8h-5zm12 0c-4.411 0-8 3.589-8 8s3.589 8 8 8c1.117 0 2.164-.236 3.121-.645C25.847 21.848 27 19.124 27 16v-8h-5z" />
+        </svg>
       </div>
-      <div>
-        <h4 className="text-brand-olive font-serif font-medium text-sm md:text-base">{author}</h4>
-        <p className="text-brand-sage text-[10px] md:text-xs uppercase tracking-wider">{role}</p>
+      <p className="text-brand-olive text-sm md:text-base leading-relaxed mb-6 md:mb-8 flex-grow opacity-90">
+        "{quote}"
+      </p>
+      <div className="flex items-center gap-4 border-t border-brand-beige/10 pt-5 md:pt-6 mt-auto">
+        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-brand-beige/20 flex-shrink-0 border border-brand-beige/30">
+          <img src={avatar} alt={author} className="w-full h-full object-cover" />
+        </div>
+        <div>
+          <h4 className="text-brand-olive font-bold text-xs md:text-sm tracking-wide">{author}</h4>
+          <p className="text-brand-sage text-[9px] md:text-[10px] tracking-[2px] font-medium">{role}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -95,20 +100,23 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="w-full bg-brand-sage/10 py-16 md:py-24 px-4 md:px-16 overflow-hidden relative">
+    <section className="w-full bg-brand-sage/10 py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-brand-olive mb-4 text-3xl md:text-4xl">Our Community Loves Ritual</h2>
           <div className="w-24 h-1 bg-brand-sage mx-auto opacity-30"></div>
         </div>
 
-        <div className="relative overflow-hidden mb-12">
+        <div className="mb-12 mx-[-12px] md:mx-[-16px]">
           <div
-            className="flex items-stretch transition-transform duration-700 ease-in-out gap-6"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            className="flex items-stretch transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1)"
+            style={{
+              transform: `translateX(-${currentIndex * (100 / totalSlides)}%)`,
+              width: `${(totalItems / itemsPerView) * 100}%`
+            }}
           >
             {testimonials.map((t, idx) => (
-              <TestimonialCard key={idx} {...t} />
+              <TestimonialCard key={idx} {...t} itemsPerView={totalItems} />
             ))}
           </div>
         </div>

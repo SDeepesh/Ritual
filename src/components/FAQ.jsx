@@ -6,7 +6,7 @@ const FAQItem = ({ question, answer }) => {
   return (
     <div className="border-b border-brand-olive/20 py-5">
       <button
-        className="w-full flex justify-between items-center text-left transition-colors"
+        className="w-full flex justify-between items-center text-left transition-colors normal-case"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className={`text-base md:text-lg font-medium transition-colors duration-300 ${isOpen ? 'text-brand-olive' : 'text-brand-olive'}`}>
