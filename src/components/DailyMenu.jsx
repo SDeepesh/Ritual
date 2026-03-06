@@ -1,21 +1,112 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import mealOats from '../assets/meal_oats.png';
 import mealTurkey from '../assets/meal_turkey.png';
 import mealFish from '../assets/meal_fish.png';
 import productBowl from '../assets/product_bowl.png';
-import heroBg from '../assets/bg.png';
+
+const MealModal = ({ meal, onClose }) => {
+  if (!meal) return null;
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-brand-olive/60 backdrop-blur-md transition-opacity duration-300"
+        onClick={onClose}
+      ></div>
+
+      {/* Modal Content */}
+      <div className="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden animate-in fade-in zoom-in duration-300">
+        <button
+          onClick={onClose}
+          className="absolute top-6 right-6 z-20 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-brand-olive transition-all shadow-lg hover:scale-110"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Left: Product Image */}
+        <div className="w-full md:w-1/2 h-[40vh] md:h-auto bg-[#f9f7f4] relative">
+          <img
+            src={meal.img}
+            alt={meal.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden"></div>
+        </div>
+
+        {/* Right: Details */}
+        <div className="w-full md:w-1/2 p-4 md:p-14 flex flex-col">
+          <div className="inline-block px-3 py-1 bg-brand-sage/10 text-brand-sage text-[10px] font-bold tracking-[2px] uppercase rounded-full mb-4 md:mb-6 w-fit">
+            {meal.type}
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-serif text-brand-olive mb-3 md:mb-6 leading-[1.1]">{meal.title}</h2>
+
+          <p className="text-brand-sage text-sm md:text-lg leading-relaxed mb-8 md:mb-10 font-serif opacity-80">
+            {meal.description}
+          </p>
+
+          <div className="mb-8 md:10">
+            <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-3 md:mb-6 border-b border-brand-beige/30 pb-3">Nutritional Profile</h4>
+            <div className="grid grid-cols-4 gap-4 text-center">
+              <div className="bg-brand-beige/5 p-2 md:p-3 rounded-2xl border border-brand-beige/20">
+                <p className="text-[9px] text-brand-sage uppercase font-bold tracking-wider mb-1">Calories</p>
+                <p className="text-md md:text-xl font-serif font-bold text-brand-olive">{meal.cal}</p>
+              </div>
+              <div className="bg-brand-beige/5 p-2 md:p-3 rounded-2xl border border-brand-beige/20">
+                <p className="text-[9px] text-brand-sage uppercase font-bold tracking-wider mb-1">Protein</p>
+                <p className="text-md md:text-xl font-serif font-bold text-brand-olive">{meal.pro}g</p>
+              </div>
+              <div className="bg-brand-beige/5 p-2 md:p-3 rounded-2xl border border-brand-beige/20">
+                <p className="text-[9px] text-brand-sage uppercase font-bold tracking-wider mb-1">Carbs</p>
+                <p className="text-md md:text-xl font-serif font-bold text-brand-olive">{meal.carb}g</p>
+              </div>
+              <div className="bg-brand-beige/5 p-2 md:p-3 rounded-2xl border border-brand-beige/20">
+                <p className="text-[9px] text-brand-sage uppercase font-bold tracking-wider mb-1">Fats</p>
+                <p className="text-md md:text-xl font-serif font-bold text-brand-olive">{meal.fat}g</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-4">
+            <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-3 md:mb-6 border-b border-brand-beige/30 pb-3">Artisanal Ingredients</h4>
+            <div className="flex flex-wrap gap-2">
+              {meal.ingredients.map((ing, i) => (
+                <span key={i} className="text-[11px] px-4 py-2 bg-white text-brand-olive rounded-xl border border-brand-beige/40 shadow-sm font-medium">
+                  {ing}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* <button className="mt-auto w-full bg-brand-sage hover:bg-brand-olive text-white py-5 rounded-xl font-bold tracking-[3px] uppercase transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+            Add to My Ritual Plan
+          </button> */}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const DailyMenu = () => {
-  const [selectedDayOffset, setSelectedDayOffset] = useState(0);
+  const today = new Date();
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear();
 
-  // Helper to get formatted dates for the 7-day header
+  // Calculate total days in current month
+  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+  const [selectedDayOffset, setSelectedDayOffset] = useState(today.getDate() - 1);
+  const [selectedMeal, setSelectedMeal] = useState(null);
+  const scrollRef = useRef(null);
+
+  // Generate all dates for the current month
   const getDates = () => {
     const dates = [];
-    const today = new Date();
-    for (let i = 0; i < 7; i++) {
-      const d = new Date(today);
-      d.setDate(today.getDate() + i);
-      dates.push(d);
+    for (let i = 1; i <= daysInMonth; i++) {
+      dates.push(new Date(currentYear, currentMonth, i));
     }
     return dates;
   };
@@ -23,84 +114,112 @@ const DailyMenu = () => {
   const dates = getDates();
 
   // Mock data for 30 unique dishes (represented by 4 types for the portfolio display)
-  // In a real app, this would be 30 unique items.
   const menuItems = [
-    { title: "Berry Oat Porridge", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 2", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 2", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 2", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 2", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 3", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 3", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 3", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 3", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 4", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 4", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 4", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 4", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 5", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 5", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 5", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 5", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 6", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 6", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 6", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 6", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 7", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 7", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 7", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 7", type: "Snack", img: productBowl },
-    { title: "Berry Oat Porridge 8", type: "Breakfast", img: mealOats },
-    { title: "Turkey Veggie Stew 8", type: "Lunch", img: mealTurkey },
-    { title: "Herb Seared Fish 8", type: "Dinner", img: mealFish },
-    { title: "Avocado Power Toast 8", type: "Snack", img: productBowl },
-    // Repeat or vary for the sake of the 30-day demo
+    {
+      title: "Berry Oat Porridge",
+      type: "Breakfast",
+      img: mealOats,
+      cal: 340, pro: 12, carb: 45, fat: 8,
+      description: "Slow-cooked steel-cut oats topped with a vibrant medley of farm-fresh blueberries and organic honey. A comforting, fiber-rich start to your day.",
+      ingredients: ["Steel-Cut Oats", "Blueberries", "Organic Honey", "Almond Milk", "Flax Seeds"]
+    },
+    {
+      title: "Turkey Veggie Stew",
+      type: "Lunch",
+      img: mealTurkey,
+      cal: 420, pro: 38, carb: 22, fat: 12,
+      description: "Lean ground turkey simmered in a rich tomato and herb reduction with slow-roasted Mediterranean vegetables. High protein, low glycemic index.",
+      ingredients: ["Ground Turkey", "Bell Peppers", "Zucchini", "Thyme", "Tomato"]
+    },
+    {
+      title: "Herb Seared Fish",
+      type: "Dinner",
+      img: mealFish,
+      cal: 380, pro: 42, carb: 10, fat: 14,
+      description: "Wild-caught seabass seared with fresh rosemary and lemon zest, served alongside a crisp asparagus spear bed. The ultimate light yet satisfying dinner.",
+      ingredients: ["Wild Seabass", "Rosemary", "Asparagus", "Lemon Zest", "Olive Oil"]
+    },
+    {
+      title: "Avocado Power Toast",
+      type: "Snack",
+      img: productBowl,
+      cal: 290, pro: 8, carb: 28, fat: 16,
+      description: "Smashed Hass avocado on artisanal sourdough, topped with micro-greens and a hint of chili flakes. Rich in healthy fats and micronutrients.",
+      ingredients: ["Sourdough", "Hass Avocado", "Micro-greens", "Chili Flakes", "Sea Salt"]
+    }
   ];
 
-  // Logic to "rotate" the menu based on the day of the month
+  // Dynamically generate the rest of the 30 items for rotation
+  for (let i = 1; i <= 7; i++) {
+    menuItems.push(
+      { ...menuItems[0], title: `Berry Oat Porridge ${i + 1}`, cal: 340 + i, description: "A seasonal variation of our classic porridge." },
+      { ...menuItems[1], title: `Turkey Veggie Stew ${i + 1}`, cal: 420 + i, description: "Our signature stew with rotating seasonal greens." },
+      { ...menuItems[2], title: `Herb Seared Fish ${i + 1}`, cal: 380 + i, description: "Fresh catch of the day with garden herbs." },
+      { ...menuItems[3], title: `Avocado Power Toast ${i + 1}`, cal: 290 + i, description: "Artisan toast with fresh avocado and seeds." }
+    );
+  }
+
   const getDailyMeals = (date) => {
     const day = date.getDate();
     // Calculate a unique starting index for each day of the month
-    // This ensures that as you click through the 7-day calendar, you see different sets of dishes
-    const startIndex = ((day - 1) * 4) % menuItems.length;
+    // Wraps back to the first item on the 31st day as requested
+    const startIndex = (((day - 1) % 30) * 4) % menuItems.length;
     return menuItems.slice(startIndex, startIndex + 4);
   };
 
   const currentMeals = getDailyMeals(dates[selectedDayOffset]);
 
   const formatDate = (date) => {
-    const options = { weekday: 'short', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
+    return {
+      weekday: date.toLocaleDateString('en-US', { weekday: 'short' }),
+      day: date.getDate()
+    };
   };
 
-  return (
-    <section className="w-full bg-[#fdfaf6] py-12 md:py-16 px-4 md:px-16 bg-center bg-cover">
-      <div className="max-w-7xl mx-auto">
+  // Scroll to today's date on mount
+  useEffect(() => {
+    if (scrollRef.current) {
+      const activeElement = scrollRef.current.children[selectedDayOffset];
+      if (activeElement) {
+        scrollRef.current.scrollTo({
+          left: activeElement.offsetLeft - scrollRef.current.offsetWidth / 2 + activeElement.offsetWidth / 2,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, []);
 
-        {/* Header Row */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h2 className="text-brand-olive">
-            Today's Ritual
-          </h2>
+  return (
+    <section className="w-full bg-[#fdfaf6] py-16 md:py-24 px-4 md:px-16 relative overflow-hidden">
+      {/* Background Accent */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="mb-12">
+          <h2 className="text-brand-olive mb-2">Today's Ritual</h2>
+          <p className="text-brand-sage font-serif">A unique rotation of 30 functional meals.</p>
         </div>
 
-        {/* 7-Day Calendar Selector */}
-        <div className="flex overflow-x-auto md:overflow-visible pl-2 md:pl-0 pb-2 mb-10 gap-3 no-scrollbar">
+        {/* Dynamic Month Calendar Selector */}
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-auto mb-12 gap-3 no-scrollbar scroll-smooth mask-fade-edges"
+        >
           {dates.map((date, idx) => {
             const isActive = selectedDayOffset === idx;
+            const isToday = date.getDate() === today.getDate();
+            const { weekday, day } = formatDate(date);
+
             return (
               <button
                 key={idx}
                 onClick={() => setSelectedDayOffset(idx)}
-                className={`flex-shrink-0 md:flex-1 px-4 py-3 rounded-lg text-xs transition-all duration-300 ${isActive
-                  ? 'bg-brand-sage text-white shadow-md transform scale-105'
-                  : 'bg-white text-brand-olive border border-brand-beige/50 hover:border-brand-sage text-opacity-80'
-                  }`}
+                className={`flex-shrink-0 w-[calc((100%-48px)/7)] min-w-[70px] h-10 flex items-center justify-center rounded transition-all duration-300 border text-sm font-medium tracking-widest ${isActive
+                  ? 'bg-[#1a2e1a] text-white border-[#1a2e1a] shadow-md'
+                  : 'bg-white text-[#6F785F] border-brand-beige/30 hover:border-brand-sage/50'
+                  } ${isToday && !isActive ? 'ring-1 ring-brand-sage/20' : ''}`}
               >
-                {formatDate(date)}
+                {day} {weekday}
               </button>
             );
           })}
@@ -109,21 +228,48 @@ const DailyMenu = () => {
         {/* 4-Meal Grid Portfolio */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {currentMeals.map((meal, idx) => (
-            <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+            <div
+              key={idx}
+              onClick={() => setSelectedMeal(meal)}
+              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col cursor-pointer hover:-translate-y-1"
+            >
               <div className="relative pt-[80%] overflow-hidden bg-[#f9f7f4]">
                 <img
                   src={meal.img}
                   alt={meal.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-brand-olive/0 group-hover:bg-brand-olive/10 transition-colors duration-300 flex items-center justify-center">
+                  <span className="bg-white/90 text-brand-olive text-[10px] font-bold tracking-[2px] uppercase py-2.5 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg">View Details</span>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-serif font-medium text-brand-olive mb-2 leading-tight">
+              <div className="p-6 flex-grow flex flex-col">
+                <div className="text-[10px] text-brand-sage uppercase tracking-widest mb-2 font-bold opacity-70">
+                  {meal.type}
+                </div>
+                <h3 className="text-lg font-serif font-medium text-brand-olive mb-4 leading-tight flex-grow group-hover:text-brand-sage transition-colors">
                   {meal.title}
                 </h3>
-                <div className="flex items-center justify-between text-[10px] text-brand-sage uppercase">
-                  <span>{meal.type}</span>
-                  <button className="hover:text-brand-olive transition-colors underline-offset-4">Swap</button>
+
+                {/* Nutritional Details */}
+                <div className="grid grid-cols-3 gap-2 py-3 border-y border-brand-beige/20 mb-4">
+                  <div className="text-center">
+                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Cal</p>
+                    <p className="text-sm font-bold text-brand-olive">{meal.cal}</p>
+                  </div>
+                  <div className="text-center border-x border-brand-beige/10">
+                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Pro</p>
+                    <p className="text-sm font-bold text-brand-olive">{meal.pro}g</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Carb</p>
+                    <p className="text-sm font-bold text-brand-olive">{meal.carb}g</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] text-brand-sage uppercase tracking-widest font-bold">View details</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand-sage/20 group-hover:bg-brand-sage transition-all"></div>
                 </div>
               </div>
             </div>
@@ -132,11 +278,14 @@ const DailyMenu = () => {
 
         {/* Bottom CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
-            Add to Ritual
+          <button className="bg-brand-sage hover:bg-brand-olive text-white px-10 py-4 rounded-xl text-sm transition-all duration-500 shadow-xl hover:shadow-2xl font-bold tracking-[2px] uppercase hover:-translate-y-1">
+            Start My Ritual Plan
           </button>
         </div>
       </div>
+
+      {/* Meal Modal */}
+      <MealModal meal={selectedMeal} onClose={() => setSelectedMeal(null)} />
     </section>
   );
 };

@@ -1,19 +1,20 @@
 import React from 'react';
 import Hero from './components/Hero';
 import Features from './components/Features';
-// import ProductMenu from './components/ProductMenu';
-// import MealInclusions from './components/MealInclusions';
+import ProductMenu from './components/ProductMenu';
+import MealInclusions from './components/MealInclusions';
 import PlanCalculator from './components/PlanCalculator';
 import DailyMenu from './components/DailyMenu';
-import FooterCTA from './components/FooterCTA';
+import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
+import FooterCTA from './components/FooterCTA';
 import logoImg from './assets/ritual-logo-trim.png';
 
 function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-brand-olive selection:bg-brand-sage selection:text-white">
       {/* Top Navigation Bar placeholder */}
-      <nav className="fixed w-full z-50 py-5 px-4 md:px-16 flex justify-between items-center transition-all bg-white/90 backdrop-blur-md border-b border-brand-beige/50">
+      <nav className="w-full z-50 py-5 px-4 md:px-16 flex justify-between items-center transition-all bg-white/90 backdrop-blur-md border-b border-brand-beige/50">
         <a href="/" className="flex items-center">
           <img src={logoImg} alt="Ritual Logo" className="h-8 object-contain w-[100px] md:w-[120px]" />
         </a>
@@ -30,13 +31,14 @@ function App() {
       </nav>
 
       {/* Main Content Sections */}
-      <main className="pt-[72px]">
+      <main>
         <Hero />
         <Features />
-        {/* <MealInclusions /> */}
         <DailyMenu />
-        {/* <ProductMenu /> */}
+        {/* <ProductMenu />
+        <MealInclusions /> */}
         <PlanCalculator />
+        <Testimonials />
         <FAQ />
         <FooterCTA />
       </main>

@@ -22,4 +22,16 @@
   button {
     @apply font-sans font-medium tracking-[2px] uppercase;
   }
+
+  .mask-fade-edges {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
