@@ -53,7 +53,7 @@ const Admin = () => {
     }
   };
 
-  const filteredEnquiries = enquiries.filter(e => 
+  const filteredEnquiries = enquiries.filter(e =>
     filter === 'all' ? true : e.status === filter
   );
 
@@ -64,7 +64,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-olive text-white pt-32 pb-24 px-4 md:px-16 relative overflow-hidden">
+    <div className="min-h-screen bg-brand-olive text-white pt-[80px] pb-24 px-4 md:px-16 relative overflow-hidden">
       {/* Abstract Background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-brand-sage/20 rounded-full blur-[120px]"></div>
@@ -72,12 +72,12 @@ const Admin = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-4 mb-6">
           <div className="flex-1">
             <div className="flex items-center gap-4 mb-4">
-              <h1 className="text-4xl md:text-6xl font-serif">Ritual Dashboard</h1>
+              <h1 className="text-4xl md:text-6xl font-serif">Dashboard</h1>
               {user && (
-                <button 
+                <button
                   onClick={handleLogout}
                   className="bg-white/5 hover:bg-white/10 text-white/40 hover:text-white px-4 py-2 rounded-xl text-[9px] font-bold uppercase tracking-[2px] transition-all border border-white/5"
                 >
@@ -85,19 +85,18 @@ const Admin = () => {
                 </button>
               )}
             </div>
-            <p className="text-brand-beige/50 font-serif italic text-lg md:text-xl max-w-xl">
-              Welcome back, <span className="text-brand-sage">{user?.email?.split('@')[0]}</span>. You have {stats.new} new enquiries processing in the ritual circle.
+            <p className="text-brand-beige/50 text-lg md:text-xl max-w-xl">
+              Welcome back, {user?.email?.split('@')[0]}. You have {stats.new} new enquiries processing in the ritual circle.
             </p>
           </div>
-          
+
           <div className="flex gap-4 bg-white/5 backdrop-blur-md p-2 rounded-2xl border border-white/10">
             {['all', 'new', 'responded'].map(f => (
-              <button 
+              <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-6 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all ${
-                  filter === f ? 'bg-brand-sage text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
-                }`}
+                className={`px-6 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all ${filter === f ? 'bg-brand-sage text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
+                  }`}
               >
                 {f} ({f === 'all' ? stats.total : stats[f]})
               </button>
@@ -107,8 +106,8 @@ const Admin = () => {
 
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-20 space-y-4">
-             <div className="w-12 h-12 border-4 border-brand-sage border-t-transparent rounded-full animate-spin"></div>
-             <p className="text-brand-beige/40 font-serif italic">Syncing with Ritual Vault...</p>
+            <div className="w-12 h-12 border-4 border-brand-sage border-t-transparent rounded-full animate-spin"></div>
+            <p className="text-brand-beige/40 font-serif italic">Syncing with Ritual Vault...</p>
           </div>
         ) : filteredEnquiries.length === 0 ? (
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[40px] p-20 text-center">
@@ -118,17 +117,16 @@ const Admin = () => {
         ) : (
           <div className="grid grid-cols-1 gap-6">
             {filteredEnquiries.map((enquiry) => (
-              <div 
+              <div
                 key={enquiry.id}
-                className="group bg-white/5 hover:bg-white/10 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 transition-all duration-500 hover:border-brand-sage/30 shadow-xl"
+                className="group bg-white/5 hover:bg-white/10 backdrop-blur-2xl border border-white/10 rounded-3xl p-4 transition-all duration-500 hover:border-brand-sage/30 shadow-xl"
               >
                 <div className="flex flex-col md:flex-row justify-between gap-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className={`px-4 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest ${
-                        enquiry.type?.includes('Plan') ? 'bg-brand-sage/20 text-brand-sage' : 
+                      <span className={`px-4 py-1.5 rounded-full text-center text-[9px] font-bold uppercase tracking-widest ${enquiry.type?.includes('Plan') ? 'bg-blue-500/20 text-blue-500' :
                         enquiry.status === 'new' ? 'bg-yellow-500/20 text-yellow-500' : 'bg-blue-500/20 text-blue-500'
-                      }`}>
+                        }`}>
                         {enquiry.type}
                       </span>
                       <span className="text-white/20 text-[10px] font-bold uppercase tracking-widest">
@@ -140,7 +138,7 @@ const Admin = () => {
                       {enquiry.name && (
                         <h3 className="text-2xl font-serif text-brand-beige">{enquiry.name}</h3>
                       )}
-                      
+
                       <div className="flex flex-wrap gap-x-8 gap-y-2">
                         {enquiry.email && (
                           <div className="flex flex-col">
@@ -175,23 +173,23 @@ const Admin = () => {
 
                   <div className="flex md:flex-col gap-3 justify-end items-end">
                     {enquiry.status === 'new' ? (
-                      <button 
+                      <button
                         onClick={() => handleStatusUpdate(enquiry.id, 'responded')}
-                        className="bg-brand-sage/80 hover:bg-brand-sage text-white px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg w-full md:w-auto"
+                        className="bg-brand-sage/80 hover:bg-brand-sage text-white p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all shadow-lg w-full md:w-auto"
                       >
                         Mark Responded
                       </button>
                     ) : (
-                      <button 
+                      <button
                         onClick={() => handleStatusUpdate(enquiry.id, 'new')}
-                        className="bg-white/10 hover:bg-white/20 text-white/60 px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all w-full md:w-auto"
+                        className="bg-white/10 hover:bg-white/20 text-white/60 p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all w-full md:w-auto"
                       >
                         Re-open
                       </button>
                     )}
-                    <button 
+                    <button
                       onClick={() => handleDelete(enquiry.id)}
-                      className="bg-red-500/10 hover:bg-red-500/20 text-red-500 px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all w-full md:w-auto"
+                      className="bg-red-500/10 hover:bg-red-500/20 text-red-500 p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all w-full md:w-auto"
                     >
                       Delete
                     </button>
@@ -201,11 +199,11 @@ const Admin = () => {
             ))}
           </div>
         )}
-        
+
         <div className="mt-20 pt-8 border-t border-white/5 text-center">
-           <p className="text-[10px] text-brand-beige/20 font-bold uppercase tracking-[4px]">
-             Secure Administration Portal • Cloud Persistence: Active
-           </p>
+          <p className="text-[10px] text-brand-beige/20 font-bold uppercase tracking-[4px]">
+            Secure Administration Portal • Cloud Persistence: Active
+          </p>
         </div>
       </div>
     </div>
