@@ -11,6 +11,9 @@ import Corporate from './pages/Corporate';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import DeliveryArea from './pages/DeliveryArea';
+import Admin from './pages/Admin';
+import AdminLogin from './pages/AdminLogin';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -26,6 +29,15 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/delivery" element={<DeliveryArea />} />
+        <Route path="/ritual-admin-auth" element={<AdminLogin />} />
+        <Route 
+          path="/ritual-admin-vault" 
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          } 
+        />
       </Routes>
     </Layout>
   );

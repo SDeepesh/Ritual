@@ -68,9 +68,13 @@ const Header = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-6">
-          <button className="bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
+          <Link 
+            to="/#plans" 
+            onClick={() => handleLinkClick('/#plans')}
+            className="bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md"
+          >
             Subscribe now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}

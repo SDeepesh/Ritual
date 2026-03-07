@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import Toast from './Toast';
+import { enquiryStore } from '../utils/enquiryStore';
 
 const PlanCalculator = () => {
   const [selectedPlan, setSelectedPlan] = useState(7);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [phone, setPhone] = useState('');
 
   const plans = [
     { days: 3, pricePerDay: 459, originalPrice: 500 },
@@ -15,90 +20,139 @@ const PlanCalculator = () => {
   const totalSavings = (currentPlan.originalPrice - currentPlan.pricePerDay) * currentPlan.days;
   const discountPercent = Math.round(((currentPlan.originalPrice - currentPlan.pricePerDay) / currentPlan.originalPrice) * 100);
 
-  return (
-    <section className="w-full bg-brand-olive py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 relative z-10">
+  const handleEnquiry = async (e) => {
+    e.preventDefault();
+    if (!phone) return;
+    setIsSubmitting(true);
+    
+    try {
+      await enquiryStore.save({
+        type: 'Plan Selection',
+        planDays: selectedPlan,
+        phoneNumber: phone,
+        amount: totalAmount
+      });
+      setShowToast(true);
+      setPhone('');
+    } catch (err) {
+      console.error('Submission error:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
+  return (
+    <section id="plans" className="w-full bg-brand-olive py-12 md:py-24 px-4 md:px-16 overflow-hidden relative">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+      
+      {showToast && (
+        <Toast 
+          message={`Enquiry sent! Our nutritionist will contact you about the ${selectedPlan}-day plan.`} 
+          onClose={() => setShowToast(false)} 
+        />
+      )}
+
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+        
         {/* Left Side: Illustration & Title */}
-        <div className="w-full lg:w-1/2 text-white text-left">
-          <h2 className="text-white normal-case md:text-6xl text-3xl md:leading-22">
+        <div className="w-full lg:w-1/2 text-white">
+          <h2 className="text-white normal-case md:text-7xl text-4xl mb-8 leading-tight">
             Choose Your <br /> Nourishment Cycle
           </h2>
-          {/* <div className="flex gap-6 mt-12 opacity-80 scale-110 origin-left">
-            <div className="w-24 h-24 bg-brand-sage/20 rounded-full flex items-center justify-center p-4">
-              <span className="text-4xl">🥬</span>
-            </div>
-            <div className="w-24 h-24 bg-brand-sage/20 rounded-full flex items-center justify-center p-4">
-              <span className="text-4xl">🥭</span>
-            </div>
-            <div className="w-24 h-24 bg-brand-sage/20 rounded-full flex items-center justify-center p-4">
-              <span className="text-4xl">🍎</span>
-            </div>
-          </div> */}
+          <p className="text-brand-beige/60 text-lg md:text-xl font-serif italic max-w-lg mb-12">
+            "The secret to health is consistency. Select a ritual that fits your lifestyle and let us handle the nutrition."
+          </p>
+          <div className="flex gap-4 md:gap-8 opacity-40">
+            <div className="w-20 h-20 border border-white/20 rounded-full flex items-center justify-center text-3xl">🥬</div>
+            <div className="w-20 h-20 border border-white/20 rounded-full flex items-center justify-center text-3xl">🥭</div>
+            <div className="w-20 h-20 border border-white/20 rounded-full flex items-center justify-center text-3xl">🍲</div>
+          </div>
         </div>
 
         {/* Right Side: Calculator Card */}
-        <div className="w-full lg:w-[480px] bg-white rounded-3xl shadow-2xl p-6 md:p-10 transform transition-transform duration-500">
-          <div className="flex justify-between items-start mb-8">
+        <div className="w-full lg:w-[500px] bg-white rounded-[40px] shadow-2xl p-8 md:p-12">
+          <div className="flex justify-between items-start mb-10">
             <div>
-              <p className="text-brand-sage text-sm font-medium tracking-wide uppercase mb-1">Your Choice</p>
-              <h3 className="text-2xl font-serif font-medium text-brand-olive">Ritual Plan</h3>
+              <p className="text-brand-sage text-[10px] font-bold tracking-[2px] uppercase mb-2">Your Ritual Choice</p>
+              <h3 className="text-3xl font-serif text-brand-olive">Personal Plan</h3>
             </div>
-            <div className="bg-brand-sage/10 text-brand-sage px-4 py-2 rounded-xl text-xs font-bold tracking-widest uppercase">
-              Save {discountPercent}% On First Order
+            <div className="bg-brand-sage/10 text-brand-sage px-4 py-2 rounded-xl text-[10px] font-bold tracking-widest uppercase">
+              Save {discountPercent}% Now
             </div>
           </div>
 
-          <div className="mb-8">
-            <p className="text-brand-olive font-medium mb-4 text-sm">Select number of ritual days:</p>
-            <div className="grid grid-cols-4 gap-2">
+          <div className="mb-10">
+            <p className="text-brand-olive font-bold mb-5 text-[11px] uppercase tracking-widest flex items-center gap-2">
+              Select duration: <span className="h-0.5 flex-grow bg-brand-beige/20"></span>
+            </p>
+            <div className="grid grid-cols-4 gap-3">
               {plans.map((plan) => (
                 <button
                   key={plan.days}
                   onClick={() => setSelectedPlan(plan.days)}
-                  className={`py-4 rounded-xl text-sm font-bold transition-all duration-300 ${selectedPlan === plan.days
-                    ? 'bg-brand-sage text-white shadow-lg'
-                    : 'bg-brand-beige/10 text-brand-olive border border-brand-beige/30 hover:bg-brand-beige/20'
-                    }`}
+                  className={`py-5 rounded-2xl text-sm font-bold transition-all duration-300 flex flex-col items-center justify-center gap-1 ${
+                    selectedPlan === plan.days
+                      ? 'bg-brand-sage text-white shadow-xl scale-105'
+                      : 'bg-brand-beige/5 text-brand-olive border border-brand-beige/20 hover:bg-brand-beige/10'
+                  }`}
                 >
-                  {plan.days} <br /> <span className="text-[10px] uppercase font-light opacity-80">Days</span>
+                  <span className="text-lg">{plan.days}</span>
+                  <span className="text-[9px] uppercase font-bold opacity-60">Days</span>
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="space-y-4 mb-8">
-            <div className="relative">
-              <input
-                type="tel"
-                placeholder="Phone Number*"
-                className="w-full bg-[#f4f1ea] border-none rounded-xl px-6 py-4 text-[#5a5448] placeholder-[#8a857b] focus:ring-2 focus:ring-[#999b7b] transition-all outline-none"
-              />
+          <form onSubmit={handleEnquiry} className="space-y-6">
+            <div className="space-y-4">
+              <div className="relative">
+                <input
+                  type="tel"
+                  placeholder="Phone Number*"
+                  required
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="w-full bg-brand-sage/5 border-none rounded-2xl px-6 py-5 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
+                  disabled={isSubmitting}
+                />
+              </div>
+              <p className="text-[10px] text-brand-sage/60 leading-relaxed italic px-2">
+                Our lead nutritionist will contact you to customize your macro-preferences and dietary goals within 2 hours.
+              </p>
             </div>
-            <p className="text-[10px] text-[#8a857b] leading-tight px-2">
-              Our nutritionist will contact you to customize your macro-preferences after order confirmation.
-            </p>
-          </div>
 
-          <div className="border-t border-brand-beige/30 pt-6 mb-8 flex justify-between items-end">
-            <div>
-              <p className="text-brand-sage text-sm font-medium">Total Amount:</p>
-              <p className="text-[10px] text-brand-sage font-bold uppercase mt-1">You save ₹{totalSavings}</p>
+            <div className="border-t border-brand-beige/20 pt-8 mb-8 flex justify-between items-end">
+              <div>
+                <p className="text-brand-sage/40 text-[10px] font-bold uppercase tracking-widest mb-1">Total Savings:</p>
+                <p className="text-brand-sage font-bold text-lg">₹{totalSavings}</p>
+              </div>
+              <div className="text-right">
+                <p className="text-brand-sage/40 text-[10px] font-bold uppercase tracking-widest mb-1">Final Amount:</p>
+                <p className="text-5xl font-serif text-brand-olive">₹{totalAmount}</p>
+              </div>
             </div>
-            <div className="text-right">
-              <p className="text-4xl font-serif font-medium text-brand-olive">₹{totalAmount}</p>
-            </div>
-          </div>
 
-          <button className="w-full bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
-            Send Enquiry
-          </button>
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full bg-brand-olive text-white py-6 rounded-2xl font-bold uppercase tracking-[3px] transition-all shadow-xl flex items-center justify-center gap-4 ${
+                isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-1'
+              }`}
+            >
+              {isSubmitting ? (
+                <>
+                  <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                  Processing...
+                </>
+              ) : 'Start My Ritual'}
+            </button>
+          </form>
 
-          <p className="text-center text-[10px] text-brand-sage mt-4">
-            By proceeding, you agree to our Terms of Service & Privacy Policy.
+          <p className="text-center text-[9px] text-brand-sage/40 mt-8 font-bold uppercase tracking-widest">
+            Safe & Secure Checkout • Terms Apply
           </p>
         </div>
-
       </div>
     </section>
   );
