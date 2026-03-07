@@ -64,7 +64,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-olive text-white pt-[80px] pb-24 px-4 md:px-16 relative overflow-hidden">
+    <div className="min-h-screen bg-brand-olive text-white pt-[96px] pb-24 px-4 md:px-16 relative overflow-hidden">
       {/* Abstract Background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-brand-sage/20 rounded-full blur-[120px]"></div>
