@@ -88,7 +88,7 @@ const Header = () => {
             onClick={() => handleLinkClick('/#plans')}
             className="bg-brand-olive hover:bg-brand-sage text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md uppercase font-medium"
           >
-            Subscribe now
+            Start Your Ritual
           </Link>
         </div>
 
@@ -106,7 +106,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-white z-[105] transition-all duration-500 ease-in-out flex flex-col p-4 pt-28 overflow-hidden ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+        className={`fixed inset-0 bg-white z-[105] transition-all duration-500 ease-in-out flex flex-col p-4 pt-28 overflow-hidden h-[100vh] ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
           }`}
       >
         <nav className="flex flex-col gap-8 mb-12">

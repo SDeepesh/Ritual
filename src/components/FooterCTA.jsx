@@ -14,7 +14,7 @@ const FooterCTA = () => {
           <p className="text-lg opacity-90 font-light mb-4 w-full max-w-sm">
             Functional detox shots, infused hydration bottles
           </p>
-          <button className="bg-brand-beige hover:bg-white hover:text-brand-sage px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
+          <button className="bg-brand-beige hover:bg-white hover:text-brand-sage px-4 md:px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
             Read More
           </button>
         </div>

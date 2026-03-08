@@ -3,11 +3,12 @@ import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import DailyMenu from '../components/DailyMenu';
-import ProductMenu from '../components/ProductMenu';
+// import ProductMenu from '../components/ProductMenu';
 import PlanCalculator from '../components/PlanCalculator';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import FooterCTA from '../components/FooterCTA';
+import InclusionsInfo from '../components/InclusionsInfo';
 
 const Home = () => {
   const { hash } = useLocation();
@@ -29,8 +30,9 @@ const Home = () => {
     <main>
       <div id="home"><Hero /></div>
       <Features />
+      <InclusionsInfo />
       <div id="menu"><DailyMenu /></div>
-      <ProductMenu />
+      {/* <ProductMenu /> */}
       <div id="plans"><PlanCalculator /></div>
       <div id="community"><Testimonials /></div>
       <div id="faq"><FAQ /></div>
