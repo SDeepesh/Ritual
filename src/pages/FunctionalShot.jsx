@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import shotsLineupImg from '../assets/shot.PNG';
-import shotsLineupImgMobile from '../assets/footer_bg.PNG';
+import shotsLineupImgMobile from '../assets/footer_bg_.PNG';
 
 const FunctionalShot = () => {
   const shots = [

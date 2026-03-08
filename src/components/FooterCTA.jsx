@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import footerDrinks from '../assets/footer_bg.png';
+import footerDrinks from '../assets/footer_bg_.png';
 
 const FooterCTA = () => {
   return (
