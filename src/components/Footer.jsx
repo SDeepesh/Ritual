@@ -52,7 +52,7 @@ const Footer = () => {
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
     if (!email) return;
-    
+
     try {
       await enquiryStore.save({
         type: 'Newsletter Subscription',
@@ -71,9 +71,9 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
 
       {showToast && (
-        <Toast 
-          message="Subscribed! Welcome to the Ritual newsletter." 
-          onClose={() => setShowToast(false)} 
+        <Toast
+          message="Subscribed! Welcome to the Ritual newsletter."
+          onClose={() => setShowToast(false)}
         />
       )}
 
@@ -126,33 +126,6 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* Newsletter / CTA Row */}
-        <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-center md:text-left">
-            <h3 className="text-xl md:text-2xl font-serif mb-2">Join our Weekly Ritual</h3>
-            <p className="text-brand-beige/50 text-sm">Nourishing tips and menu updates, once a week.</p>
-          </div>
-          <form 
-            onSubmit={handleNewsletterSubmit}
-            className="w-full md:w-auto flex gap-2"
-          >
-            <input 
-              type="email" 
-              placeholder="email@example.com"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-sage w-full md:w-64 transition-all"
-            />
-            <button 
-              type="submit"
-              className="bg-brand-sage hover:bg-white hover:text-brand-olive text-brand-olive font-bold px-6 py-3 rounded-lg text-[10px] uppercase tracking-[2px] transition-all whitespace-nowrap shadow-lg"
-            >
-              Subscribe
-            </button>
-          </form>
         </div>
 
         {/* Copyright Row */}

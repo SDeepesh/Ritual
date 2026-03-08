@@ -6,33 +6,43 @@ const PlanCalculator = () => {
   const [selectedPlan, setSelectedPlan] = useState(7);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
   const plans = [
-    { days: 3, pricePerDay: 459, originalPrice: 500 },
-    { days: 7, pricePerDay: 429, originalPrice: 500 },
-    { days: 14, pricePerDay: 399, originalPrice: 500 },
-    { days: 28, pricePerDay: 369, originalPrice: 500 },
+    { days: 3, totalPrice: 1349, originalPrice: 1500 },
+    { days: 7, totalPrice: 2999, originalPrice: 3500 },
+    { days: 14, totalPrice: 5499, originalPrice: 7000 },
+    { days: 28, totalPrice: 9999, originalPrice: 14000 },
   ];
 
   const currentPlan = plans.find(p => p.days === selectedPlan);
-  const totalAmount = currentPlan.pricePerDay * currentPlan.days;
-  const totalSavings = (currentPlan.originalPrice - currentPlan.pricePerDay) * currentPlan.days;
-  const discountPercent = Math.round(((currentPlan.originalPrice - currentPlan.pricePerDay) / currentPlan.originalPrice) * 100);
+  const totalAmount = currentPlan.totalPrice;
+  const totalSavings = currentPlan.originalPrice - currentPlan.totalPrice;
+  const discountPercent = Math.round(((currentPlan.originalPrice - currentPlan.totalPrice) / currentPlan.originalPrice) * 100);
 
   const handleEnquiry = async (e) => {
     e.preventDefault();
-    if (!phone) return;
+    if (!phone || !name) return;
+
+    // Basic validation
+    if (phone.length !== 10) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
     setIsSubmitting(true);
-    
+
     try {
       await enquiryStore.save({
         type: 'Plan Selection',
+        name,
         planDays: selectedPlan,
         phoneNumber: phone,
         amount: totalAmount
       });
       setShowToast(true);
+      setName('');
       setPhone('');
     } catch (err) {
       console.error('Submission error:', err);
@@ -41,38 +51,40 @@ const PlanCalculator = () => {
     }
   };
 
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/\D/g, ''); // Only allow numbers
+    if (value.length <= 10) {
+      setPhone(value);
+    }
+  };
+
   return (
-    <section id="plans" className="w-full bg-brand-olive py-12 md:py-24 px-4 md:px-16 overflow-hidden relative">
+    <section id="plans" className="w-full bg-brand-olive py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
-      
+
       {showToast && (
-        <Toast 
-          message={`Enquiry sent! Our nutritionist will contact you about the ${selectedPlan}-day plan.`} 
-          onClose={() => setShowToast(false)} 
+        <Toast
+          message={`Enquiry sent! Our nutritionist will contact you about the ${selectedPlan}-day plan.`}
+          onClose={() => setShowToast(false)}
         />
       )}
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
-        
+
         {/* Left Side: Illustration & Title */}
         <div className="w-full lg:w-1/2 text-white">
           <h2 className="text-white normal-case md:text-7xl text-4xl mb-8 leading-tight">
             Choose Your <br /> Nourishment Cycle
           </h2>
-          <p className="text-brand-beige/60 text-lg md:text-xl font-serif italic max-w-lg mb-12">
+          <p className="text-brand-beige/60 text-lg md:text-xl font-serif italic max-w-lg">
             "The secret to health is consistency. Select a ritual that fits your lifestyle and let us handle the nutrition."
           </p>
-          <div className="flex gap-4 md:gap-8 opacity-40">
-            <div className="w-20 h-20 border border-white/20 rounded-full flex items-center justify-center text-3xl">🥬</div>
-            <div className="w-20 h-20 border border-white/20 rounded-full flex items-center justify-center text-3xl">🥭</div>
-            <div className="w-20 h-20 border border-white/20 rounded-full flex items-center justify-center text-3xl">🍲</div>
-          </div>
         </div>
 
         {/* Right Side: Calculator Card */}
-        <div className="w-full lg:w-[500px] bg-white rounded-[40px] shadow-2xl p-8 md:p-12">
-          <div className="flex justify-between items-start mb-10">
+        <div className="w-full lg:w-[500px] bg-white rounded-[20px] shadow-2xl p-6 md:p-8">
+          <div className="flex justify-between items-start mb-8">
             <div>
               <p className="text-brand-sage text-[10px] font-bold tracking-[2px] uppercase mb-2">Your Ritual Choice</p>
               <h3 className="text-3xl font-serif text-brand-olive">Personal Plan</h3>
@@ -82,7 +94,7 @@ const PlanCalculator = () => {
             </div>
           </div>
 
-          <div className="mb-10">
+          <div className="mb-8">
             <p className="text-brand-olive font-bold mb-5 text-[11px] uppercase tracking-widest flex items-center gap-2">
               Select duration: <span className="h-0.5 flex-grow bg-brand-beige/20"></span>
             </p>
@@ -91,11 +103,10 @@ const PlanCalculator = () => {
                 <button
                   key={plan.days}
                   onClick={() => setSelectedPlan(plan.days)}
-                  className={`py-5 rounded-2xl text-sm font-bold transition-all duration-300 flex flex-col items-center justify-center gap-1 ${
-                    selectedPlan === plan.days
-                      ? 'bg-brand-sage text-white shadow-xl scale-105'
-                      : 'bg-brand-beige/5 text-brand-olive border border-brand-beige/20 hover:bg-brand-beige/10'
-                  }`}
+                  className={`py-5 rounded-2xl text-sm font-bold transition-all duration-300 flex flex-col items-center justify-center gap-1 ${selectedPlan === plan.days
+                    ? 'bg-brand-sage text-white shadow-xl scale-105'
+                    : 'bg-brand-beige/5 text-brand-olive border border-brand-beige/20 hover:bg-brand-beige/10'
+                    }`}
                 >
                   <span className="text-lg">{plan.days}</span>
                   <span className="text-[9px] uppercase font-bold opacity-60">Days</span>
@@ -108,11 +119,22 @@ const PlanCalculator = () => {
             <div className="space-y-4">
               <div className="relative">
                 <input
+                  type="text"
+                  placeholder="Full Name*"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full bg-brand-sage/5 border-none rounded-2xl px-6 py-5 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
+                  disabled={isSubmitting}
+                />
+              </div>
+              <div className="relative">
+                <input
                   type="tel"
                   placeholder="Phone Number*"
                   required
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={handlePhoneChange}
                   className="w-full bg-brand-sage/5 border-none rounded-2xl px-6 py-5 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
                   disabled={isSubmitting}
                 />
@@ -122,7 +144,7 @@ const PlanCalculator = () => {
               </p>
             </div>
 
-            <div className="border-t border-brand-beige/20 pt-8 mb-8 flex justify-between items-end">
+            <div className="border-t border-brand-beige/20 pt-6 mb-6 flex justify-between items-end">
               <div>
                 <p className="text-brand-sage/40 text-[10px] font-bold uppercase tracking-widest mb-1">Total Savings:</p>
                 <p className="text-brand-sage font-bold text-lg">₹{totalSavings}</p>
@@ -133,12 +155,11 @@ const PlanCalculator = () => {
               </div>
             </div>
 
-            <button 
+            <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full bg-brand-olive text-white py-6 rounded-2xl font-bold uppercase tracking-[3px] transition-all shadow-xl flex items-center justify-center gap-4 ${
-                isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-1'
-              }`}
+              className={`w-full bg-brand-olive text-sm text-white py-3 rounded-md font-medium uppercase tracking-[3px] transition-all shadow-xl flex items-center justify-center gap-4 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-1'
+                }`}
             >
               {isSubmitting ? (
                 <>
@@ -149,7 +170,7 @@ const PlanCalculator = () => {
             </button>
           </form>
 
-          <p className="text-center text-[9px] text-brand-sage/40 mt-8 font-bold uppercase tracking-widest">
+          <p className="text-center text-[9px] text-brand-sage/40 mt-4 font-bold uppercase tracking-widest">
             Safe & Secure Checkout • Terms Apply
           </p>
         </div>
