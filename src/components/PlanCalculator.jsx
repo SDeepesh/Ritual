@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Toast from './Toast';
+import PincodeChecker from './PincodeChecker';
 import { enquiryStore } from '../utils/enquiryStore';
 
 const PlanCalculator = () => {
@@ -74,12 +75,18 @@ const PlanCalculator = () => {
 
         {/* Left Side: Illustration & Title */}
         <div className="w-full lg:w-1/2 text-white">
-          <h2 className="text-white normal-case md:text-7xl text-4xl mb-8 leading-tight">
+          <h2 className="text-white normal-case md:text-5xl text-4xl mb-8 leading-tight">
             Choose Your <br /> Nourishment Cycle
           </h2>
-          <p className="text-brand-beige text-lg md:text-xl max-w-lg">
-            "The secret to health is consistency. Select a ritual that fits your lifestyle and let us handle the nutrition."
-          </p>
+          <div className="space-y-8">
+            <p className="text-brand-beige text-lg md:text-xl max-w-lg">
+              The secret to health is consistency. Select a ritual that fits your lifestyle and let us handle the nutrition.
+            </p>
+
+            <div>
+              <PincodeChecker theme="dark" />
+            </div>
+          </div>
         </div>
 
         {/* Right Side: Calculator Card */}

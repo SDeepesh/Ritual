@@ -117,7 +117,7 @@ const DailyMenu = () => {
   const menuItems = [
     {
       title: "Berry Oat Porridge",
-      type: "Breakfast",
+      type: "Vegan",
       img: mealOats,
       cal: 340, pro: 12, carb: 45, fat: 8,
       description: "Slow-cooked steel-cut oats topped with a vibrant medley of farm-fresh blueberries and organic honey. A comforting, fiber-rich start to your day.",
@@ -125,7 +125,7 @@ const DailyMenu = () => {
     },
     {
       title: "Turkey Veggie Stew",
-      type: "Lunch",
+      type: "Veg",
       img: mealTurkey,
       cal: 420, pro: 38, carb: 22, fat: 12,
       description: "Lean ground turkey simmered in a rich tomato and herb reduction with slow-roasted Mediterranean vegetables. High protein, low glycemic index.",
@@ -133,7 +133,7 @@ const DailyMenu = () => {
     },
     {
       title: "Herb Seared Fish",
-      type: "Dinner",
+      type: "Non Veg",
       img: mealFish,
       cal: 380, pro: 42, carb: 10, fat: 14,
       description: "Wild-caught seabass seared with fresh rosemary and lemon zest, served alongside a crisp asparagus spear bed. The ultimate light yet satisfying dinner.",
@@ -141,7 +141,7 @@ const DailyMenu = () => {
     },
     {
       title: "Avocado Power Toast",
-      type: "Snack",
+      type: "Functional Shot",
       img: productBowl,
       cal: 290, pro: 8, carb: 28, fat: 16,
       description: "Smashed Hass avocado on artisanal sourdough, topped with micro-greens and a hint of chili flakes. Rich in healthy fats and micronutrients.",

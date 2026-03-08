@@ -34,12 +34,31 @@ export const enquiryStore = {
 
     try {
       // 1. Map frontend fields to database columns (camelCase -> snake_case)
+      // Handle different field naming conventions across forms:
+      //   - PlanCalculator sends: { name, phoneNumber, planDays, amount }
+      //   - Contact sends: { name, phone, email, message }
+      //   - Corporate sends: { companyName, contactName, phone, email, teamSize, message }
+      //   - DeliveryArea/Footer sends: { email }
+
+      // Build a comprehensive name field for Corporate inquiries
+      let displayName = enquiry.name || null;
+      if (enquiry.companyName) {
+        displayName = `${enquiry.companyName}${enquiry.contactName ? ' — ' + enquiry.contactName : ''}`;
+      }
+
+      // Build a comprehensive message field — append extra details if present
+      let fullMessage = enquiry.message || null;
+      if (enquiry.teamSize) {
+        const teamInfo = `[Team Size: ${enquiry.teamSize}]`;
+        fullMessage = fullMessage ? `${teamInfo}\n${fullMessage}` : teamInfo;
+      }
+
       const dbEntry = {
         type: enquiry.type,
-        name: enquiry.name || null,
+        name: displayName,
         email: enquiry.email || null,
-        phone_number: enquiry.phoneNumber || null,
-        message: enquiry.message || null,
+        phone_number: enquiry.phoneNumber || enquiry.phone || null,
+        message: fullMessage,
         plan_days: enquiry.planDays || null,
         amount: enquiry.amount || null,
         status: 'new'

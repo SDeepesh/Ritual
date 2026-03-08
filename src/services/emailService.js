@@ -29,7 +29,7 @@ export const emailService = {
         type: data.type || 'General Enquiry',
         message: data.message || 'No message provided',
         email: data.email || 'N/A',
-        phone: data.phoneNumber || 'N/A',
+        phone: data.phoneNumber || data.phone || 'N/A',
         plan: data.planDays ? `${data.planDays} Days` : 'N/A',
         timestamp: new Date(data.timestamp).toLocaleString(),
         details: JSON.stringify(data, null, 2)

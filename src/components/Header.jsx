@@ -31,11 +31,11 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Menu', href: '/#menu' },
-    { name: 'Plans', href: '/#plans' },
-    { name: 'Community', href: '/#community' },
-    { name: 'FAQ', href: '/#faq' },
     { name: 'Our Story', href: '/story' },
+    { name: 'Menu', href: '/#menu' },
+    { name: 'Functional Shots', href: '/functional-shots' },
+    { name: 'Plans', href: '/#plans' },
+    { name: 'FAQ', href: '/#faq' },
   ];
 
   const handleLinkClick = (href) => {

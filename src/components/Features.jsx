@@ -7,7 +7,7 @@ import subscription from '../assets/subscription.png';
 
 const FeatureItem = ({ image, title, description }) => (
   <div className="flex flex-col items-center text-center px-4">
-    <div className="w-16 h-16 rounded-full bg-brand-sage flex items-center justify-center mb-6 shadow-sm p-3">
+    <div className="w-16 h-16 rounded-full bg-brand-sage flex items-center justify-center mb-4 shadow-sm p-3">
       <img
         src={image}
         alt={title}

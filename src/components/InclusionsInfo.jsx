@@ -20,18 +20,18 @@ const InclusionsInfo = () => {
             <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light max-w-xl mb-4">
               We focus exclusively on Lunch to ensure absolute freshness. Each delivery is a complete functional experience designed to fuel your peak performance.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 pt-4">
-              <div className="bg-brand-beige/5 p-5 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
-                <span className="text-2xl md:text-3xl font-serif font-bold text-brand-olive block mb-1">30</span>
-                <span className="text-[9px] uppercase tracking-[2px] text-brand-sage font-bold">Unique Bowls</span>
+            <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 md:gap-6 pt-4">
+              <div className="bg-brand-beige/5 p-4 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
+                <span className="text-xl md:text-3xl font-serif font-bold text-brand-olive block mb-1">30</span>
+                <span className="text-[8px] uppercase tracking-[2px] text-brand-sage font-bold">Unique Bowls</span>
               </div>
-              <div className="bg-brand-beige/5 p-5 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
-                <span className="text-2xl md:text-3xl font-serif font-bold text-brand-olive block mb-1">60ml</span>
-                <span className="text-[9px] uppercase tracking-[2px] text-brand-sage font-bold">Functional Shot</span>
+              <div className="bg-brand-beige/5 p-4 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
+                <span className="text-xl md:text-3xl font-serif font-bold text-brand-olive block mb-1">60ml</span>
+                <span className="text-[8px] uppercase tracking-[2px] text-brand-sage font-bold">Functional Shot</span>
               </div>
-              <div className="bg-brand-beige/5 p-5 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
-                <span className="text-2xl md:text-3xl font-serif font-bold text-brand-olive block mb-1">350ml</span>
-                <span className="text-[9px] uppercase tracking-[2px] text-brand-sage font-bold">Infused Water</span>
+              <div className="bg-brand-beige/5 p-4 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
+                <span className="text-xl md:text-3xl font-serif font-bold text-brand-olive block mb-1">350ml</span>
+                <span className="text-[8px] uppercase tracking-[2px] text-brand-sage font-bold">Infused Water</span>
               </div>
             </div>
           </div>
