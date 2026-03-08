@@ -35,7 +35,7 @@ const Nutrition = () => {
             <p className="text-brand-beige/70 text-lg md:text-xl leading-relaxed font-serif italic mb-10">
               We provide full transparency. Our ritual includes a detailed nutritional breakdown for every meal, tracking protein, carbs, healthy fats, and calories to support your fitness objectives.
             </p>
-            <button className="bg-brand-sage text-white px-10 py-4 rounded-xl font-bold uppercase tracking-[2px] transition-all hover:bg-white hover:text-brand-olive shadow-lg">
+            <button className="bg-brand-olive text-white px-10 py-4 rounded-xl font-bold uppercase tracking-[2px] transition-all hover:bg-white hover:text-brand-sage shadow-lg">
               Download Menu Macros (PDF)
             </button>
           </div>

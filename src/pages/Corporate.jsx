@@ -53,7 +53,7 @@ const Corporate = () => {
             <button 
               onClick={handleInquiry}
               disabled={isSubmitting}
-              className={`mt-12 border border-brand-olive text-brand-olive hover:bg-brand-olive hover:text-white px-10 py-4 rounded-xl font-bold uppercase tracking-[2px] transition-all shadow-lg flex items-center gap-3 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`mt-12 border border-brand-olive text-brand-olive hover:bg-brand-sage hover:border-brand-sage hover:text-white px-10 py-4 rounded-xl font-bold uppercase tracking-[2px] transition-all shadow-lg flex items-center gap-3 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {isSubmitting ? (
                 <>

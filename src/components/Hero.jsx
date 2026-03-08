@@ -26,7 +26,7 @@ const Hero = () => {
           <p className="text-lg text-brand-olive mb-3 md:mb-6 font-sans max-w-sm drop-shadow-sm font-light">
             Nutritionally balanced power bowls delivered fresh in Chennai
           </p>
-          <button className="bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
+          <button className="bg-brand-olive hover:bg-brand-sage text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
             Explore Menu
           </button>
         </div>

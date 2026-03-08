@@ -95,7 +95,7 @@ const Admin = () => {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-6 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all ${filter === f ? 'bg-brand-sage text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
+                className={`px-6 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all ${filter === f ? 'bg-brand-olive text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
                   }`}
               >
                 {f} ({f === 'all' ? stats.total : stats[f]})
@@ -175,7 +175,7 @@ const Admin = () => {
                     {enquiry.status === 'new' ? (
                       <button
                         onClick={() => handleStatusUpdate(enquiry.id, 'responded')}
-                        className="bg-brand-sage/80 hover:bg-brand-sage text-white p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all shadow-lg w-full md:w-auto"
+                        className="bg-brand-olive/80 hover:bg-brand-sage hover:text-white text-white p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all shadow-lg w-full md:w-auto"
                       >
                         Mark Responded
                       </button>

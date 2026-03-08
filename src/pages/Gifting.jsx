@@ -52,7 +52,7 @@ const Gifting = () => {
               <button 
                 onClick={() => handleGiftInquiry('Digital Gift Card')}
                 disabled={isSubmitting}
-                className="w-full py-4 border border-brand-olive text-brand-olive rounded-xl font-bold uppercase tracking-[2px] hover:bg-brand-olive hover:text-white transition-all disabled:opacity-50"
+                className="w-full py-4 border border-brand-olive text-brand-olive rounded-xl font-bold uppercase tracking-[2px] hover:bg-brand-sage hover:border-brand-sage hover:text-white transition-all disabled:opacity-50"
               >
                 {isSubmitting && giftType === 'Digital Gift Card' ? 'Processing...' : 'Buy Gift Card'}
               </button>
@@ -64,7 +64,7 @@ const Gifting = () => {
               <button 
                 onClick={() => handleGiftInquiry('1-Week Subscription')}
                 disabled={isSubmitting}
-                className="w-full py-4 bg-brand-sage text-white rounded-xl font-bold uppercase tracking-[2px] hover:bg-white hover:text-brand-olive transition-all disabled:opacity-50"
+                className="w-full py-4 bg-brand-olive text-white rounded-xl font-bold uppercase tracking-[2px] hover:bg-brand-sage transition-all disabled:opacity-50"
               >
                 {isSubmitting && giftType === '1-Week Subscription' ? 'Processing...' : 'Gift a Week'}
               </button>

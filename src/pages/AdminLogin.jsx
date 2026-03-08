@@ -79,8 +79,8 @@ const AdminLogin = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full bg-brand-sage text-white py-5 rounded-2xl font-bold uppercase tracking-[3px] transition-all shadow-xl flex items-center justify-center gap-4 ${
-                loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white hover:text-brand-olive'
+              className={`w-full bg-brand-olive text-white py-5 rounded-2xl font-bold uppercase tracking-[3px] transition-all shadow-xl flex items-center justify-center gap-4 ${
+                loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white hover:text-brand-sage'
               }`}
             >
               {loading ? (

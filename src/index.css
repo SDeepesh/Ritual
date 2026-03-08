@@ -4,8 +4,8 @@
   --font-serif: "Trajan Pro", "Cinzel", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans: "Proxima Nova", "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --color-brand-sage: #1a2e1a;
-  --color-brand-olive: #335533;
+  --color-brand-sage: #335533;
+  --color-brand-olive: #1a2e1a;
   --color-brand-beige: #D7C7A2;
   --color-brand-clay: #C8AFA3;
 }
@@ -34,6 +34,7 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;

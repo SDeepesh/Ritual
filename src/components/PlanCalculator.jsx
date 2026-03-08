@@ -104,7 +104,7 @@ const PlanCalculator = () => {
                   key={plan.days}
                   onClick={() => setSelectedPlan(plan.days)}
                   className={`py-5 rounded-2xl text-sm font-bold transition-all duration-300 flex flex-col items-center justify-center gap-1 ${selectedPlan === plan.days
-                    ? 'bg-brand-sage text-white shadow-xl scale-105'
+                    ? 'bg-brand-olive text-white shadow-xl scale-105'
                     : 'bg-brand-beige/5 text-brand-olive border border-brand-beige/20 hover:bg-brand-beige/10'
                     }`}
                 >

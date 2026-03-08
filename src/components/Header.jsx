@@ -15,6 +15,21 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      return () => {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+        document.body.style.touchAction = '';
+      };
+    }
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: 'Menu', href: '/#menu' },
     { name: 'Plans', href: '/#plans' },
@@ -68,10 +83,10 @@ const Header = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-6">
-          <Link 
-            to="/#plans" 
+          <Link
+            to="/#plans"
             onClick={() => handleLinkClick('/#plans')}
-            className="bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md"
+            className="bg-brand-olive hover:bg-brand-sage text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md uppercase font-medium"
           >
             Subscribe now
           </Link>
@@ -91,7 +106,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-white z-[105] transition-all duration-500 ease-in-out flex flex-col p-8 pt-32 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+        className={`fixed inset-0 bg-white z-[105] transition-all duration-500 ease-in-out flex flex-col p-4 pt-28 overflow-hidden ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
           }`}
       >
         <nav className="flex flex-col gap-8 mb-12">
@@ -100,7 +115,7 @@ const Header = () => {
               key={link.name}
               to={link.href}
               onClick={() => handleLinkClick(link.href)}
-              className="text-3xl font-serif text-brand-olive hover:text-brand-sage transition-colors"
+              className="text-2xl text-brand-olive hover:text-brand-sage transition-colors"
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
               {link.name}
@@ -108,11 +123,8 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="mt-auto flex flex-col gap-4">
-          <button className="w-full py-4 border border-brand-olive text-brand-olive rounded-xl font-bold uppercase tracking-[2px] transition-all">
-            Login
-          </button>
-          <button className="w-full py-4 bg-brand-olive text-white rounded-xl font-bold uppercase tracking-[2px] transition-all shadow-lg">
+        <div className="mt-auto flex flex-col gap-4 mb-8">
+          <button className="w-full bg-brand-olive hover:bg-brand-sage text-white py-3 rounded-md text-md transition-colors duration-300 shadow-sm hover:shadow-md">
             Start Your Ritual
           </button>
         </div>

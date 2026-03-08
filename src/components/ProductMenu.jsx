@@ -13,7 +13,7 @@ const ProductCard = ({ title, description, isExplore }) => (
     <div className="p-6 flex-grow flex flex-col">
       <h3 className="text-xl text-brand-olive font-serif mb-3 leading-snug">{title}</h3>
       <p className="text-sm text-brand-sage mb-6 flex-grow">{description}</p>
-      <button className={`w-full py-3 rounded-md text-xs transition-colors ${isExplore ? 'bg-brand-sage hover:bg-brand-olive text-white' : 'bg-brand-clay hover:bg-brand-sage text-white'}`}>
+      <button className={`w-full py-3 rounded-md text-xs transition-colors ${isExplore ? 'bg-brand-olive hover:bg-brand-sage text-white' : 'bg-brand-clay hover:bg-brand-olive text-white'}`}>
         {isExplore ? 'Explore Menu' : 'Select Menu'}
       </button>
     </div>

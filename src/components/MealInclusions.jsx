@@ -73,7 +73,7 @@ const MealInclusions = () => {
 
         {/* Buttons Section */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="bg-brand-sage hover:bg-brand-olive text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
+          <button className="bg-brand-olive hover:bg-brand-sage text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md">
             Start Subscription
           </button>
         </div>

@@ -84,7 +84,7 @@ const DeliveryArea = () => {
             <button 
               type="submit"
               disabled={isSubmitting}
-              className={`bg-brand-sage text-white px-8 py-4 rounded-xl font-bold uppercase tracking-[2px] transition-all shadow-md flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-olive'}`}
+              className={`bg-brand-olive text-white px-8 py-4 rounded-xl font-bold uppercase tracking-[2px] transition-all shadow-md flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage'}`}
             >
               {isSubmitting ? (
                 <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>

@@ -278,7 +278,7 @@ const DailyMenu = () => {
 
         {/* Bottom CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-brand-sage hover:bg-brand-olive text-white px-10 py-3 rounded-md text-sm transition-all duration-500 shadow-xl hover:shadow-2xl font-medium tracking-[2px] uppercase hover:-translate-y-1">
+          <button className="bg-brand-olive hover:bg-brand-sage text-white px-10 py-3 rounded-md text-sm transition-all duration-500 shadow-xl hover:shadow-2xl font-medium tracking-[2px] uppercase hover:-translate-y-1">
             Start My Ritual Plan
           </button>
         </div>

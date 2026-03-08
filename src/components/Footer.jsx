@@ -66,7 +66,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-brand-olive pt-20 pb-12 px-4 md:px-16 text-white relative overflow-hidden">
+    <footer className="bg-brand-olive pt-16 pb-8 px-4 md:px-16 text-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
 
@@ -78,17 +78,17 @@ const Footer = () => {
       )}
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img
                 src={logoImg}
                 alt="Ritual Logo"
-                className="mb-8 brightness-0 invert opacity-90 w-[120px]"
+                className="mb-8 brightness-0 invert w-[120px]"
               />
             </Link>
-            <p className="text-brand-beige/60 text-base leading-relaxed mb-8 max-w-sm font-serif italic">
+            <p className="text-brand-beige text-base leading-relaxed mb-8 max-w-sm">
               Cultivating wellness through conscious meals. Our ritual is to provide nutrient-dense, plant-forward nourishment delivered fresh to your doorstep.
             </p>
             <div className="flex gap-4">
@@ -96,10 +96,10 @@ const Footer = () => {
                 <a
                   key={social}
                   href={`#${social.toLowerCase()}`}
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all group"
+                  className="w-10 h-10 rounded-full border text-brand-beige flex items-center justify-center hover:text-brand-beige/30 transition-all group"
                   aria-label={social}
                 >
-                  <span className="text-[10px] font-bold tracking-widest uppercase opacity-40 group-hover:opacity-100">{social[0]}</span>
+                  <span className="text-[10px] font-bold tracking-widest uppercase text-brand-beige hover:text-white">{social[0]}</span>
                 </a>
               ))}
             </div>
@@ -108,7 +108,7 @@ const Footer = () => {
           {/* Links Columns */}
           {footerLinks.map((column) => (
             <div key={column.title}>
-              <h4 className="text-[10px] font-bold uppercase tracking-[3px] mb-8 text-white/40">
+              <h4 className="text-[12px] font-bold uppercase tracking-[3px] mb-8 text-white">
                 {column.title}
               </h4>
               <ul className="flex flex-col gap-4">
@@ -117,7 +117,7 @@ const Footer = () => {
                     <Link
                       to={link.href}
                       onClick={() => handleLinkClick(link.href)}
-                      className="text-brand-beige/70 hover:text-white transition-colors text-sm font-medium"
+                      className="text-brand-beige hover:text-white transition-colors text-sm font-medium"
                     >
                       {link.name}
                     </Link>
@@ -129,7 +129,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Row */}
-        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[2px] text-white/30 font-bold">
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[2px] text-white/80 font-bold">
           <p>&copy; {currentYear} Ritual. All rights reserved.</p>
           <div className="flex gap-2 md:gap-8">
             <Link to="/privacy" className="hover:text-white transition-colors">Terms of Service</Link>
