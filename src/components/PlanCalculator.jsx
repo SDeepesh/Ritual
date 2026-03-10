@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Toast from './Toast';
 import PincodeChecker from './PincodeChecker';
+import PlanSelector, { PLANS } from './PlanSelector';
 import { enquiryStore } from '../utils/enquiryStore';
 
 const PlanCalculator = () => {
@@ -10,17 +11,8 @@ const PlanCalculator = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
-  const plans = [
-    { days: 3, totalPrice: 1349, originalPrice: 1500 },
-    { days: 7, totalPrice: 2999, originalPrice: 3500 },
-    { days: 14, totalPrice: 5499, originalPrice: 7000 },
-    { days: 28, totalPrice: 9999, originalPrice: 14000 },
-  ];
-
-  const currentPlan = plans.find(p => p.days === selectedPlan);
+  const currentPlan = PLANS.find(p => p.days === selectedPlan);
   const totalAmount = currentPlan.totalPrice;
-  const totalSavings = currentPlan.originalPrice - currentPlan.totalPrice;
-  const discountPercent = Math.round(((currentPlan.originalPrice - currentPlan.totalPrice) / currentPlan.originalPrice) * 100);
 
   const handleEnquiry = async (e) => {
     e.preventDefault();
@@ -97,7 +89,7 @@ const PlanCalculator = () => {
               <h3 className="text-3xl font-serif text-brand-olive">Personal Plan</h3>
             </div>
             <div className="bg-brand-sage/10 text-brand-sage px-4 py-2 rounded-xl text-[10px] font-bold tracking-widest uppercase">
-              Save {discountPercent}% Now
+              Save {Math.round(((currentPlan.originalPrice - currentPlan.totalPrice) / currentPlan.originalPrice) * 100)}% Now
             </div>
           </div>
 
@@ -105,21 +97,11 @@ const PlanCalculator = () => {
             <p className="text-brand-olive font-bold mb-5 text-[11px] uppercase tracking-widest flex items-center gap-2">
               Select duration: <span className="h-0.5 flex-grow bg-brand-beige/20"></span>
             </p>
-            <div className="grid grid-cols-4 gap-3">
-              {plans.map((plan) => (
-                <button
-                  key={plan.days}
-                  onClick={() => setSelectedPlan(plan.days)}
-                  className={`py-5 rounded-2xl text-sm font-bold transition-all duration-300 flex flex-col items-center justify-center gap-1 ${selectedPlan === plan.days
-                    ? 'bg-brand-olive text-white shadow-xl scale-105'
-                    : 'bg-brand-beige/5 text-brand-olive border border-brand-beige/20 hover:bg-brand-beige/10'
-                    }`}
-                >
-                  <span className="text-lg">{plan.days}</span>
-                  <span className="text-[9px] uppercase font-bold opacity-60">Days</span>
-                </button>
-              ))}
-            </div>
+            <PlanSelector 
+              selectedPlan={selectedPlan} 
+              onSelect={setSelectedPlan} 
+              showSummary={false} 
+            />
           </div>
 
           <form onSubmit={handleEnquiry} className="space-y-6">
@@ -154,7 +136,7 @@ const PlanCalculator = () => {
             <div className="border-t border-brand-beige/20 pt-6 mb-6 flex justify-between items-end">
               <div>
                 <p className="text-brand-sage/40 text-[10px] font-bold uppercase tracking-widest mb-1">Total Savings:</p>
-                <p className="text-brand-sage font-bold text-lg">₹{totalSavings}</p>
+                <p className="text-brand-sage font-bold text-lg">₹{currentPlan.originalPrice - currentPlan.totalPrice}</p>
               </div>
               <div className="text-right">
                 <p className="text-brand-sage/40 text-[10px] font-bold uppercase tracking-widest mb-1">Final Amount:</p>

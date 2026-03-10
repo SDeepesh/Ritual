@@ -13,6 +13,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import DeliveryArea from './pages/DeliveryArea';
 import FunctionalShot from './pages/FunctionalShot';
+import StartRitual from './pages/StartRitual';
 import Admin from './pages/Admin';
 import AdminLogin from './pages/AdminLogin';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -33,6 +34,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/delivery" element={<DeliveryArea />} />
         <Route path="/functional-shots" element={<FunctionalShot />} />
+        <Route path="/start-ritual" element={<StartRitual />} />
         <Route path="/ritual-admin-auth" element={<AdminLogin />} />
         <Route 
           path="/ritual-admin-vault" 

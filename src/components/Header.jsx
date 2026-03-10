@@ -84,8 +84,7 @@ const Header = () => {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-6">
           <Link
-            to="/#plans"
-            onClick={() => handleLinkClick('/#plans')}
+            to="/start-ritual"
             className="bg-brand-olive hover:bg-brand-sage text-white px-8 py-3 rounded-md text-sm transition-colors duration-300 shadow-sm hover:shadow-md uppercase font-medium"
           >
             Start Your Ritual
@@ -124,9 +123,13 @@ const Header = () => {
         </nav>
 
         <div className="mt-auto flex flex-col gap-4 mb-8">
-          <button className="w-full bg-brand-olive hover:bg-brand-sage text-white py-3 rounded-md text-md transition-colors duration-300 shadow-sm hover:shadow-md">
+          <Link
+            to="/start-ritual"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="w-full text-center bg-brand-olive hover:bg-brand-sage text-white py-3 rounded-md text-md transition-colors duration-300 shadow-sm hover:shadow-md"
+          >
             Start Your Ritual
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Decor */}

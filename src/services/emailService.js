@@ -6,9 +6,10 @@ import emailjs from '@emailjs/browser';
  */
 
 // These would ideally be in .env files
-const SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID'; 
-const TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID';
-const PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY';
+// EmailJS configuration from environment variables
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_EMAILJS_SERVICE_ID'; 
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_EMAILJS_TEMPLATE_ID';
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_EMAILJS_PUBLIC_KEY';
 
 export const emailService = {
   /**
@@ -29,9 +30,9 @@ export const emailService = {
         type: data.type || 'General Enquiry',
         message: data.message || 'No message provided',
         email: data.email || 'N/A',
-        phone: data.phoneNumber || data.phone || 'N/A',
-        plan: data.planDays ? `${data.planDays} Days` : 'N/A',
-        timestamp: new Date(data.timestamp).toLocaleString(),
+        phone: data.phoneNumber || data.phone || data.phone_number || 'N/A',
+        plan: (data.planDays || data.plan_days) ? `${data.planDays || data.plan_days} Days` : 'N/A',
+        timestamp: new Date(data.timestamp || Date.now()).toLocaleString(),
         details: JSON.stringify(data, null, 2)
       };
 

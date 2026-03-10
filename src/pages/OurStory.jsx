@@ -96,9 +96,9 @@ const OurStory = () => {
           <img src={poolImg} alt="Ritual — Wellness Lifestyle" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-[2000ms]" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-olive/70 via-brand-olive/30 to-transparent flex items-center p-8 md:p-16">
             <div className="text-white max-w-lg">
-              <span className="text-white/60 text-[10px] uppercase tracking-[4px] font-bold block mb-2">Our Mission</span>
+              <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">Our Mission</span>
               <h3 className="text-2xl md:text-4xl font-serif mb-4">Make Wellness <br />the Easiest Choice.</h3>
-              <p className="text-sm md:text-base text-white/80 font-light leading-relaxed">We remove every barrier between you and proper nutrition. Fresh, functional, and delivered — every single day.</p>
+              <p className="text-sm md:text-base text-white font-light leading-relaxed">We remove every barrier between you and proper nutrition. Fresh, functional, and delivered — every single day.</p>
             </div>
           </div>
         </div>

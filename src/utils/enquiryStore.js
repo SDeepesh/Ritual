@@ -128,5 +128,99 @@ export const enquiryStore = {
       const filtered = localEnquiries.filter(e => e.id !== id);
       localStorage.setItem('ritual_enquiries', JSON.stringify(filtered));
     }
+  },
+
+  // ─── Ritual Signups (ritual_signups table) ───────────────────────────────
+
+  // Save a new ritual signup to the dedicated ritual_signups table
+  saveRitualSignup: async (data) => {
+    const dbEntry = {
+      name: data.name,
+      phone: data.phone,
+      email: data.email || null,
+      pincode: data.pincode || null,
+      address: data.address || null,
+      latitude: data.latitude || null,
+      longitude: data.longitude || null,
+      plan_days: data.planDays || null,
+      amount: data.amount || null,
+      dietary_preference: data.dietaryPreference || null,
+      goals: data.goals || null,
+      message: data.message || null,
+      status: 'new'
+    };
+
+    try {
+      const { data: result, error } = await supabase
+        .from('ritual_signups')
+        .insert([dbEntry])
+        .select();
+
+      if (error) throw error;
+
+      return result[0];
+    } catch (error) {
+      console.error('Supabase ritual_signups insert error:', error);
+      // Fallback to localStorage
+      const local = JSON.parse(localStorage.getItem('ritual_signups') || '[]');
+      const localEntry = { ...dbEntry, id: Date.now(), created_at: new Date().toISOString() };
+      local.unshift(localEntry);
+      localStorage.setItem('ritual_signups', JSON.stringify(local));
+
+      // Trigger Admin Email Notification (even on fallback) via Frontend service as a last resort
+      const emailPayload = {
+        ...dbEntry,
+        type: '🌿 New Ritual Signup (Fallback)',
+        timestamp: new Date().toISOString()
+      };
+      emailService.sendEnquiryNotification(emailPayload).catch(err => {
+        console.error('Failed to trigger fallback email notification:', err);
+      });
+
+      return localEntry;
+    }
+  },
+
+  // Get all ritual signups
+  getAllRitualSignups: async () => {
+    try {
+      const { data, error } = await supabase
+        .from('ritual_signups')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      return data || [];
+    } catch (error) {
+      console.error('Supabase ritual_signups fetch error:', error);
+      const localData = localStorage.getItem('ritual_signups');
+      return localData ? JSON.parse(localData) : [];
+    }
+  },
+
+  // Update ritual signup status
+  updateRitualSignupStatus: async (id, status) => {
+    try {
+      const { error } = await supabase
+        .from('ritual_signups')
+        .update({ status })
+        .eq('id', id);
+      if (error) throw error;
+    } catch (error) {
+      console.error('Supabase ritual_signup status update error:', error);
+    }
+  },
+
+  // Delete a ritual signup
+  deleteRitualSignup: async (id) => {
+    try {
+      const { error } = await supabase
+        .from('ritual_signups')
+        .delete()
+        .eq('id', id);
+      if (error) throw error;
+    } catch (error) {
+      console.error('Supabase ritual_signup delete error:', error);
+    }
   }
 };

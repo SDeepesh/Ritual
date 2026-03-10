@@ -14,15 +14,24 @@ serve(async (req) => {
     const { record } = payload
     console.log('Received record:', record)
 
+    // Detect if this is a Ritual Signup (which doesn't have a 'type' column)
+    // or a standard Enquiry.
+    const isSignup = !record.type && record.address;
+    const type = record.type || (isSignup ? '🌿 Ritual Signup' : 'New Web Inquiry');
+
     // Format the email content
     const emailHtml = `
-      <h1>New Ritual Inquiry</h1>
-      <p><strong>Type:</strong> ${record.type}</p>
+      <h1>${type}</h1>
       <p><strong>Name:</strong> ${record.name || 'N/A'}</p>
       <p><strong>Email:</strong> ${record.email || 'N/A'}</p>
-      <p><strong>Phone:</strong> ${record.phone_number || 'N/A'}</p>
+      <p><strong>Phone:</strong> ${record.phone || record.phone_number || 'N/A'}</p>
+      ${record.pincode ? `<p><strong>Pincode:</strong> ${record.pincode}</p>` : ''}
+      ${record.address ? `<p><strong>Address:</strong> ${record.address}</p>` : ''}
       <p><strong>Plan:</strong> ${record.plan_days ? record.plan_days + ' Days' : 'N/A'}</p>
-      <p><strong>Message:</strong> ${record.message || 'No message provided'}</p>
+      ${record.amount ? `<p><strong>Amount:</strong> ₹${record.amount}</p>` : ''}
+      ${record.dietary_preference ? `<p><strong>Dietary Pref:</strong> ${record.dietary_preference}</p>` : ''}
+      ${record.goals ? `<p><strong>Goals:</strong> ${record.goals}</p>` : ''}
+      <p><strong>Message/Notes:</strong> ${record.message || 'No message provided'}</p>
       <hr />
       <p><small>Sent from your Ritual Supabase Backend</small></p>
     `
@@ -39,7 +48,7 @@ serve(async (req) => {
         body: JSON.stringify({
           from: 'Ritual Admin <onboarding@resend.dev>',
           to: ['deepeshsrs@gmail.com'],
-          subject: `New ${record.type}: ${record.name || 'User'}`,
+          subject: `${type}: ${record.name || 'User'}`,
           html: emailHtml,
         }),
       })
