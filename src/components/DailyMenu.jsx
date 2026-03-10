@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { menuByDay } from './RitualMenuJson';
 import foodImages from '../utils/foodImages';
 import productBowl from '../assets/product_bowl.png'; // Fallback
+import LazyImage from './LazyImage';
 
 const MealModal = ({ meal, onClose }) => {
   if (!meal) return null;
@@ -27,11 +28,12 @@ const MealModal = ({ meal, onClose }) => {
         </button>
 
         {/* Left: Product Image */}
-        <div className="w-full md:w-1/2 h-[40vh] md:h-auto bg-[#f9f7f4] relative">
-          <img
+        <div className="w-full md:w-1/2 aspect-square md:aspect-auto md:h-auto bg-[#f9f7f4] relative">
+          <LazyImage
             src={meal.img}
             alt={meal.title}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full"
+            objectFit="cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden"></div>
         </div>
@@ -193,11 +195,12 @@ const DailyMenu = () => {
               onClick={() => setSelectedMeal(meal)}
               className="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col cursor-pointer hover:-translate-y-1"
             >
-              <div className="relative pt-[80%] overflow-hidden bg-[#f9f7f4]">
-                <img
+              <div className="relative w-full pt-[80%] overflow-hidden bg-[#f9f7f4]">
+                <LazyImage
                   src={meal.img}
                   alt={meal.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full group-hover:scale-110 transition-transform duration-700"
+                  objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-brand-olive/0 group-hover:bg-brand-olive/10 transition-colors duration-300 flex items-center justify-center">
                   <span className="bg-white/90 text-brand-olive text-[10px] font-bold tracking-[2px] uppercase py-2.5 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg">View Details</span>

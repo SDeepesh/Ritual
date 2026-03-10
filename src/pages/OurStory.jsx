@@ -6,6 +6,7 @@ import trioDeskImg from '../assets/ritual_trio_desk.jpeg';
 import glowShotImg from '../assets/glow_shot_concept.jpeg';
 import poolImg from '../assets/ritual_pool.jpeg';
 import shotsImg from '../assets/our_shots.PNG';
+import LazyImage from '../components/LazyImage';
 
 const OurStory = () => {
   const values = [
@@ -65,7 +66,7 @@ const OurStory = () => {
 
           <div className="flex-1 relative w-full">
             <div className="aspect-[4/5] rounded-[20px] overflow-hidden shadow-2xl transform md:rotate-1 hover:rotate-0 transition-transform duration-700">
-              <img src={trioDeskImg} alt="Ritual — The Complete Lunch Experience" className="w-full h-full object-cover" />
+              <LazyImage src={trioDeskImg} alt="Ritual — The Complete Lunch Experience" className="w-full h-full" />
             </div>
           </div>
         </div>
@@ -99,7 +100,7 @@ const OurStory = () => {
       {/* Full Width Image Banner */}
       <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
         <div className="rounded-[20px] overflow-hidden shadow-2xl relative group h-[300px] md:h-[450px]">
-          <img src={poolImg} alt="Ritual — Wellness Lifestyle" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-[2000ms]" />
+          <LazyImage src={poolImg} alt="Ritual — Wellness Lifestyle" className="w-full h-full group-hover:scale-[1.02] transition-transform duration-[2000ms]" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-olive/70 via-brand-olive/30 to-transparent flex items-center p-8 md:p-16">
             <div className="text-white max-w-lg">
               <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">Our Mission</span>
@@ -156,8 +157,8 @@ const OurStory = () => {
           </div>
 
           <div className="flex-1 w-full">
-            <div className="rounded-[20px] overflow-hidden shadow-2xl relative group">
-              <img src={shotsImg} alt="Ritual — Functional Shots Collection" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-[2000ms]" />
+            <div className="aspect-[16/9] md:aspect-auto md:h-[400px] rounded-[20px] overflow-hidden shadow-2xl relative group">
+              <LazyImage src={shotsImg} alt="Ritual — Functional Shots Collection" className="w-full h-full group-hover:scale-105 transition-transform duration-[2000ms]" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/50 via-transparent to-transparent flex items-end p-6 md:p-12">
                 <div>
                   <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">5 Formulations</span>

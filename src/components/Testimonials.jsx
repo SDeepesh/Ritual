@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LazyImage from './LazyImage';
 
 const TestimonialCard = ({ quote, author, role, avatar, itemsPerView }) => (
   <div
@@ -16,7 +17,7 @@ const TestimonialCard = ({ quote, author, role, avatar, itemsPerView }) => (
       </p>
       <div className="flex items-center gap-4 border-t border-brand-beige/10 pt-5 md:pt-6 mt-auto">
         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-brand-beige/20 flex-shrink-0 border border-brand-beige/30">
-          <img src={avatar} alt={author} className="w-full h-full object-cover" />
+          <LazyImage src={avatar} alt={author} className="w-full h-full" />
         </div>
         <div>
           <h4 className="text-brand-olive font-bold text-xs md:text-sm tracking-wide">{author}</h4>

@@ -1,13 +1,14 @@
-import React from 'react';
 import productBowl from '../assets/product_bowl.png';
+import LazyImage from './LazyImage';
 
 const ProductCard = ({ title, description, isExplore }) => (
   <div className="bg-[#f2ece4] rounded-sm overflow-hidden flex flex-col group transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
     <div className="relative pt-[100%] bg-white/40">
-      <img
+      <LazyImage
         src={productBowl}
         alt={title}
-        className="absolute inset-0 w-full h-full object-cover p-6 mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+        className="absolute inset-0 w-full h-full p-6 mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+        objectFit="contain"
       />
     </div>
     <div className="p-6 flex-grow flex flex-col">

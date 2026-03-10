@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader';
 import SEO from '../components/SEO';
 import shotsLineupImg from '../assets/shot.PNG';
 import shotsLineupImgMobile from '../assets/footer_bg_.png';
+import LazyImage from '../components/LazyImage';
 
 const FunctionalShot = () => {
   const shots = [
@@ -68,17 +69,21 @@ const FunctionalShot = () => {
 
       {/* Hero Image Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
-        <div className="aspect-auto rounded-[20px] overflow-hidden shadow-2xl relative group">
-          <img
-            src={shotsLineupImg}
-            alt="Ritual Functional Shot Lineup — 5 vibrant cold-pressed shots"
-            className="hidden md:block w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-[2000ms]"
-          />
-          <img
-            src={shotsLineupImgMobile}
-            alt="Ritual Functional Shot Lineup — 5 vibrant cold-pressed shots"
-            className="block md:hidden w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-[2000ms]"
-          />
+        <div className="aspect-[3/4] md:aspect-[21/9] rounded-[20px] overflow-hidden shadow-2xl relative group">
+          <div className="hidden md:block w-full h-full">
+            <LazyImage
+              src={shotsLineupImg}
+              alt="Ritual Functional Shot Lineup — 5 vibrant cold-pressed shots"
+              className="w-full h-full group-hover:scale-[1.02] transition-transform duration-[2000ms]"
+            />
+          </div>
+          <div className="block md:hidden w-full h-full">
+            <LazyImage
+              src={shotsLineupImgMobile}
+              alt="Ritual Functional Shot Lineup — 5 vibrant cold-pressed shots"
+              className="w-full h-full group-hover:scale-[1.02] transition-transform duration-[2000ms]"
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-start md:items-end p-8 md:p-16">
             <div className="text-white">
               <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">Campaign 01</span>

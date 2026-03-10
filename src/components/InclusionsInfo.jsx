@@ -1,6 +1,7 @@
 import React from 'react';
 import trioDeskImg from '../assets/ritual_trio_desk.jpeg';
 import glowShotImg from '../assets/glow_shot_concept.jpeg';
+import LazyImage from './LazyImage';
 
 const InclusionsInfo = () => {
   return (
@@ -37,7 +38,7 @@ const InclusionsInfo = () => {
           </div>
           <div className="flex-1 relative w-full">
             <div className="aspect-[4/5] rounded-[20px] overflow-hidden shadow-2xl transform md:rotate-1 hover:rotate-0 transition-transform duration-700">
-              <img src={trioDeskImg} alt="Ritual Lunch Setup: Power Bowl, Functional Shot, and Infused Water" className="w-full h-full object-cover" />
+              <LazyImage src={trioDeskImg} alt="Ritual Lunch Setup: Power Bowl, Functional Shot, and Infused Water" className="w-full h-full" />
             </div>
             <div className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 bg-brand-olive text-white p-5 rounded-full shadow-2xl animate-bounce-slow z-20 scale-90 md:scale-100">
               <div className="text-center">
@@ -116,7 +117,7 @@ const InclusionsInfo = () => {
           </div>
           <div className="flex-1 w-full">
             <div className="rounded-[20px] overflow-hidden shadow-2xl relative group">
-              <img src={glowShotImg} alt="Ritual 'Eat Your Skin Care' Campaign — The Glow Shot elixirs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" />
+              <LazyImage src={glowShotImg} alt="Ritual 'Eat Your Skin Care' Campaign — The Glow Shot elixirs" className="w-full h-full group-hover:scale-105 transition-transform duration-[2000ms]" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/50 via-transparent to-transparent flex items-end p-6 md:p-12">
                 <div>
                   <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">Campaign 01</span>

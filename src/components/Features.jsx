@@ -4,14 +4,16 @@ import mixingBowl from '../assets/mixing-bowl.png';
 import fresh from '../assets/fresh.png';
 import recycle from '../assets/recycle.png';
 import subscription from '../assets/subscription.png';
+import LazyImage from './LazyImage';
 
 const FeatureItem = ({ image, title, description }) => (
   <div className="flex flex-col items-center text-center px-4">
     <div className="w-16 h-16 rounded-full bg-brand-sage flex items-center justify-center mb-4 shadow-sm p-3">
-      <img
+      <LazyImage
         src={image}
         alt={`Ritual Wellness Feature: ${title}`}
-        className="w-full h-full object-contain brightness-0 invert"
+        className="w-full h-full brightness-0 invert"
+        objectFit="contain"
       />
     </div>
     <h3 className="text-lg text-brand-olive font-medium mb-3 tracking-[1px] font-serif uppercase">{title}</h3>
