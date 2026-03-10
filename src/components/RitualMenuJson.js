@@ -2,141 +2,620 @@ export const menuByDay = {
     "Day 1": [
         { title: "Green Glow Reset Bowl (Paneer)", type: "Veg", img: "image84", cal: 452, pro: 30, carb: 44, fat: 18, description: "Fluffy foxtail millet layered with cucumber, broccoli, and creamy avocado whip, finished with grilled paneer and a bright lemon tahini dressing.", ingredients: ["Foxtail Millet", "Grilled Paneer", "Cucumber", "Broccoli", "Avocado Whip", "Lemon Tahini Dressing", "Pumpkin Seeds", "Microgreens"] },
         { title: "Green Glow Reset Bowl (Chicken)", type: "Non Veg", img: "image34", cal: 445, pro: 34, carb: 42, fat: 17, description: "Lemon herb grilled chicken paired with fluffy millet, hydrating cucumber, bright broccoli and creamy avocado whip.", ingredients: ["Foxtail Millet", "Lemon Herb Chicken", "Cucumber", "Broccoli", "Avocado Whip", "Lemon Tahini Dressing", "Pumpkin Seeds", "Microgreens"] },
-        { title: "Green Glow Reset Bowl (Chickpea)", type: "Vegan", img: "image69", cal: 438, pro: 26, carb: 46, fat: 16, description: "Roasted herb chickpeas layered over fluffy millet with crisp cucumber, vibrant broccoli and creamy avocado whip.", ingredients: ["Foxtail Millet", "Roasted Chickpeas", "Cucumber", "Broccoli", "Avocado Whip", "Lemon Tahini Dressing", "Pumpkin Seeds", "Microgreens"] }
+        { title: "Green Glow Reset Bowl (Chickpea)", type: "Vegan", img: "image69", cal: 438, pro: 26, carb: 46, fat: 16, description: "Roasted herb chickpeas layered over fluffy millet with crisp cucumber, vibrant broccoli and creamy avocado whip.", ingredients: ["Foxtail Millet", "Roasted Chickpeas", "Cucumber", "Broccoli", "Avocado Whip", "Lemon Tahini Dressing", "Pumpkin Seeds", "Microgreens"] },
+        {
+            title: "Berry Glow Shot",
+            type: "Functional Shot",
+            img: "image01",
+            cal: 32,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin, finished with a refreshing touch of lemon.",
+            ingredients: [
+                "Beetroot",
+                "Pomegranate",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 2": [
         { title: "Korean Sesame Glow Bowl (Tofu)", type: "Veg", img: "image54", cal: 452, pro: 29, carb: 46, fat: 17, description: "Sesame brown rice, caramelized sesame tofu, sautéed spinach, and tangy pickled cucumber.", ingredients: ["Sesame Brown Rice", "Sesame Tofu", "Spinach", "Pickled Cucumber", "Sesame Dressing", "Spring Onion", "Sesame Seeds"] },
         { title: "Korean Sesame Glow Bowl (Chicken)", type: "Non Veg", img: "image36", cal: 445, pro: 35, carb: 44, fat: 16, description: "Sesame-glazed chicken with brown rice, sautéed spinach, and tangy pickled cucumber.", ingredients: ["Sesame Brown Rice", "Sesame Chicken", "Spinach", "Pickled Cucumber", "Sesame Dressing", "Spring Onion", "Sesame Seeds"] },
-        { title: "Korean Sesame Glow Bowl (Vegan Tofu)", type: "Vegan", img: "image25", cal: 438, pro: 27, carb: 48, fat: 16, description: "Crispy sesame tofu layered over nutty brown rice with sautéed spinach and tangy cucumber.", ingredients: ["Sesame Brown Rice", "Crispy Sesame Tofu", "Spinach", "Pickled Cucumber", "Sesame Dressing", "Spring Onion", "Sesame Seeds"] }
+        { title: "Korean Sesame Glow Bowl (Vegan Tofu)", type: "Vegan", img: "image25", cal: 438, pro: 27, carb: 48, fat: 16, description: "Crispy sesame tofu layered over nutty brown rice with sautéed spinach and tangy cucumber.", ingredients: ["Sesame Brown Rice", "Crispy Sesame Tofu", "Spinach", "Pickled Cucumber", "Sesame Dressing", "Spring Onion", "Sesame Seeds"] },
+        {
+            title: "Coconut Hydration Shot",
+            type: "Functional Shot",
+            img: "image02",
+            cal: 18,
+            pro: 0,
+            carb: 4,
+            fat: 0,
+            description: "Electrolyte-rich tender coconut water with lemon and mineral salt to replenish hydration and support daily energy balance.",
+            ingredients: [
+                "Tender Coconut Water",
+                "Lemon Juice",
+                "Raw Honey",
+                "Pink Himalayan Salt"
+            ]
+        }
     ],
     "Day 3": [
         { title: "Tandoori Paneer Ritual Bowl", type: "Veg", img: "image68", cal: 460, pro: 22, carb: 48, fat: 18, description: "Jeera brown rice, smoky tandoori paneer, mint cucumber salad, and roasted carrots with mint yogurt drizzle.", ingredients: ["Brown Rice", "Paneer", "Mint", "Cucumber", "Carrot", "Pickled Onion", "Hung Curd"] },
         { title: "Tandoori Chicken Ritual Bowl", type: "Non Veg", img: "image15", cal: 440, pro: 34, carb: 46, fat: 12, description: "Tandoori grilled chicken breast with jeera brown rice, mint cucumber salad, and roasted carrots.", ingredients: ["Brown Rice", "Tandoori Chicken", "Mint", "Cucumber", "Carrot", "Pickled Onion", "Hung Curd"] },
-        { title: "Tandoori Cauliflower Ritual Bowl", type: "Vegan", img: "image81", cal: 430, pro: 14, carb: 52, fat: 14, description: "Smoky roasted tandoori cauliflower with jeera brown rice, mint cucumber salad, and roasted carrots.", ingredients: ["Brown Rice", "Tandoori Cauliflower", "Mint", "Cucumber", "Carrot", "Pickled Onion", "Cashew Yogurt"] }
+        { title: "Tandoori Cauliflower Ritual Bowl", type: "Vegan", img: "image81", cal: 430, pro: 14, carb: 52, fat: 14, description: "Smoky roasted tandoori cauliflower with jeera brown rice, mint cucumber salad, and roasted carrots.", ingredients: ["Brown Rice", "Tandoori Cauliflower", "Mint", "Cucumber", "Carrot", "Pickled Onion", "Cashew Yogurt"] },
+        {
+            title: "Green Detox Shot",
+            type: "Functional Shot",
+            img: "image03",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Refreshing detox blend of green apple, cucumber and mint designed to support digestion, hydration and clear glowing skin.",
+            ingredients: [
+                "Green Apple",
+                "Cucumber",
+                "Mint",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 4": [
         { title: "Miso Glazed Paneer Balance Bowl", type: "Veg", img: "image75", cal: 470, pro: 24, carb: 50, fat: 18, description: "Sesame soba noodles, miso glazed paneer, sautéed mushrooms, bok choy, and pickled carrot.", ingredients: ["Soba Noodles", "Paneer", "Miso Paste", "Mushroom", "Bok Choy", "Edamame", "Carrot"] },
         { title: "Miso Chicken Umami Bowl", type: "Non Veg", img: "image51", cal: 450, pro: 36, carb: 46, fat: 12, description: "Sesame soba noodles, miso glazed chicken breast, sautéed mushrooms, bok choy, and pickled carrot.", ingredients: ["Soba Noodles", "Chicken Breast", "Miso Paste", "Mushroom", "Bok Choy", "Edamame", "Carrot"] },
-        { title: "Miso Tofu Umami Bowl", type: "Vegan", img: "image80", cal: 440, pro: 20, carb: 48, fat: 14, description: "Sesame soba noodles, crispy miso glazed tofu, sautéed mushrooms, bok choy, and pickled carrot.", ingredients: ["Soba Noodles", "Tofu", "Miso Paste", "Mushroom", "Bok Choy", "Edamame", "Carrot"] }
+        { title: "Miso Tofu Umami Bowl", type: "Vegan", img: "image80", cal: 440, pro: 20, carb: 48, fat: 14, description: "Sesame soba noodles, crispy miso glazed tofu, sautéed mushrooms, bok choy, and pickled carrot.", ingredients: ["Soba Noodles", "Tofu", "Miso Paste", "Mushroom", "Bok Choy", "Edamame", "Carrot"] },
+        {
+            title: "Blue Beauty Shot",
+            type: "Functional Shot",
+            img: "image04",
+            cal: 28,
+            pro: 0.8,
+            carb: 6,
+            fat: 0,
+            description: "Antioxidant-rich pineapple and blue spirulina shot designed to support skin repair and cellular health.",
+            ingredients: [
+                "Pineapple",
+                "Blue Spirulina",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 5": [
         { title: "Mediterranean Paneer Goddess Bowl", type: "Veg", img: "image58", cal: 465, pro: 24, carb: 44, fat: 20, description: "Herbed quinoa, oregano grilled paneer, roasted zucchini, cucumber tomato salad, and kalamata olives.", ingredients: ["Quinoa", "Paneer", "Zucchini", "Cucumber", "Cherry Tomato", "Kalamata Olives", "Yogurt Dressing"] },
         { title: "Mediterranean Oregano Chicken Bowl", type: "Non Veg", img: "image70", cal: 445, pro: 36, carb: 42, fat: 12, description: "Herbed quinoa, oregano grilled chicken breast, roasted zucchini, cucumber tomato salad, and kalamata olives.", ingredients: ["Quinoa", "Chicken Breast", "Zucchini", "Cucumber", "Cherry Tomato", "Kalamata Olives", "Yogurt Dressing"] },
-        { title: "Mediterranean Chickpea Goddess Bowl", type: "Vegan", img: "image65", cal: 440, pro: 18, carb: 52, fat: 14, description: "Herbed quinoa, roasted harissa chickpeas, roasted zucchini, cucumber tomato salad, and kalamata olives.", ingredients: ["Quinoa", "Harissa Chickpeas", "Zucchini", "Cucumber", "Cherry Tomato", "Kalamata Olives", "Tahini Drizzle"] }
+        { title: "Mediterranean Chickpea Goddess Bowl", type: "Vegan", img: "image65", cal: 440, pro: 18, carb: 52, fat: 14, description: "Herbed quinoa, roasted harissa chickpeas, roasted zucchini, cucumber tomato salad, and kalamata olives.", ingredients: ["Quinoa", "Harissa Chickpeas", "Zucchini", "Cucumber", "Cherry Tomato", "Kalamata Olives", "Tahini Drizzle"] },
+        {
+            title: "Golden Glow Shot",
+            type: "Functional Shot",
+            img: "image05",
+            cal: 30,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Carrot, pineapple and turmeric blend designed to support skin glow, reduce inflammation and promote natural radiance.",
+            ingredients: [
+                "Carrot",
+                "Pineapple",
+                "Turmeric",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 6": [
         { title: "Avocado Tahini Paneer Earth Bowl", type: "Veg", img: "image57", cal: 472, pro: 23, carb: 46, fat: 22, description: "Herbed quinoa, grilled paneer, steamed broccoli, roasted sweet potato, and avocado whip with tahini.", ingredients: ["Quinoa", "Paneer", "Broccoli", "Sweet Potato", "Avocado", "Tahini", "Red Cabbage"] },
         { title: "Avocado Tahini Chicken Earth Bowl", type: "Non Veg", img: "image37", cal: 455, pro: 36, carb: 42, fat: 16, description: "Herbed quinoa, grilled chicken, steamed broccoli, roasted sweet potato, and avocado whip with tahini.", ingredients: ["Quinoa", "Chicken Breast", "Broccoli", "Sweet Potato", "Avocado", "Tahini", "Red Cabbage"] },
-        { title: "Avocado Tahini Harissa Chickpea Bowl", type: "Vegan", img: "image10", cal: 445, pro: 18, carb: 52, fat: 16, description: "Herbed quinoa, harissa roasted chickpeas, steamed broccoli, roasted sweet potato, and avocado whip with tahini.", ingredients: ["Quinoa", "Harissa Chickpeas", "Broccoli", "Sweet Potato", "Avocado", "Tahini", "Red Cabbage"] }
+        { title: "Avocado Tahini Harissa Chickpea Bowl", type: "Vegan", img: "image10", cal: 445, pro: 18, carb: 52, fat: 16, description: "Herbed quinoa, harissa roasted chickpeas, steamed broccoli, roasted sweet potato, and avocado whip with tahini.", ingredients: ["Quinoa", "Harissa Chickpeas", "Broccoli", "Sweet Potato", "Avocado", "Tahini", "Red Cabbage"] },
+        {
+            title: "Digestive Shot",
+            type: "Functional Shot",
+            img: "image06",
+            cal: 27,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Pineapple and ginger digestive shot crafted to reduce bloating and support gut health.",
+            ingredients: [
+                "Pineapple",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 7": [
         { title: "Mexican Rajma Glow Bowl", type: "Veg", img: "image35", cal: 468, pro: 20, carb: 60, fat: 14, description: "Cilantro lime rice, smoky chipotle rajma, corn salsa, tomato salsa, and avocado whip.", ingredients: ["Brown Rice", "Rajma", "Corn", "Tomato", "Avocado", "Chipotle", "Greek Yogurt"] },
         { title: "Chipotle Chicken Glow Bowl", type: "Non Veg", img: "image27", cal: 455, pro: 36, carb: 44, fat: 14, description: "Cilantro lime rice, smoky chipotle grilled chicken, corn salsa, tomato salsa, and avocado whip.", ingredients: ["Brown Rice", "Chicken Breast", "Corn", "Tomato", "Avocado", "Chipotle", "Greek Yogurt"] },
-        { title: "Mexican Black Bean Glow Bowl", type: "Vegan", img: "image77", cal: 448, pro: 18, carb: 58, fat: 12, description: "Cilantro lime rice, smoky chipotle black beans, corn salsa, tomato salsa, and avocado whip.", ingredients: ["Brown Rice", "Black Beans", "Corn", "Tomato", "Avocado", "Chipotle", "Tahini"] }
+        { title: "Mexican Black Bean Glow Bowl", type: "Vegan", img: "image77", cal: 448, pro: 18, carb: 58, fat: 12, description: "Cilantro lime rice, smoky chipotle black beans, corn salsa, tomato salsa, and avocado whip.", ingredients: ["Brown Rice", "Black Beans", "Corn", "Tomato", "Avocado", "Chipotle", "Tahini"] },
+        {
+            title: "Amla Immunity Shot",
+            type: "Functional Shot",
+            img: "image07",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Vitamin C rich amla shot blended with ginger, lemon and honey to strengthen immunity and support skin health.",
+            ingredients: [
+                "Amla",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 8": [
         { title: "Matcha Paneer Energy Bowl", type: "Veg", img: "image33", cal: 468, pro: 24, carb: 44, fat: 20, description: "Sesame brown rice, matcha paneer, bok choy, fresh cucumber, pickled carrot, and edamame.", ingredients: ["Brown Rice", "Paneer", "Matcha", "Miso", "Bok Choy", "Edamame", "Cucumber", "Carrot"] },
         { title: "Matcha Chicken Energy Bowl", type: "Non Veg", img: "image6", cal: 448, pro: 36, carb: 40, fat: 14, description: "Sesame brown rice, matcha grilled chicken breast, bok choy, fresh cucumber, pickled carrot, and edamame.", ingredients: ["Brown Rice", "Chicken Breast", "Matcha", "Miso", "Bok Choy", "Edamame", "Cucumber", "Carrot"] },
-        { title: "Matcha Tofu Energy Bowl", type: "Vegan", img: "image82", cal: 438, pro: 22, carb: 46, fat: 14, description: "Sesame brown rice, matcha glazed tofu, bok choy, fresh cucumber, pickled carrot, and edamame.", ingredients: ["Brown Rice", "Tofu", "Matcha", "Miso", "Bok Choy", "Edamame", "Cucumber", "Carrot"] }
+        { title: "Matcha Tofu Energy Bowl", type: "Vegan", img: "image82", cal: 438, pro: 22, carb: 46, fat: 14, description: "Sesame brown rice, matcha glazed tofu, bok choy, fresh cucumber, pickled carrot, and edamame.", ingredients: ["Brown Rice", "Tofu", "Matcha", "Miso", "Bok Choy", "Edamame", "Cucumber", "Carrot"] },
+        {
+            title: "Berry Glow Shot",
+            type: "Functional Shot",
+            img: "image01",
+            cal: 32,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin, finished with a refreshing touch of lemon.",
+            ingredients: [
+                "Beetroot",
+                "Pomegranate",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 9": [
         { title: "Shawarma Paneer Ritual Bowl", type: "Veg", img: "image72", cal: 472, pro: 24, carb: 46, fat: 18, description: "Turmeric rice, spiced shawarma paneer, creamy hummus, fresh tomato cucumber salad, and roasted chickpeas.", ingredients: ["Turmeric Rice", "Paneer", "Hummus", "Tahini", "Cucumber", "Tomato", "Chickpeas"] },
         { title: "Shawarma Chicken Ritual Bowl", type: "Non Veg", img: "image13", cal: 458, pro: 36, carb: 42, fat: 14, description: "Turmeric rice, spiced shawarma chicken, creamy hummus, roasted chickpeas, fresh tomato cucumber salad, and pickled cabbage.", ingredients: ["Turmeric Rice", "Chicken Breast", "Hummus", "Tahini", "Cucumber", "Tomato", "Chickpeas"] },
-        { title: "Falafel Mediterranean Bowl", type: "Vegan", img: "image24", cal: 476, pro: 20, carb: 50, fat: 18, description: "Turmeric rice, crispy baked falafel, creamy hummus, roasted chickpeas, fresh tomato cucumber salad, and pickled cabbage.", ingredients: ["Turmeric Rice", "Falafel", "Hummus", "Tahini", "Cucumber", "Tomato", "Chickpeas"] }
+        { title: "Falafel Mediterranean Bowl", type: "Vegan", img: "image24", cal: 476, pro: 20, carb: 50, fat: 18, description: "Turmeric rice, crispy baked falafel, creamy hummus, roasted chickpeas, fresh tomato cucumber salad, and pickled cabbage.", ingredients: ["Turmeric Rice", "Falafel", "Hummus", "Tahini", "Cucumber", "Tomato", "Chickpeas"] },
+        {
+            title: "Coconut Hydration Shot",
+            type: "Functional Shot",
+            img: "image02",
+            cal: 18,
+            pro: 0,
+            carb: 4,
+            fat: 0,
+            description: "Electrolyte-rich tender coconut water with lemon and mineral salt to replenish hydration and support daily energy balance.",
+            ingredients: [
+                "Tender Coconut Water",
+                "Lemon Juice",
+                "Raw Honey",
+                "Pink Himalayan Salt"
+            ]
+        }
     ],
     "Day 10": [
         { title: "Turmeric Coconut Paneer Bowl", type: "Veg", img: "image32", cal: 472, pro: 24, carb: 50, fat: 18, description: "Lemon millet, turmeric coconut dal, grilled spiced paneer, roasted pumpkin, and sautéed spinach.", ingredients: ["Millet", "Paneer", "Turmeric", "Coconut Milk", "Spinach", "Pumpkin", "Lentils"] },
         { title: "Turmeric Coconut Chicken Bowl", type: "Non Veg", img: "image11", cal: 448, pro: 36, carb: 44, fat: 14, description: "Lemon millet, turmeric coconut dal, roasted pumpkin, sautéed spinach, and grilled turmeric chicken.", ingredients: ["Millet", "Chicken Breast", "Turmeric", "Coconut Milk", "Spinach", "Pumpkin", "Lentils"] },
-        { title: "Coconut Lentil Glow Bowl", type: "Vegan", img: "image71", cal: 468, pro: 20, carb: 54, fat: 16, description: "Lemon millet, turmeric coconut dal, roasted pumpkin, sautéed spinach, and crispy roasted chickpeas.", ingredients: ["Millet", "Lentils", "Chickpeas", "Turmeric", "Coconut Milk", "Spinach", "Pumpkin"] }
+        { title: "Coconut Lentil Glow Bowl", type: "Vegan", img: "image71", cal: 468, pro: 20, carb: 54, fat: 16, description: "Lemon millet, turmeric coconut dal, roasted pumpkin, sautéed spinach, and crispy roasted chickpeas.", ingredients: ["Millet", "Lentils", "Chickpeas", "Turmeric", "Coconut Milk", "Spinach", "Pumpkin"] },
+        {
+            title: "Green Detox Shot",
+            type: "Functional Shot",
+            img: "image03",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Refreshing detox blend of green apple, cucumber and mint designed to support digestion, hydration and clear glowing skin.",
+            ingredients: [
+                "Green Apple",
+                "Cucumber",
+                "Mint",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 11": [
         { title: "Thai Peanut Paneer Noodle Bowl", type: "Veg", img: "image21", cal: 476, pro: 23, carb: 50, fat: 18, description: "Rice noodles, peanut-glazed paneer cubes, crunchy cabbage, cucumber, carrot slaw, and edamame.", ingredients: ["Rice Noodles", "Paneer", "Peanut Butter", "Cabbage", "Cucumber", "Carrot", "Edamame"] },
         { title: "Thai Peanut Chicken Noodle Bowl", type: "Non Veg", img: "image49", cal: 452, pro: 36, carb: 42, fat: 14, description: "Rice noodles, grilled peanut-marinated chicken breast slices, crunchy cabbage, cucumber, carrot slaw, and edamame.", ingredients: ["Rice Noodles", "Chicken Breast", "Peanut Butter", "Cabbage", "Cucumber", "Carrot", "Edamame"] },
-        { title: "Thai Peanut Tofu Noodle Bowl", type: "Vegan", img: "image52", cal: 440, pro: 20, carb: 48, fat: 14, description: "Rice noodles, crispy peanut-glazed tofu, crunchy cabbage, cucumber, carrot slaw, and edamame.", ingredients: ["Rice Noodles", "Tofu", "Peanut Butter", "Cabbage", "Cucumber", "Carrot", "Edamame"] }
+        { title: "Thai Peanut Tofu Noodle Bowl", type: "Vegan", img: "image52", cal: 440, pro: 20, carb: 48, fat: 14, description: "Rice noodles, crispy peanut-glazed tofu, crunchy cabbage, cucumber, carrot slaw, and edamame.", ingredients: ["Rice Noodles", "Tofu", "Peanut Butter", "Cabbage", "Cucumber", "Carrot", "Edamame"] },
+        {
+            title: "Blue Beauty Shot",
+            type: "Functional Shot",
+            img: "image04",
+            cal: 28,
+            pro: 0.8,
+            carb: 6,
+            fat: 0,
+            description: "Antioxidant-rich pineapple and blue spirulina shot designed to support skin repair and cellular health.",
+            ingredients: [
+                "Pineapple",
+                "Blue Spirulina",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 12": [
         { title: "Greek Lemon Herb Paneer Bowl", type: "Veg", img: "image29", cal: 452, pro: 26, carb: 42, fat: 20, description: "Fluffy quinoa, herb-grilled paneer, juicy tomatoes, crisp cucumber, and creamy feta, finished with a bright lemon olive oil drizzle.", ingredients: ["Quinoa", "Paneer", "Cherry Tomato", "Cucumber", "Feta Cheese", "Olive Oil", "Lemon", "Oregano"] },
         { title: "Greek Lemon Herb Chicken Bowl", type: "Non Veg", img: "image40", cal: 438, pro: 38, carb: 40, fat: 16, description: "Tender lemon herb grilled chicken breast on fluffy quinoa with fresh cucumber, tomato, and creamy feta.", ingredients: ["Quinoa", "Chicken Breast", "Cherry Tomato", "Cucumber", "Feta Cheese", "Olive Oil", "Lemon", "Oregano"] },
-        { title: "Greek Lemon Herb Chickpea Bowl", type: "Vegan", img: "image44", cal: 468, pro: 18, carb: 52, fat: 18, description: "Roasted chickpeas with fluffy quinoa, fresh tomato, cucumber, and vegan feta crumble.", ingredients: ["Quinoa", "Roasted Chickpeas", "Cherry Tomato", "Cucumber", "Vegan Feta", "Olive Oil", "Lemon", "Oregano"] }
+        { title: "Greek Lemon Herb Chickpea Bowl", type: "Vegan", img: "image44", cal: 468, pro: 18, carb: 52, fat: 18, description: "Roasted chickpeas with fluffy quinoa, fresh tomato, cucumber, and vegan feta crumble.", ingredients: ["Quinoa", "Roasted Chickpeas", "Cherry Tomato", "Cucumber", "Vegan Feta", "Olive Oil", "Lemon", "Oregano"] },
+        {
+            title: "Golden Glow Shot",
+            type: "Functional Shot",
+            img: "image05",
+            cal: 30,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Carrot, pineapple and turmeric blend designed to support skin glow, reduce inflammation and promote natural radiance.",
+            ingredients: [
+                "Carrot",
+                "Pineapple",
+                "Turmeric",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 13": [
         { title: "Super Rainbow Paneer Antioxidant Bowl", type: "Veg", img: "image26", cal: 468, pro: 26, carb: 48, fat: 20, description: "Quinoa, roasted chickpeas, purple cabbage, sweet corn, cherry tomatoes, toasted seeds, and herb-seared paneer.", ingredients: ["Quinoa", "Paneer", "Roasted Chickpeas", "Purple Cabbage", "Sweet Corn", "Cherry Tomato", "Pumpkin Seeds", "Sunflower Seeds"] },
         { title: "Super Rainbow Chicken Antioxidant Bowl", type: "Non Veg", img: "image3", cal: 452, pro: 38, carb: 42, fat: 16, description: "Grilled chicken slices on quinoa with roasted chickpeas, purple cabbage, sweet corn, and tomatoes.", ingredients: ["Quinoa", "Chicken Breast", "Roasted Chickpeas", "Purple Cabbage", "Sweet Corn", "Cherry Tomato", "Pumpkin Seeds", "Sunflower Seeds"] },
-        { title: "Super Rainbow Chickpea Antioxidant Bowl", type: "Vegan", img: "image79", cal: 448, pro: 18, carb: 55, fat: 16, description: "Protein-rich roasted chickpeas with quinoa, purple cabbage, corn, tomato, and toasted seeds.", ingredients: ["Quinoa", "Roasted Chickpeas", "Purple Cabbage", "Sweet Corn", "Cherry Tomato", "Pumpkin Seeds", "Sunflower Seeds"] }
+        { title: "Super Rainbow Chickpea Antioxidant Bowl", type: "Vegan", img: "image79", cal: 448, pro: 18, carb: 55, fat: 16, description: "Protein-rich roasted chickpeas with quinoa, purple cabbage, corn, tomato, and toasted seeds.", ingredients: ["Quinoa", "Roasted Chickpeas", "Purple Cabbage", "Sweet Corn", "Cherry Tomato", "Pumpkin Seeds", "Sunflower Seeds"] }, {
+            title: "Digestive Shot",
+            type: "Functional Shot",
+            img: "image06",
+            cal: 27,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Pineapple and ginger digestive shot crafted to reduce bloating and support gut health.",
+            ingredients: [
+                "Pineapple",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 14": [
         { title: "Korean Bibimbap Paneer Bowl", type: "Veg", img: "image60", cal: 468, pro: 26, carb: 46, fat: 20, description: "Sesame brown rice, sautéed mushrooms, crunchy carrots, cucumber pickle, and golden seared paneer.", ingredients: ["Brown Rice", "Paneer", "Mushrooms", "Carrot", "Pickled Cucumber", "Sesame Seeds", "Gochujang"] },
         { title: "Korean Bibimbap Chicken Bowl", type: "Non Veg", img: "image56", cal: 452, pro: 38, carb: 42, fat: 14, description: "Sesame grilled chicken slices on warm brown rice with mushrooms, carrots, and cucumber pickle.", ingredients: ["Brown Rice", "Chicken Breast", "Mushrooms", "Carrot", "Pickled Cucumber", "Sesame Seeds", "Gochujang"] },
-        { title: "Korean Bibimbap Tofu Bowl", type: "Vegan", img: "image64", cal: 444, pro: 22, carb: 48, fat: 16, description: "Crispy sesame tofu cubes with brown rice, mushrooms, carrots, and cucumber pickle.", ingredients: ["Brown Rice", "Crispy Tofu", "Mushrooms", "Carrot", "Pickled Cucumber", "Sesame Seeds", "Gochujang"] }
+        { title: "Korean Bibimbap Tofu Bowl", type: "Vegan", img: "image64", cal: 444, pro: 22, carb: 48, fat: 16, description: "Crispy sesame tofu cubes with brown rice, mushrooms, carrots, and cucumber pickle.", ingredients: ["Brown Rice", "Crispy Tofu", "Mushrooms", "Carrot", "Pickled Cucumber", "Sesame Seeds", "Gochujang"] },
+        {
+            title: "Amla Immunity Shot",
+            type: "Functional Shot",
+            img: "image07",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Vitamin C rich amla shot blended with ginger, lemon and honey to strengthen immunity and support skin health.",
+            ingredients: [
+                "Amla",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 15": [
         { title: "Citrus Paneer Detox Bowl", type: "Veg", img: "image76", cal: 452, pro: 24, carb: 42, fat: 20, description: "Millet with cucumber, sautéed kale, roasted pumpkin seeds, and herb-seared paneer.", ingredients: ["Foxtail Millet", "Paneer", "Cucumber", "Kale", "Pumpkin Seeds", "Orange", "Lemon"] },
         { title: "Citrus Chicken Detox Bowl", type: "Non Veg", img: "image43", cal: 438, pro: 36, carb: 40, fat: 16, description: "Millet, cucumber, sautéed kale, toasted pumpkin seeds, and tender citrus herb grilled chicken breast.", ingredients: ["Foxtail Millet", "Chicken Breast", "Cucumber", "Kale", "Pumpkin Seeds", "Orange", "Lemon"] },
-        { title: "Citrus Chickpea Detox Bowl", type: "Vegan", img: "image18", cal: 444, pro: 18, carb: 52, fat: 16, description: "Roasted chickpeas, millet, cucumber, sautéed kale, pumpkin seeds, and citrus dressing.", ingredients: ["Foxtail Millet", "Roasted Chickpeas", "Cucumber", "Kale", "Pumpkin Seeds", "Orange", "Lemon"] }
+        { title: "Citrus Chickpea Detox Bowl", type: "Vegan", img: "image18", cal: 444, pro: 18, carb: 52, fat: 16, description: "Roasted chickpeas, millet, cucumber, sautéed kale, pumpkin seeds, and citrus dressing.", ingredients: ["Foxtail Millet", "Roasted Chickpeas", "Cucumber", "Kale", "Pumpkin Seeds", "Orange", "Lemon"] },
+        {
+            title: "Berry Glow Shot",
+            type: "Functional Shot",
+            img: "image01",
+            cal: 32,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin, finished with a refreshing touch of lemon.",
+            ingredients: [
+                "Beetroot",
+                "Pomegranate",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 16": [
         { title: "Lemongrass Paneer Roll Bowl", type: "Veg", img: "image62", cal: 452, pro: 26, carb: 46, fat: 18, description: "Rice paper rolls filled with lemongrass paneer, vegetables, and herbs over brown rice.", ingredients: ["Brown Rice", "Paneer", "Rice Paper", "Carrot", "Cucumber", "Mint", "Lemongrass"] },
         { title: "Lemongrass Chicken Roll Bowl", type: "Non Veg", img: "image17", cal: 438, pro: 38, carb: 42, fat: 14, description: "Lemongrass grilled chicken in rice paper rolls with brown rice, pickled carrots, cucumber ribbons.", ingredients: ["Brown Rice", "Chicken", "Rice Paper", "Carrot", "Cucumber", "Mint", "Lemongrass"] },
-        { title: "Lemongrass Tofu Roll Bowl", type: "Vegan", img: "image30", cal: 440, pro: 20, carb: 48, fat: 14, description: "Lemongrass tofu rice paper rolls, crisp vegetables and herbs over brown rice.", ingredients: ["Brown Rice", "Tofu", "Rice Paper", "Carrot", "Cucumber", "Mint", "Lemongrass"] }
+        { title: "Lemongrass Tofu Roll Bowl", type: "Vegan", img: "image30", cal: 440, pro: 20, carb: 48, fat: 14, description: "Lemongrass tofu rice paper rolls, crisp vegetables and herbs over brown rice.", ingredients: ["Brown Rice", "Tofu", "Rice Paper", "Carrot", "Cucumber", "Mint", "Lemongrass"] },
+        {
+            title: "Coconut Hydration Shot",
+            type: "Functional Shot",
+            img: "image02",
+            cal: 18,
+            pro: 0,
+            carb: 4,
+            fat: 0,
+            description: "Electrolyte-rich tender coconut water with lemon and mineral salt to replenish hydration and support daily energy balance.",
+            ingredients: [
+                "Tender Coconut Water",
+                "Lemon Juice",
+                "Raw Honey",
+                "Pink Himalayan Salt"
+            ]
+        }
     ],
     "Day 17": [
         { title: "Paneer Millet Wellness Bowl", type: "Veg", img: "image45", cal: 462, pro: 23, carb: 44, fat: 20, description: "Millet, warm spiced paneer, roasted vegetables, and pickled onions.", ingredients: ["Foxtail Millet", "Paneer", "Carrot", "Zucchini", "Capsicum", "Cumin"] },
         { title: "Chicken Millet Wellness Bowl", type: "Non Veg", img: "image12", cal: 448, pro: 36, carb: 42, fat: 16, description: "Millet, spiced grilled chicken slices, and roasted seasonal vegetables.", ingredients: ["Foxtail Millet", "Chicken Breast", "Carrot", "Zucchini", "Capsicum", "Cumin"] },
-        { title: "Chickpea Millet Wellness Bowl", type: "Vegan", img: "image50", cal: 440, pro: 18, carb: 52, fat: 14, description: "Millet, spiced roasted chickpeas, and caramelized vegetables.", ingredients: ["Foxtail Millet", "Roasted Chickpeas", "Carrot", "Zucchini", "Capsicum", "Cumin"] }
+        { title: "Chickpea Millet Wellness Bowl", type: "Vegan", img: "image50", cal: 440, pro: 18, carb: 52, fat: 14, description: "Millet, spiced roasted chickpeas, and caramelized vegetables.", ingredients: ["Foxtail Millet", "Roasted Chickpeas", "Carrot", "Zucchini", "Capsicum", "Cumin"] },
+        {
+            title: "Green Detox Shot",
+            type: "Functional Shot",
+            img: "image03",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Refreshing detox blend of green apple, cucumber and mint designed to support digestion, hydration and clear glowing skin.",
+            ingredients: [
+                "Green Apple",
+                "Cucumber",
+                "Mint",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 18": [
         { title: "Ginger Miso Paneer Soba Bowl", type: "Veg", img: "image73", cal: 468, pro: 24, carb: 48, fat: 18, description: "Soba noodles, ginger miso glazed paneer, sautéed bok choy, and sesame seeds.", ingredients: ["Soba Noodles", "Paneer", "Bok Choy", "Ginger", "White Miso", "Sesame Seeds"] },
         { title: "Ginger Miso Chicken Soba Bowl", type: "Non Veg", img: "image22", cal: 452, pro: 36, carb: 46, fat: 14, description: "Soba noodles, ginger miso grilled chicken, sautéed bok choy, and sesame seeds.", ingredients: ["Soba Noodles", "Chicken Breast", "Bok Choy", "Ginger", "White Miso", "Sesame Seeds"] },
-        { title: "Ginger Miso Tofu Soba Bowl", type: "Vegan", img: "image39", cal: 440, pro: 22, carb: 50, fat: 14, description: "Soba noodles, ginger miso glazed crispy tofu, sautéed bok choy, and sesame seeds.", ingredients: ["Soba Noodles", "Tofu", "Bok Choy", "Ginger", "White Miso", "Sesame Seeds"] }
+        { title: "Ginger Miso Tofu Soba Bowl", type: "Vegan", img: "image39", cal: 440, pro: 22, carb: 50, fat: 14, description: "Soba noodles, ginger miso glazed crispy tofu, sautéed bok choy, and sesame seeds.", ingredients: ["Soba Noodles", "Tofu", "Bok Choy", "Ginger", "White Miso", "Sesame Seeds"] },
+        {
+            title: "Blue Beauty Shot",
+            type: "Functional Shot",
+            img: "image04",
+            cal: 28,
+            pro: 0.8,
+            carb: 6,
+            fat: 0,
+            description: "Antioxidant-rich pineapple and blue spirulina shot designed to support skin repair and cellular health.",
+            ingredients: [
+                "Pineapple",
+                "Blue Spirulina",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 19": [
         { title: "Shawarma Paneer Ritual Bowl", type: "Veg", img: "image67", cal: 460, pro: 24, carb: 44, fat: 20, description: "Herbed quinoa, herb paneer, cucumber parsley salad, roasted cherry tomato, hummus.", ingredients: ["Quinoa", "Paneer", "Cucumber", "Parsley", "Tomato", "Hummus", "Tahini"] },
         { title: "Shawarma Chicken Ritual Bowl", type: "Non Veg", img: "image46", cal: 445, pro: 36, carb: 42, fat: 16, description: "Herbed quinoa, Mediterranean chicken, cucumber parsley salad, roasted tomato, hummus.", ingredients: ["Quinoa", "Chicken", "Cucumber", "Parsley", "Tomato", "Hummus", "Tahini"] },
-        { title: "Falafel Mediterranean Bowl", type: "Vegan", img: "image2", cal: 440, pro: 18, carb: 50, fat: 16, description: "Herbed quinoa, crispy falafel, cucumber parsley salad, roasted tomato, hummus.", ingredients: ["Quinoa", "Falafel", "Cucumber", "Parsley", "Tomato", "Hummus", "Tahini"] }
+        { title: "Falafel Mediterranean Bowl", type: "Vegan", img: "image2", cal: 440, pro: 18, carb: 50, fat: 16, description: "Herbed quinoa, crispy falafel, cucumber parsley salad, roasted tomato, hummus.", ingredients: ["Quinoa", "Falafel", "Cucumber", "Parsley", "Tomato", "Hummus", "Tahini"] },
+        {
+            title: "Golden Glow Shot",
+            type: "Functional Shot",
+            img: "image05",
+            cal: 30,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Carrot, pineapple and turmeric blend designed to support skin glow, reduce inflammation and promote natural radiance.",
+            ingredients: [
+                "Carrot",
+                "Pineapple",
+                "Turmeric",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 20": [
         { title: "Collagen Boost Seed Paneer Bowl", type: "Veg", img: "image66", cal: 470, pro: 26, carb: 46, fat: 22, description: "Quinoa, stuffed sweet potato boats, spinach, cucumber, paneer, and seed mix.", ingredients: ["Quinoa", "Sweet Potato", "Spinach", "Cucumber", "Paneer", "Pumpkin Seeds", "Sunflower Seeds", "Tahini"] },
         { title: "Collagen Boost Seed Chicken Bowl", type: "Non Veg", img: "image83", cal: 450, pro: 38, carb: 42, fat: 18, description: "Quinoa, stuffed sweet potato boats, spinach, cucumber, chicken breast, and seed mix.", ingredients: ["Quinoa", "Sweet Potato", "Spinach", "Cucumber", "Chicken Breast", "Pumpkin Seeds", "Sunflower Seeds", "Tahini"] },
-        { title: "Collagen Boost Seed Chickpea Bowl", type: "Vegan", img: "image28", cal: 445, pro: 18, carb: 52, fat: 16, description: "Quinoa, stuffed sweet potato boats, spinach, cucumber, roasted chickpeas, and seed mix.", ingredients: ["Quinoa", "Sweet Potato", "Spinach", "Cucumber", "Chickpeas", "Pumpkin Seeds", "Sunflower Seeds", "Tahini"] }
+        { title: "Collagen Boost Seed Chickpea Bowl", type: "Vegan", img: "image28", cal: 445, pro: 18, carb: 52, fat: 16, description: "Quinoa, stuffed sweet potato boats, spinach, cucumber, roasted chickpeas, and seed mix.", ingredients: ["Quinoa", "Sweet Potato", "Spinach", "Cucumber", "Chickpeas", "Pumpkin Seeds", "Sunflower Seeds", "Tahini"] },
+        {
+            title: "Digestive Shot",
+            type: "Functional Shot",
+            img: "image06",
+            cal: 27,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Pineapple and ginger digestive shot crafted to reduce bloating and support gut health.",
+            ingredients: [
+                "Pineapple",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 21": [
         { title: "Mexican Chipotle Paneer Bowl", type: "Veg", img: "image7", cal: 468, pro: 20, carb: 60, fat: 14, description: "Cilantro lime brown rice, chipotle paneer, corn salsa, tomato salsa, lettuce, and avocado whip.", ingredients: ["Brown Rice", "Paneer", "Corn", "Tomato", "Lettuce", "Avocado", "Chipotle"] },
         { title: "Mexican Chipotle Chicken Bowl", type: "Non Veg", img: "image20", cal: 455, pro: 36, carb: 44, fat: 14, description: "Cilantro lime brown rice, chipotle chicken breast, corn salsa, tomato salsa, lettuce, and avocado whip.", ingredients: ["Brown Rice", "Chicken", "Corn", "Tomato", "Lettuce", "Avocado", "Chipotle"] },
-        { title: "Mexican Chipotle Black Bean Bowl", type: "Vegan", img: "image38", cal: 448, pro: 18, carb: 58, fat: 12, description: "Cilantro lime brown rice, chipotle black beans, corn salsa, tomato salsa, lettuce, and avocado whip.", ingredients: ["Brown Rice", "Black Beans", "Corn", "Tomato", "Lettuce", "Avocado", "Chipotle"] }
+        { title: "Mexican Chipotle Black Bean Bowl", type: "Vegan", img: "image38", cal: 448, pro: 18, carb: 58, fat: 12, description: "Cilantro lime brown rice, chipotle black beans, corn salsa, tomato salsa, lettuce, and avocado whip.", ingredients: ["Brown Rice", "Black Beans", "Corn", "Tomato", "Lettuce", "Avocado", "Chipotle"] },
+        {
+            title: "Amla Immunity Shot",
+            type: "Functional Shot",
+            img: "image07",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Vitamin C rich amla shot blended with ginger, lemon and honey to strengthen immunity and support skin health.",
+            ingredients: [
+                "Amla",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 22": [
         { title: "Green Gut Reset Paneer Bowl", type: "Veg", img: "image74", cal: 450, pro: 24, carb: 42, fat: 18, description: "Herbed millet, fermented cabbage, broccoli, cucumber, sesame paneer, and green tahini dressing.", ingredients: ["Millet", "Paneer", "Sauerkraut", "Broccoli", "Cucumber", "Spinach", "Tahini"] },
         { title: "Green Gut Reset Chicken Bowl", type: "Non Veg", img: "image1", cal: 435, pro: 36, carb: 40, fat: 14, description: "Herbed millet, fermented cabbage, broccoli, cucumber, chicken, and green tahini dressing.", ingredients: ["Millet", "Chicken", "Sauerkraut", "Broccoli", "Cucumber", "Spinach", "Tahini"] },
-        { title: "Green Gut Reset Tofu Bowl", type: "Vegan", img: "image5", cal: 420, pro: 18, carb: 48, fat: 14, description: "Herbed millet, fermented cabbage, broccoli, cucumber, miso tofu, and green tahini dressing.", ingredients: ["Millet", "Tofu", "Sauerkraut", "Broccoli", "Cucumber", "Spinach", "Tahini"] }
+        { title: "Green Gut Reset Tofu Bowl", type: "Vegan", img: "image5", cal: 420, pro: 18, carb: 48, fat: 14, description: "Herbed millet, fermented cabbage, broccoli, cucumber, miso tofu, and green tahini dressing.", ingredients: ["Millet", "Tofu", "Sauerkraut", "Broccoli", "Cucumber", "Spinach", "Tahini"] },
+        {
+            title: "Berry Glow Shot",
+            type: "Functional Shot",
+            img: "image01",
+            cal: 32,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin, finished with a refreshing touch of lemon.",
+            ingredients: [
+                "Beetroot",
+                "Pomegranate",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 23": [
         { title: "Teriyaki Paneer Balance Bowl", type: "Veg", img: "image4", cal: 460, pro: 23, carb: 48, fat: 18, description: "Brown rice, teriyaki paneer strips, rice paper rolls, edamame, carrot, cucumber, and sesame garnish.", ingredients: ["Brown Rice", "Paneer", "Rice Paper", "Edamame", "Carrot", "Cucumber", "Teriyaki Sauce"] },
         { title: "Teriyaki Chicken Balance Bowl", type: "Non Veg", img: "image42", cal: 445, pro: 35, carb: 44, fat: 14, description: "Brown rice, teriyaki chicken slices, rice paper rolls, edamame, carrot, cucumber, and sesame garnish.", ingredients: ["Brown Rice", "Chicken", "Rice Paper", "Edamame", "Carrot", "Cucumber", "Teriyaki Sauce"] },
-        { title: "Teriyaki Tofu Balance Bowl", type: "Vegan", img: "image14", cal: 435, pro: 20, carb: 50, fat: 14, description: "Brown rice, teriyaki tofu sticks, rice paper rolls, edamame, carrot, cucumber, and sesame garnish.", ingredients: ["Brown Rice", "Tofu", "Rice Paper", "Edamame", "Carrot", "Cucumber", "Teriyaki Sauce"] }
+        { title: "Teriyaki Tofu Balance Bowl", type: "Vegan", img: "image14", cal: 435, pro: 20, carb: 50, fat: 14, description: "Brown rice, teriyaki tofu sticks, rice paper rolls, edamame, carrot, cucumber, and sesame garnish.", ingredients: ["Brown Rice", "Tofu", "Rice Paper", "Edamame", "Carrot", "Cucumber", "Teriyaki Sauce"] },
+        {
+            title: "Coconut Hydration Shot",
+            type: "Functional Shot",
+            img: "image02",
+            cal: 18,
+            pro: 0,
+            carb: 4,
+            fat: 0,
+            description: "Electrolyte-rich tender coconut water with lemon and mineral salt to replenish hydration and support daily energy balance.",
+            ingredients: [
+                "Tender Coconut Water",
+                "Lemon Juice",
+                "Raw Honey",
+                "Pink Himalayan Salt"
+            ]
+        }
     ],
     "Day 24": [
         { title: "Smoky Masala Paneer Bowl", type: "Veg", img: "image16", cal: 470, pro: 24, carb: 46, fat: 20, description: "Jeera brown rice, smoky masala paneer, pickled onion, cucumber mint salad, chickpeas, and mint yogurt.", ingredients: ["Brown Rice", "Paneer", "Chickpeas", "Onion", "Cucumber", "Mint", "Yogurt"] },
         { title: "Smoky Masala Chicken Bowl", type: "Non Veg", img: "image53", cal: 450, pro: 36, carb: 44, fat: 16, description: "Jeera brown rice, smoky tandoori chicken, pickled onion, cucumber mint salad, chickpeas, and mint yogurt.", ingredients: ["Brown Rice", "Chicken", "Chickpeas", "Onion", "Cucumber", "Mint", "Yogurt"] },
-        { title: "Smoky Masala Chickpea Bowl", type: "Vegan", img: "image9", cal: 440, pro: 18, carb: 52, fat: 14, description: "Jeera brown rice, masala chickpeas, pickled onion, cucumber mint salad, and mint cashew yogurt.", ingredients: ["Brown Rice", "Chickpeas", "Onion", "Cucumber", "Mint", "Cashew Yogurt"] }
+        { title: "Smoky Masala Chickpea Bowl", type: "Vegan", img: "image9", cal: 440, pro: 18, carb: 52, fat: 14, description: "Jeera brown rice, masala chickpeas, pickled onion, cucumber mint salad, and mint cashew yogurt.", ingredients: ["Brown Rice", "Chickpeas", "Onion", "Cucumber", "Mint", "Cashew Yogurt"] },
+        {
+            title: "Green Detox Shot",
+            type: "Functional Shot",
+            img: "image03",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Refreshing detox blend of green apple, cucumber and mint designed to support digestion, hydration and clear glowing skin.",
+            ingredients: [
+                "Green Apple",
+                "Cucumber",
+                "Mint",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 25": [
         { title: "Sesame Udon Paneer Bowl", type: "Veg", img: "image78", cal: 460, pro: 22, carb: 50, fat: 18, description: "Udon noodles, sesame paneer strips, sauteed spinach, carrot, cucumber, and creamy sesame sauce.", ingredients: ["Udon Noodles", "Paneer", "Spinach", "Carrot", "Cucumber", "Sesame Seeds", "Sesame Sauce"] },
         { title: "Sesame Udon Chicken Bowl", type: "Non Veg", img: "image31", cal: 445, pro: 36, carb: 46, fat: 14, description: "Udon noodles, teriyaki chicken slices, sauteed spinach, carrot, cucumber, and creamy sesame sauce.", ingredients: ["Udon Noodles", "Chicken", "Spinach", "Carrot", "Cucumber", "Sesame Seeds", "Sesame Sauce"] },
-        { title: "Sesame Udon Tofu Bowl", type: "Vegan", img: "image55", cal: 435, pro: 20, carb: 52, fat: 14, description: "Udon noodles, crispy sesame tofu, sauteed spinach, carrot, cucumber, and creamy sesame sauce.", ingredients: ["Udon Noodles", "Tofu", "Spinach", "Carrot", "Cucumber", "Sesame Seeds", "Sesame Sauce"] }
+        { title: "Sesame Udon Tofu Bowl", type: "Vegan", img: "image55", cal: 435, pro: 20, carb: 52, fat: 14, description: "Udon noodles, crispy sesame tofu, sauteed spinach, carrot, cucumber, and creamy sesame sauce.", ingredients: ["Udon Noodles", "Tofu", "Spinach", "Carrot", "Cucumber", "Sesame Seeds", "Sesame Sauce"] },
+        {
+            title: "Blue Beauty Shot",
+            type: "Functional Shot",
+            img: "image04",
+            cal: 28,
+            pro: 0.8,
+            carb: 6,
+            fat: 0,
+            description: "Antioxidant-rich pineapple and blue spirulina shot designed to support skin repair and cellular health.",
+            ingredients: [
+                "Pineapple",
+                "Blue Spirulina",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 26": [
         { title: "Mediterranean Herb Paneer Bowl", type: "Veg", img: "image48", cal: 460, pro: 22, carb: 38, fat: 24, description: "Herbed quinoa, herb paneer, cherry tomato, cucumber salad, greens, olives, and lemon tahini yogurt sauce.", ingredients: ["Quinoa", "Paneer", "Tomato", "Cucumber", "Greens", "Olives", "Tahini", "Yogurt"] },
         { title: "Mediterranean Herb Chicken Bowl", type: "Non Veg", img: "image61", cal: 430, pro: 32, carb: 36, fat: 16, description: "Herbed quinoa, Mediterranean chicken, cherry tomato, cucumber salad, greens, olives, and lemon tahini yogurt sauce.", ingredients: ["Quinoa", "Chicken", "Tomato", "Cucumber", "Greens", "Olives", "Tahini", "Yogurt"] },
-        { title: "Mediterranean Herb Chickpea Bowl", type: "Vegan", img: "image47", cal: 440, pro: 18, carb: 48, fat: 15, description: "Herbed quinoa, roasted lemon chickpeas, cherry tomato, cucumber salad, greens, olives, and tahini sauce.", ingredients: ["Quinoa", "Chickpeas", "Tomato", "Cucumber", "Greens", "Olives", "Tahini"] }
+        { title: "Mediterranean Herb Chickpea Bowl", type: "Vegan", img: "image47", cal: 440, pro: 18, carb: 48, fat: 15, description: "Herbed quinoa, roasted lemon chickpeas, cherry tomato, cucumber salad, greens, olives, and tahini sauce.", ingredients: ["Quinoa", "Chickpeas", "Tomato", "Cucumber", "Greens", "Olives", "Tahini"] },
+        {
+            title: "Golden Glow Shot",
+            type: "Functional Shot",
+            img: "image05",
+            cal: 30,
+            pro: 0.6,
+            carb: 7,
+            fat: 0,
+            description: "Carrot, pineapple and turmeric blend designed to support skin glow, reduce inflammation and promote natural radiance.",
+            ingredients: [
+                "Carrot",
+                "Pineapple",
+                "Turmeric",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 27": [
         { title: "Avocado Glow Paneer Bowl", type: "Veg", img: "image19", cal: 470, pro: 22, carb: 34, fat: 26, description: "Herbed quinoa, grilled paneer, cucumber, cherry tomato, baby spinach, avocado whip, and seed mix.", ingredients: ["Quinoa", "Paneer", "Cucumber", "Tomato", "Spinach", "Avocado", "Pumpkin Seeds", "Sunflower Seeds", "Flax Seeds"] },
         { title: "Avocado Glow Chicken Bowl", type: "Non Veg", img: "image23", cal: 430, pro: 30, carb: 32, fat: 18, description: "Herbed quinoa, lemon herb chicken, cucumber, cherry tomato, baby spinach, avocado whip, and seed mix.", ingredients: ["Quinoa", "Chicken", "Cucumber", "Tomato", "Spinach", "Avocado", "Pumpkin Seeds", "Sunflower Seeds", "Flax Seeds"] },
-        { title: "Avocado Glow Chickpea Bowl", type: "Vegan", img: "image41", cal: 450, pro: 18, carb: 42, fat: 17, description: "Herbed quinoa, roasted chickpeas, cucumber, cherry tomato, baby spinach, avocado whip, and seed mix.", ingredients: ["Quinoa", "Chickpeas", "Cucumber", "Tomato", "Spinach", "Avocado", "Pumpkin Seeds", "Sunflower Seeds", "Flax Seeds"] }
+        { title: "Avocado Glow Chickpea Bowl", type: "Vegan", img: "image41", cal: 450, pro: 18, carb: 42, fat: 17, description: "Herbed quinoa, roasted chickpeas, cucumber, cherry tomato, baby spinach, avocado whip, and seed mix.", ingredients: ["Quinoa", "Chickpeas", "Cucumber", "Tomato", "Spinach", "Avocado", "Pumpkin Seeds", "Sunflower Seeds", "Flax Seeds"] },
+        {
+            title: "Digestive Shot",
+            type: "Functional Shot",
+            img: "image06",
+            cal: 27,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Pineapple and ginger digestive shot crafted to reduce bloating and support gut health.",
+            ingredients: [
+                "Pineapple",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ],
     "Day 28": [
         { title: "Thai Coconut Paneer Bowl", type: "Veg", img: "image63", cal: 470, pro: 21, carb: 36, fat: 24, description: "Coconut brown rice, grilled paneer satay, carrot ribbons, steamed broccoli, cucumber salad, peanut sauce.", ingredients: ["Brown Rice", "Coconut Milk", "Paneer", "Carrot", "Broccoli", "Cucumber", "Peanut Sauce"] },
         { title: "Thai Coconut Chicken Bowl", type: "Non Veg", img: "image8", cal: 440, pro: 32, carb: 34, fat: 16, description: "Coconut brown rice, Thai peanut chicken, carrot ribbons, steamed broccoli, cucumber salad, peanut sauce.", ingredients: ["Brown Rice", "Coconut Milk", "Chicken", "Carrot", "Broccoli", "Cucumber", "Peanut Sauce"] },
-        { title: "Thai Coconut Tofu Bowl", type: "Vegan", img: "image59", cal: 460, pro: 20, carb: 36, fat: 22, description: "Coconut brown rice, crispy peanut tofu, carrot ribbons, steamed broccoli, cucumber salad, peanut sauce.", ingredients: ["Brown Rice", "Coconut Milk", "Tofu", "Carrot", "Broccoli", "Cucumber", "Peanut Sauce"] }
+        { title: "Thai Coconut Tofu Bowl", type: "Vegan", img: "image59", cal: 460, pro: 20, carb: 36, fat: 22, description: "Coconut brown rice, crispy peanut tofu, carrot ribbons, steamed broccoli, cucumber salad, peanut sauce.", ingredients: ["Brown Rice", "Coconut Milk", "Tofu", "Carrot", "Broccoli", "Cucumber", "Peanut Sauce"] },
+        {
+            title: "Amla Immunity Shot",
+            type: "Functional Shot",
+            img: "image07",
+            cal: 26,
+            pro: 0.4,
+            carb: 6,
+            fat: 0,
+            description: "Vitamin C rich amla shot blended with ginger, lemon and honey to strengthen immunity and support skin health.",
+            ingredients: [
+                "Amla",
+                "Ginger",
+                "Lemon Juice",
+                "Raw Honey",
+                "Filtered Water"
+            ]
+        }
     ]
 };

@@ -3,34 +3,6 @@ import { menuByDay } from './RitualMenuJson';
 import foodImages from '../utils/foodImages';
 import productBowl from '../assets/product_bowl.png'; // Fallback
 
-const LazyImage = ({ src, alt, className, containerClassName = "" }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState(false);
-
-  // Reset state when src changes
-  useEffect(() => {
-    setIsLoaded(false);
-    setError(false);
-  }, [src]);
-
-  return (
-    <div className={`relative overflow-hidden ${containerClassName}`}>
-      {!isLoaded && !error && (
-        <div className="absolute inset-0 flex items-center justify-center bg-brand-beige/5 animate-pulse">
-          <div className="w-6 h-6 border-2 border-brand-sage/20 border-t-brand-sage rounded-full animate-spin"></div>
-        </div>
-      )}
-      <img
-        src={src}
-        alt={alt}
-        onLoad={() => setIsLoaded(true)}
-        onError={() => setError(true)}
-        className={`${className} transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      />
-    </div>
-  );
-};
-
 const MealModal = ({ meal, onClose }) => {
   if (!meal) return null;
 
@@ -55,11 +27,10 @@ const MealModal = ({ meal, onClose }) => {
 
         {/* Left: Product Image */}
         <div className="w-full md:w-1/2 h-[40vh] md:h-auto bg-[#f9f7f4] relative">
-          <LazyImage
+          <img
             src={meal.img}
             alt={meal.title}
             className="w-full h-full object-cover"
-            containerClassName="w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden"></div>
         </div>
@@ -222,11 +193,10 @@ const DailyMenu = () => {
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col cursor-pointer hover:-translate-y-1"
             >
               <div className="relative pt-[80%] overflow-hidden bg-[#f9f7f4]">
-                <LazyImage
+                <img
                   src={meal.img}
                   alt={meal.title}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  containerClassName="absolute inset-0"
                 />
                 <div className="absolute inset-0 bg-brand-olive/0 group-hover:bg-brand-olive/10 transition-colors duration-300 flex items-center justify-center">
                   <span className="bg-white/90 text-brand-olive text-[10px] font-bold tracking-[2px] uppercase py-2.5 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg">View Details</span>
