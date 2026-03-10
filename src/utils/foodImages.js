@@ -4,7 +4,7 @@
 const foodImages = {};
 
 // Use Vite's glob import to get all images in the fooditems folder
-const images = import.meta.glob('../assets/fooditems/*.{png,jpg,jpeg,svg}', { eager: true });
+const images = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { eager: true });
 
 for (const path in images) {
   // Extract filename without extension (e.g., "image1")
