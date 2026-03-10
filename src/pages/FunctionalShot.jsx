@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import shotsLineupImg from '../assets/shot.PNG';
 import shotsLineupImgMobile from '../assets/footer_bg_.png';
 
@@ -55,6 +56,11 @@ const FunctionalShot = () => {
 
   return (
     <div className="pb-16">
+      <SEO 
+        title="Functional Shot Therapy" 
+        description="Discover our cold-pressed functional shots designed for skin health, metabolism, and immunity. 100% natural, scientifically backed nutrition."
+        keywords="Functional Drinks Chennai, Cold Pressed Shots, Immunity Boosters, Skin Health Drinks"
+      />
       <PageHeader
         title="Functional Shots"
         subtitle="Eat Your Skin Care — 60ml of potent, functional wellness in every bottle."
@@ -132,7 +138,7 @@ const FunctionalShot = () => {
             <div key={idx} className="bg-white rounded-[20px] border border-brand-beige/20 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
               <div className={`h-2 ${shot.color}`}></div>
               <div className="p-6">
-                <div className={`w-10 h-10 rounded-xl ${shot.color} flex items-center justify-center text-white font-bold text-xs mb-4 shadow-inner`}>
+                <div className={`w-10 h-10 rounded-md ${shot.color} flex items-center justify-center text-white font-bold text-xs mb-4 shadow-inner`}>
                   {String(idx + 1).padStart(2, '0')}
                 </div>
                 <h4 className="text-lg font-serif text-brand-olive mb-1">{shot.name}</h4>
@@ -166,7 +172,7 @@ const FunctionalShot = () => {
               {weeklyRotation.map((item, idx) => {
                 const isToday = idx === (new Date().getDay() === 0 ? 6 : new Date().getDay() - 1);
                 return (
-                  <div key={idx} className={`p-4 rounded-xl border transition-all ${isToday ? 'bg-white/15 border-white/30 shadow-lg' : 'bg-white/5 border-white/10 hover:bg-white/10'}`}>
+                  <div key={idx} className={`p-4 rounded-md border transition-all ${isToday ? 'bg-white/15 border-white/30 shadow-lg' : 'bg-white/5 border-white/10 hover:bg-white/10'}`}>
                     <span className={`text-[10px] uppercase tracking-widest font-bold block mb-3 ${isToday ? 'text-brand-beige' : 'text-white/40'}`}>{item.day}</span>
                     <p className="text-white font-serif text-sm mb-1">{item.shot}</p>
                     <p className="text-[10px] text-brand-beige/60 uppercase tracking-widest font-bold">{item.focus}</p>
@@ -202,7 +208,7 @@ const FunctionalShot = () => {
         <div className="text-center mt-12">
           <Link
             to="/#plans"
-            className="inline-block bg-brand-olive text-white px-10 py-4 rounded-xl font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg"
+            className="inline-block bg-brand-olive text-white px-10 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm"
           >
             Start Your Ritual
           </Link>

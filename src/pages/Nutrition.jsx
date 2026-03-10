@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 
 const Nutrition = () => {
   const pillars = [
@@ -56,6 +57,11 @@ const Nutrition = () => {
 
   return (
     <div className="pb-16">
+      <SEO 
+        title="Precision Nutrition & Macros" 
+        description="Learn about the Ritual nutrition standard. Precision macros, gut health, and clean label ingredients for optimal metabolic wellness."
+        keywords="Precision Nutrition Chennai, Macro Balanced Meals, Gut Health Chennai, Clean Eating"
+      />
       <PageHeader
         title="Nutrition"
         subtitle="Optimizing your health through nutrient density and functional ingredients."
@@ -68,7 +74,7 @@ const Nutrition = () => {
             <div key={idx} className="bg-white rounded-[20px] border border-brand-beige/20 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="h-2 bg-brand-sage"></div>
               <div className="p-6">
-                <div className="w-12 h-12 rounded-xl bg-brand-sage/10 flex items-center justify-center text-brand-sage mb-4">
+                <div className="w-12 h-12 rounded-md bg-brand-sage/10 flex items-center justify-center text-brand-sage mb-4">
                   {item.icon}
                 </div>
                 <h4 className="text-lg font-serif text-brand-olive mb-2">{item.title}</h4>
@@ -138,7 +144,7 @@ const Nutrition = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {principles.map((item, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                <div key={idx} className="p-5 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                   <div className="flex items-center gap-2 mb-2">
                     <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     <p className="text-white font-serif text-sm">{item.title}</p>
@@ -180,7 +186,7 @@ const Nutrition = () => {
         <div className="text-center mt-12">
           <Link
             to="/#plans"
-            className="inline-block bg-brand-olive text-white px-10 py-4 rounded-xl font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm"
+            className="inline-block bg-brand-olive text-white px-10 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm"
           >
             Choose Your Plan
           </Link>

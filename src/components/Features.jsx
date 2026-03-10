@@ -10,7 +10,7 @@ const FeatureItem = ({ image, title, description }) => (
     <div className="w-16 h-16 rounded-full bg-brand-sage flex items-center justify-center mb-4 shadow-sm p-3">
       <img
         src={image}
-        alt={title}
+        alt={`Ritual Wellness Feature: ${title}`}
         className="w-full h-full object-contain brightness-0 invert"
       />
     </div>

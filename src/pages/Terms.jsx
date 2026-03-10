@@ -316,7 +316,7 @@ const Terms = () => {
                   <h3 className="text-xl font-serif font-medium mb-1">Have questions about our terms?</h3>
                   <p className="text-brand-beige/70 text-sm">We're happy to clarify anything before you subscribe.</p>
                 </div>
-                <Link to="/contact" className="inline-block bg-brand-beige text-brand-olive px-8 py-3 rounded-xl font-medium uppercase tracking-[2px] hover:bg-white transition-all shadow-md text-sm whitespace-nowrap">
+                <Link to="/contact" className="inline-block bg-brand-beige text-brand-olive px-8 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-white transition-all shadow-md text-sm whitespace-nowrap">
                   Contact Us
                 </Link>
               </div>

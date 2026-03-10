@@ -142,7 +142,7 @@ const Corporate = () => {
                 { step: '02', title: 'Get a Custom Proposal', desc: 'Our corporate wellness team creates a tailored plan with pricing and menu options.' },
                 { step: '03', title: 'Start Delivering', desc: 'Once approved, we begin daily deliveries. Your team stays fueled, focused, and happy.' },
               ].map((item, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                <div key={idx} className="p-5 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                   <span className="text-[10px] uppercase tracking-widest font-bold text-brand-beige/50 block mb-3">Step {item.step}</span>
                   <p className="text-white font-serif text-lg mb-2">{item.title}</p>
                   <p className="text-[12px] text-brand-beige/60 font-light leading-relaxed">{item.desc}</p>
@@ -205,7 +205,7 @@ const Corporate = () => {
                 <label className="text-[10px] font-bold uppercase tracking-[2px] text-brand-sage/60 ml-1">Company Name *</label>
                 <input
                   type="text"
-                  className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
+                  className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
                   required
                   value={formData.companyName}
                   onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
@@ -217,7 +217,7 @@ const Corporate = () => {
                   <label className="text-[10px] font-bold uppercase tracking-[2px] text-brand-sage/60 ml-1">Contact Person *</label>
                   <input
                     type="text"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
                     required
                     value={formData.contactName}
                     onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
@@ -229,7 +229,7 @@ const Corporate = () => {
                   <input
                     type="tel"
                     placeholder="10-digit number"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
                     required
                     value={formData.phone}
                     onChange={handlePhoneChange}
@@ -242,7 +242,7 @@ const Corporate = () => {
                   <label className="text-[10px] font-bold uppercase tracking-[2px] text-brand-sage/60 ml-1">Email Address</label>
                   <input
                     type="email"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     disabled={isSubmitting}
@@ -251,7 +251,7 @@ const Corporate = () => {
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold uppercase tracking-[2px] text-brand-sage/60 ml-1">Team Size *</label>
                   <select
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive appearance-none"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive appearance-none"
                     required
                     value={formData.teamSize}
                     onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
@@ -269,7 +269,7 @@ const Corporate = () => {
                 <textarea
                   rows="3"
                   placeholder="Dietary preferences, delivery schedule, special requests..."
-                  className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive resize-none placeholder:text-brand-sage/30"
+                  className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive resize-none placeholder:text-brand-sage/30"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   disabled={isSubmitting}
@@ -278,7 +278,7 @@ const Corporate = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 bg-brand-olive text-white rounded-xl font-medium uppercase tracking-[2px] transition-all shadow-lg flex items-center justify-center gap-3 text-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-0.5'}`}
+                className={`w-full py-4 bg-brand-olive text-white rounded-md font-medium uppercase tracking-[2px] transition-all shadow-lg flex items-center justify-center gap-3 text-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-0.5'}`}
               >
                 {isSubmitting ? (
                   <>

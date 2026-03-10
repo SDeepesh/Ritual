@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Toast from '../components/Toast';
+import SEO from '../components/SEO';
 import { enquiryStore } from '../utils/enquiryStore';
 
 // ─── Config ──────────────────────────────────────────────────────────────────
@@ -24,7 +25,7 @@ const DELIVERY_PINCODES = [
 // ─── Component ────────────────────────────────────────────────────────────────
 const StartRitual = () => {
   const [searchParams] = useSearchParams();
-  const [selectedPlan, setSelectedPlan] = useState(7);
+  const [selectedPlan, setSelectedPlan] = useState(28);
   const [pincode, setPincode] = useState('');
   const [pincodeResult, setPincodeResult] = useState(null); // null | 'success' | 'error'
   const [isLocating, setIsLocating] = useState(false);
@@ -174,6 +175,11 @@ const StartRitual = () => {
   // ─── Render ───────────────────────────────────────────────────────────────
   return (
     <div className="pb-20 bg-[#faf8f5] min-h-screen">
+      <SEO 
+        title="Start Your Ritual | Chennai Meal Delivery" 
+        description="Choose your nourishment cycle and start your wellness ritual today. Premium healthy meal delivery in Chennai with localized delivery tracking."
+        keywords="Start Ritual, Meal Plan Subscription Chennai, Healthy Delivery"
+      />
       {showToast && <Toast message={toastMsg} onClose={() => setShowToast(false)} />}
 
       {/* ── Hero (using PageHeader for correct header visibility) ── */}
@@ -203,17 +209,17 @@ const StartRitual = () => {
                   if (v.length <= 6) setPincode(v);
                   setPincodeResult(null);
                 }}
-                className="flex-1 rounded-xl px-5 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all tracking-[4px] text-center sm:text-left text-sm font-medium"
+                className="flex-1 rounded-md px-5 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all tracking-[4px] text-center sm:text-left text-sm font-medium"
               />
               <button
                 type="submit"
-                className="px-8 py-3 rounded-xl bg-brand-beige text-brand-olive font-medium uppercase tracking-[2px] text-sm hover:bg-white transition-all shadow-md"
+                className="px-8 py-3 rounded-md bg-brand-beige text-brand-olive font-medium uppercase tracking-[2px] text-sm hover:bg-white transition-all shadow-md"
               >
                 Check Now
               </button>
             </form>
             {pincodeResult && (
-              <div className={`mt-4 p-4 rounded-xl flex items-center gap-3 max-w-lg transition-all ${pincodeResult === 'success' ? 'bg-green-500/20 border border-green-400/30 text-green-100' : 'bg-orange-500/20 border border-orange-400/30 text-orange-100'}`}>
+              <div className={`mt-4 p-4 rounded-md flex items-center gap-3 max-w-lg transition-all ${pincodeResult === 'success' ? 'bg-green-500/20 border border-green-400/30 text-green-100' : 'bg-orange-500/20 border border-orange-400/30 text-orange-100'}`}>
                 <div className={`w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center ${pincodeResult === 'success' ? 'bg-green-500' : 'bg-orange-500'}`}>
                   {pincodeResult === 'success'
                     ? <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
@@ -263,7 +269,7 @@ const StartRitual = () => {
             </div>
 
             {/* Plan Summary */}
-            <div className="bg-brand-olive/5 rounded-xl p-4 flex flex-wrap gap-6 items-center">
+            <div className="bg-brand-olive/5 rounded-md p-4 flex flex-wrap gap-6 items-center">
               <div>
                 <span className="text-[9px] uppercase tracking-[2px] text-brand-sage/60 font-bold block mb-0.5">Selected Plan</span>
                 <span className="text-2xl font-serif text-brand-olive font-medium">{selectedPlan} Days</span>
@@ -303,7 +309,7 @@ const StartRitual = () => {
                     onChange={setField('name')}
                     disabled={isSubmitting}
                     placeholder="e.g. Priya Sharma"
-                    className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
+                    className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -333,7 +339,7 @@ const StartRitual = () => {
                   onChange={setField('email')}
                   disabled={isSubmitting}
                   placeholder="e.g. priya@email.com"
-                  className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
+                  className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
                 />
               </div>
 
@@ -365,11 +371,10 @@ const StartRitual = () => {
                   onChange={setField('address')}
                   disabled={isSubmitting}
                   placeholder="Your full delivery address (house/flat no., street, area, city)"
-                  className={`w-full bg-brand-beige/5 border rounded-xl px-5 py-4 focus:ring-1 transition-all outline-none text-brand-olive placeholder:text-brand-sage/30 resize-none ${
-                    form.address && pincode && !form.address.includes(pincode) 
-                    ? 'border-orange-300 focus:ring-orange-300 focus:border-orange-300' 
-                    : 'border-brand-beige/20 focus:ring-brand-sage focus:border-brand-sage'
-                  }`}
+                  className={`w-full bg-brand-beige/5 border rounded-md px-5 py-4 focus:ring-1 transition-all outline-none text-brand-olive placeholder:text-brand-sage/30 resize-none ${form.address && pincode && !form.address.includes(pincode)
+                      ? 'border-orange-300 focus:ring-orange-300 focus:border-orange-300'
+                      : 'border-brand-beige/20 focus:ring-brand-sage focus:border-brand-sage'
+                    }`}
                 />
                 <div className="flex justify-between items-center mt-1">
                   {form.latitude && (
@@ -399,7 +404,7 @@ const StartRitual = () => {
                   value={form.dietaryPreference}
                   onChange={setField('dietaryPreference')}
                   disabled={isSubmitting}
-                  className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive appearance-none cursor-pointer"
+                  className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive appearance-none cursor-pointer"
                 >
                   <option value="" disabled>Select preference…</option>
                   <option value="Vegetarian">Vegetarian</option>
@@ -417,7 +422,7 @@ const StartRitual = () => {
                   onChange={setField('message')}
                   disabled={isSubmitting}
                   placeholder="Any allergies, health conditions, or special requests…"
-                  className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30 resize-none"
+                  className="w-full bg-brand-beige/5 border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30 resize-none"
                 />
               </div>
 
@@ -440,7 +445,7 @@ const StartRitual = () => {
 
               {/* Delivery not available notice */}
               {pincodeResult === 'error' && (
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 flex items-center gap-3">
+                <div className="bg-orange-50 border border-orange-200 rounded-md p-4 flex items-center gap-3">
                   <svg className="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <p className="text-orange-700 text-sm">We don't currently deliver to pincode <strong>{pincode}</strong>. We're expanding soon — your interest is noted!</p>
                 </div>
@@ -450,7 +455,7 @@ const StartRitual = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || pincodeResult !== 'success'}
-                className={`w-full py-5 rounded-xl font-medium uppercase tracking-[3px] text-sm transition-all shadow-xl flex items-center justify-center gap-3 ${isSubmitting || pincodeResult !== 'success'
+                className={`w-full py-5 rounded-md font-medium uppercase tracking-[3px] text-sm transition-all shadow-xl flex items-center justify-center gap-3 ${isSubmitting || pincodeResult !== 'success'
                   ? 'bg-brand-olive/40 text-white cursor-not-allowed'
                   : 'bg-brand-olive text-white hover:bg-brand-sage hover:-translate-y-0.5'
                   }`}
@@ -466,7 +471,7 @@ const StartRitual = () => {
                   </>
                 )}
               </button>
-              
+
               {!pincodeResult && (
                 <p className="text-center text-[10px] text-orange-500 font-bold uppercase tracking-widest mt-2 animate-pulse">
                   Please check delivery availability first (Step 1)

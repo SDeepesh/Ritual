@@ -26,12 +26,12 @@ const DELIVERY_PINCODES = [
 const PincodeChecker = ({ theme = 'dark', value, onChange, onResult }) => {
   // Internal state used only in uncontrolled mode
   const [internalPincode, setInternalPincode] = useState('');
-  const [internalResult, setInternalResult]   = useState(null);
+  const [internalResult, setInternalResult] = useState(null);
 
   const isControlled = value !== undefined;
 
-  const pincode     = isControlled ? value : internalPincode;
-  const checkResult = isControlled ? null  : internalResult; // controlled callers track result themselves
+  const pincode = isControlled ? value : internalPincode;
+  const checkResult = isControlled ? null : internalResult; // controlled callers track result themselves
 
   const handleChange = (raw) => {
     const val = raw.replace(/\D/g, '');
@@ -56,7 +56,7 @@ const PincodeChecker = ({ theme = 'dark', value, onChange, onResult }) => {
     }
   };
 
-  const isDark       = theme === 'dark';
+  const isDark = theme === 'dark';
   const displayResult = isControlled ? null : checkResult; // in controlled mode the parent renders its own feedback
 
   return (
@@ -75,7 +75,7 @@ const PincodeChecker = ({ theme = 'dark', value, onChange, onResult }) => {
             className={`flex-1 rounded-md px-5 py-3 outline-none transition-all font-medium tracking-[4px] text-center sm:text-left text-sm ${isDark
               ? 'bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:bg-white/20'
               : 'bg-white border border-brand-beige/30 text-brand-olive placeholder:text-brand-sage/40 focus:ring-1 focus:ring-brand-sage'
-            }`}
+              }`}
           />
           <button
             type="submit"
@@ -87,10 +87,10 @@ const PincodeChecker = ({ theme = 'dark', value, onChange, onResult }) => {
 
         {/* Result feedback — only shown in uncontrolled mode; controlled callers render their own */}
         {displayResult && (
-          <div className={`mt-6 p-4 rounded-xl flex items-center gap-4 animate-in fade-in slide-in-from-top-2 duration-500 ${displayResult === 'success'
+          <div className={`mt-6 p-4 rounded-md flex items-center gap-4 animate-in fade-in slide-in-from-top-2 duration-500 ${displayResult === 'success'
             ? 'bg-green-500/20 border border-green-500/30 text-green-100'
             : 'bg-orange-500/20 border border-orange-500/30 text-orange-100'
-          }`}>
+            }`}>
             <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center ${displayResult === 'success' ? 'bg-green-500 text-white' : 'bg-orange-500 text-white'}`}>
               {displayResult === 'success' ? (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>

@@ -26,15 +26,15 @@ const Gifting = () => {
 
   return (
     <div className="pb-24">
-      <PageHeader 
-        title="Gifting" 
-        subtitle="Give the gift of wellness and mindful nourishment." 
+      <PageHeader
+        title="Gifting"
+        subtitle="Give the gift of wellness and mindful nourishment."
       />
-      
+
       {showToast && (
-        <Toast 
-          message={`Inquiry received for ${giftType}! We'll contact you to finalize the gift.`} 
-          onClose={() => setShowToast(false)} 
+        <Toast
+          message={`Inquiry received for ${giftType}! We'll contact you to finalize the gift.`}
+          onClose={() => setShowToast(false)}
         />
       )}
 
@@ -49,10 +49,10 @@ const Gifting = () => {
               <div className="w-16 h-16 bg-brand-sage/5 rounded-full flex items-center justify-center mx-auto text-3xl">🎁</div>
               <h3 className="text-xl font-serif text-brand-olive tracking-widest uppercase">Digital Gift Card</h3>
               <p className="text-brand-sage/60 text-sm italic">Flexible credits for any Ritual plan.</p>
-              <button 
+              <button
                 onClick={() => handleGiftInquiry('Digital Gift Card')}
                 disabled={isSubmitting}
-                className="w-full py-4 border border-brand-olive text-brand-olive rounded-xl font-bold uppercase tracking-[2px] hover:bg-brand-sage hover:border-brand-sage hover:text-white transition-all disabled:opacity-50"
+                className="w-full py-4 border border-brand-olive text-brand-olive rounded-md font-bold uppercase tracking-[2px] hover:bg-brand-sage hover:border-brand-sage hover:text-white transition-all disabled:opacity-50"
               >
                 {isSubmitting && giftType === 'Digital Gift Card' ? 'Processing...' : 'Buy Gift Card'}
               </button>
@@ -61,10 +61,10 @@ const Gifting = () => {
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto text-3xl">🥘</div>
               <h3 className="text-xl font-serif tracking-widest uppercase">1-Week Subscription</h3>
               <p className="text-brand-beige/50 text-sm italic">7 days of gourmet, functional nutrition.</p>
-              <button 
+              <button
                 onClick={() => handleGiftInquiry('1-Week Subscription')}
                 disabled={isSubmitting}
-                className="w-full py-4 bg-brand-olive text-white rounded-xl font-bold uppercase tracking-[2px] hover:bg-brand-sage transition-all disabled:opacity-50"
+                className="w-full py-4 bg-brand-olive text-white rounded-md font-bold uppercase tracking-[2px] hover:bg-brand-sage transition-all disabled:opacity-50"
               >
                 {isSubmitting && giftType === '1-Week Subscription' ? 'Processing...' : 'Gift a Week'}
               </button>

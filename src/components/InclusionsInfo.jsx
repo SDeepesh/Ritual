@@ -37,7 +37,7 @@ const InclusionsInfo = () => {
           </div>
           <div className="flex-1 relative w-full">
             <div className="aspect-[4/5] rounded-[20px] overflow-hidden shadow-2xl transform md:rotate-1 hover:rotate-0 transition-transform duration-700">
-              <img src={trioDeskImg} alt="Ritual Lunch Setup" className="w-full h-full object-cover" />
+              <img src={trioDeskImg} alt="Ritual Lunch Setup: Power Bowl, Functional Shot, and Infused Water" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 bg-brand-olive text-white p-5 rounded-full shadow-2xl animate-bounce-slow z-20 scale-90 md:scale-100">
               <div className="text-center">
@@ -59,16 +59,16 @@ const InclusionsInfo = () => {
               We cater to all dietary preferences while maintaining the same nutritional integrity across every functional plan.
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 w-full">
-              <div className="flex items-center gap-4 bg-white p-[10px] rounded-xl md:rounded-2xl shadow-sm border border-brand-beige/20 hover:shadow-md transition-shadow flex-1">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex-shrink-0 flex items-center justify-center text-white font-bold text-[10px] md:text-xs shadow-inner bg-green-600">V</div>
+              <div className="flex items-center gap-4 bg-white p-[10px] rounded-md md:rounded-2xl shadow-sm border border-brand-beige/20 hover:shadow-md transition-shadow flex-1">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-md flex-shrink-0 flex items-center justify-center text-white font-bold text-[10px] md:text-xs shadow-inner bg-green-600">V</div>
                 <span className="text-brand-olive text-base md:text-lg">Plant Based / Vegan</span>
               </div>
-              <div className="flex items-center gap-4 bg-white p-[10px] rounded-xl md:rounded-2xl shadow-sm border border-brand-beige/20 hover:shadow-md transition-shadow flex-1">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex-shrink-0 flex items-center justify-center text-white font-bold text-[10px] md:text-xs shadow-inner bg-orange-500">VG</div>
+              <div className="flex items-center gap-4 bg-white p-[10px] rounded-md md:rounded-2xl shadow-sm border border-brand-beige/20 hover:shadow-md transition-shadow flex-1">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-md flex-shrink-0 flex items-center justify-center text-white font-bold text-[10px] md:text-xs shadow-inner bg-orange-500">VG</div>
                 <span className="text-brand-olive text-base md:text-lg">Vegetarian</span>
               </div>
-              <div className="flex items-center gap-4 bg-white p-[10px] rounded-xl md:rounded-2xl shadow-sm border border-brand-beige/20 hover:shadow-md transition-shadow flex-1">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex-shrink-0 flex items-center justify-center text-white font-bold text-[10px] md:text-xs shadow-inner bg-red-500">NV</div>
+              <div className="flex items-center gap-4 bg-white p-[10px] rounded-md md:rounded-2xl shadow-sm border border-brand-beige/20 hover:shadow-md transition-shadow flex-1">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-md flex-shrink-0 flex items-center justify-center text-white font-bold text-[10px] md:text-xs shadow-inner bg-red-500">NV</div>
                 <span className="text-brand-olive text-base md:text-lg">Non-Vegetarian</span>
               </div>
             </div>
@@ -116,7 +116,7 @@ const InclusionsInfo = () => {
           </div>
           <div className="flex-1 w-full">
             <div className="rounded-[20px] overflow-hidden shadow-2xl relative group">
-              <img src={glowShotImg} alt="Eat Your Skin Care Campaign" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" />
+              <img src={glowShotImg} alt="Ritual 'Eat Your Skin Care' Campaign — The Glow Shot elixirs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/50 via-transparent to-transparent flex items-end p-6 md:p-12">
                 <div>
                   <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">Campaign 01</span>

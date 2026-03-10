@@ -9,6 +9,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import FooterCTA from '../components/FooterCTA';
 import InclusionsInfo from '../components/InclusionsInfo';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const { hash } = useLocation();
@@ -28,6 +29,11 @@ const Home = () => {
 
   return (
     <main>
+      <SEO 
+        title="Premium Wellness Bowls Chennai" 
+        description="Premium Wellness Bowls & Functional Nutrition delivered fresh in Chennai. Precision macros, clean label, artisanal ingredients. Reset your ritual today."
+        keywords="Meal Delivery Chennai, Healthy Food, Wellness Ritual, Keto Chennai, Vegan Meal Plan"
+      />
       <div id="home"><Hero /></div>
       <Features />
       <InclusionsInfo />

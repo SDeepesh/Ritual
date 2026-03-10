@@ -6,7 +6,7 @@ import { enquiryStore } from '../utils/enquiryStore';
 
 const PlanCalculator = () => {
   const navigate = useNavigate();
-  const [selectedPlan, setSelectedPlan] = useState(7);
+  const [selectedPlan, setSelectedPlan] = useState(28);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [name, setName] = useState('');
@@ -44,10 +44,10 @@ const PlanCalculator = () => {
         phoneNumber: phone,
         amount: totalAmount
       });
-      
+
       // Navigate to Start Ritual page with pre-filled info
       navigate(`/start-ritual?name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&plan=${selectedPlan}`);
-      
+
     } catch (err) {
       console.error('Submission error:', err);
     } finally {
@@ -99,7 +99,7 @@ const PlanCalculator = () => {
               <p className="text-brand-sage text-[10px] font-bold tracking-[2px] uppercase mb-2">Your Ritual Choice</p>
               <h3 className="text-3xl font-serif text-brand-olive">Personal Plan</h3>
             </div>
-            <div className="bg-brand-sage/10 text-brand-sage px-4 py-2 rounded-xl text-[10px] font-bold tracking-widest uppercase">
+            <div className="bg-brand-sage/10 text-brand-sage px-4 py-2 rounded-md text-[10px] font-bold tracking-widest uppercase">
               Save {discountPercent}% Now
             </div>
           </div>

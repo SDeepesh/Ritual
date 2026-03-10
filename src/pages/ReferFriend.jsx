@@ -119,15 +119,14 @@ const ReferFriend = () => {
                   type="text"
                   readOnly
                   value={referralLink}
-                  className="flex-1 bg-white/10 border border-white/20 rounded-xl px-5 py-3 text-white/80 font-mono text-sm focus:outline-none truncate"
+                  className="flex-1 bg-white/10 border border-white/20 rounded-md px-5 py-3 text-white/80 font-mono text-sm focus:outline-none truncate"
                 />
                 <button
                   onClick={handleCopy}
-                  className={`px-8 py-3 rounded-xl font-medium uppercase tracking-[2px] transition-all shadow-md text-sm flex items-center justify-center gap-2 ${
-                    copied
+                  className={`px-8 py-3 rounded-md font-medium uppercase tracking-[2px] transition-all shadow-md text-sm flex items-center justify-center gap-2 ${copied
                       ? 'bg-green-500 text-white'
                       : 'bg-brand-beige text-brand-olive hover:bg-white'
-                  }`}
+                    }`}
                 >
                   {copied ? (
                     <>
@@ -165,7 +164,7 @@ const ReferFriend = () => {
             <div key={idx} className="bg-white rounded-[20px] border border-brand-beige/20 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="h-2 bg-brand-sage"></div>
               <div className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-brand-sage/10 flex items-center justify-center text-brand-sage mb-4">
+                <div className="w-12 h-12 rounded-md bg-brand-sage/10 flex items-center justify-center text-brand-sage mb-4">
                   {item.icon}
                 </div>
                 <h4 className="text-lg font-serif text-brand-olive mb-2">{item.title}</h4>
@@ -193,7 +192,7 @@ const ReferFriend = () => {
 
             <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-md bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
@@ -202,7 +201,7 @@ const ReferFriend = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-md bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 </div>
                 <div>
@@ -211,7 +210,7 @@ const ReferFriend = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-md bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                 </div>
                 <div>
@@ -233,7 +232,7 @@ const ReferFriend = () => {
                   <label className="text-[10px] font-bold uppercase tracking-[2px] text-brand-sage/60 ml-1">Your Name *</label>
                   <input
                     type="text"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
                     required
                     value={formData.yourName}
                     onChange={(e) => setFormData({ ...formData, yourName: e.target.value })}
@@ -245,7 +244,7 @@ const ReferFriend = () => {
                   <input
                     type="tel"
                     placeholder="10-digit number"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
                     required
                     value={formData.yourPhone}
                     onChange={(e) => handlePhoneChange('yourPhone', e.target.value)}
@@ -262,7 +261,7 @@ const ReferFriend = () => {
                   <label className="text-[10px] font-bold uppercase tracking-[2px] text-brand-sage/60 ml-1">Friend's Name *</label>
                   <input
                     type="text"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive"
                     required
                     value={formData.friendName}
                     onChange={(e) => setFormData({ ...formData, friendName: e.target.value })}
@@ -274,7 +273,7 @@ const ReferFriend = () => {
                   <input
                     type="tel"
                     placeholder="10-digit number"
-                    className="w-full bg-white border border-brand-beige/20 rounded-xl px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
+                    className="w-full bg-white border border-brand-beige/20 rounded-md px-5 py-4 focus:ring-1 focus:ring-brand-sage focus:border-brand-sage transition-all outline-none text-brand-olive placeholder:text-brand-sage/30"
                     required
                     value={formData.friendPhone}
                     onChange={(e) => handlePhoneChange('friendPhone', e.target.value)}
@@ -286,7 +285,7 @@ const ReferFriend = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 bg-brand-olive text-white rounded-xl font-medium uppercase tracking-[2px] transition-all shadow-lg flex items-center justify-center gap-3 text-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-0.5'}`}
+                className={`w-full py-4 bg-brand-olive text-white rounded-md font-medium uppercase tracking-[2px] transition-all shadow-lg flex items-center justify-center gap-3 text-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-sage hover:-translate-y-0.5'}`}
               >
                 {isSubmitting ? (
                   <>

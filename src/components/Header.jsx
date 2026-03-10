@@ -122,7 +122,7 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="mt-auto flex flex-col gap-4 mb-8">
+        <div className="mt-auto flex flex-col gap-4 mb-20">
           <Link
             to="/start-ritual"
             onClick={() => setIsMobileMenuOpen(false)}

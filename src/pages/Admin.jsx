@@ -112,21 +112,21 @@ const Admin = () => {
       {item.status === 'new' ? (
         <button
           onClick={() => onStatusUpdate(item.id, 'responded')}
-          className="bg-brand-olive/80 hover:bg-brand-sage hover:text-white text-white p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all shadow-lg w-full md:w-auto"
+          className="bg-brand-olive/80 hover:bg-brand-sage hover:text-white text-white p-3 rounded-md text-[10px] font-medium uppercase tracking-widest transition-all shadow-lg w-full md:w-auto"
         >
           Mark Responded
         </button>
       ) : (
         <button
           onClick={() => onStatusUpdate(item.id, 'new')}
-          className="bg-white/10 hover:bg-white text-white p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all w-full md:w-auto"
+          className="bg-white/10 hover:bg-white text-white p-3 rounded-md text-[10px] font-medium uppercase tracking-widest transition-all w-full md:w-auto"
         >
           Re-open
         </button>
       )}
       <button
         onClick={() => onDelete(item.id)}
-        className="bg-red-500/10 hover:bg-red-500 text-red-400 p-3 rounded-xl text-[10px] font-medium uppercase tracking-widest transition-all w-full md:w-auto"
+        className="bg-red-500/10 hover:bg-red-500 text-red-400 p-3 rounded-md text-[10px] font-medium uppercase tracking-widest transition-all w-full md:w-auto"
       >
         Delete
       </button>
@@ -152,7 +152,7 @@ const Admin = () => {
               {user && (
                 <button
                   onClick={handleLogout}
-                  className="bg-white/5 hover:bg-white/10 text-white/40 hover:text-white px-4 py-2 rounded-xl text-[9px] font-bold uppercase tracking-[2px] transition-all border border-white/5"
+                  className="bg-white/5 hover:bg-white/10 text-white/40 hover:text-white px-4 py-2 rounded-md text-[9px] font-bold uppercase tracking-[2px] transition-all border border-white/5"
                 >
                   Logout
                 </button>
@@ -186,7 +186,7 @@ const Admin = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all flex items-center gap-2 ${activeTab === tab.id
+              className={`px-6 py-2.5 rounded-md text-[10px] font-bold uppercase tracking-[2px] transition-all flex items-center gap-2 ${activeTab === tab.id
                 ? 'bg-white text-brand-olive shadow-lg'
                 : 'hover:bg-white/5 text-white/50'
                 }`}
@@ -210,7 +210,7 @@ const Admin = () => {
                 <button
                   key={f}
                   onClick={() => setEnqFilter(f)}
-                  className={`px-5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all ${enqFilter === f ? 'bg-brand-olive text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
+                  className={`px-5 py-2 rounded-md text-[10px] font-bold uppercase tracking-[2px] transition-all ${enqFilter === f ? 'bg-brand-olive text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
                     }`}
                 >
                   {f} ({f === 'all' ? enqStats.total : enqStats[f]})
@@ -276,7 +276,7 @@ const Admin = () => {
                 <button
                   key={f}
                   onClick={() => setSignupFilter(f)}
-                  className={`px-5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[2px] transition-all ${signupFilter === f ? 'bg-brand-olive text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
+                  className={`px-5 py-2 rounded-md text-[10px] font-bold uppercase tracking-[2px] transition-all ${signupFilter === f ? 'bg-brand-olive text-white shadow-lg' : 'hover:bg-white/5 text-white/40'
                     }`}
                 >
                   {f} ({f === 'all' ? signupStats.total : signupStats[f]})
@@ -371,7 +371,7 @@ const Admin = () => {
                             {signup.email && (
                               <a
                                 href={`mailto:${signup.email}?subject=Your Ritual Wellness Plan&body=Hi ${signup.name}, thank you for signing up for your ${signup.plan_days}-day Ritual!`}
-                                className="inline-flex items-center gap-2 bg-blue-500/10 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-[9px] font-bold uppercase tracking-[1px] transition-all"
+                                className="inline-flex items-center gap-2 bg-blue-500/10 hover:bg-blue-500 text-white px-4 py-2 rounded-md text-[9px] font-bold uppercase tracking-[1px] transition-all"
                               >
                                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                 Email Customer

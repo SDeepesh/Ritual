@@ -117,7 +117,7 @@ const DeliveryArea = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-white/40 focus:bg-white/20 outline-none transition-all"
+                className="flex-1 bg-white/10 border border-white/20 rounded-md px-6 py-4 text-white placeholder:text-white/40 focus:bg-white/20 outline-none transition-all"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -126,7 +126,7 @@ const DeliveryArea = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`bg-brand-beige text-brand-olive px-8 py-4 rounded-xl font-medium uppercase tracking-[2px] transition-all shadow-md flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white'}`}
+                className={`bg-brand-beige text-brand-olive px-8 py-4 rounded-md font-medium uppercase tracking-[2px] transition-all shadow-md flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white'}`}
               >
                 {isSubmitting ? (
                   <span className="w-5 h-5 border-2 border-brand-olive/30 border-t-brand-olive rounded-full animate-spin"></span>

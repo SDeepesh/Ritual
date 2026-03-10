@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { menuByDay } from './RitualMenuJson';
 import foodImages from '../utils/foodImages';
 import productBowl from '../assets/product_bowl.png'; // Fallback
@@ -73,14 +74,14 @@ const MealModal = ({ meal, onClose }) => {
             <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-4 border-b border-brand-beige/30 pb-3">Artisanal Ingredients</h4>
             <div className="flex flex-wrap gap-2">
               {meal.ingredients.map((ing, i) => (
-                <span key={i} className="text-[11px] px-4 py-2 bg-white text-brand-olive rounded-xl border border-brand-beige/40 shadow-sm font-medium">
+                <span key={i} className="text-[11px] px-4 py-2 bg-white text-brand-olive rounded-md border border-brand-beige/40 shadow-sm font-medium">
                   {ing}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* <button className="mt-auto w-full bg-brand-sage hover:bg-brand-olive text-white py-5 rounded-xl font-bold tracking-[3px] uppercase transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          {/* <button className="mt-auto w-full bg-brand-sage hover:bg-brand-olive text-white py-5 rounded-md font-bold tracking-[3px] uppercase transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-1">
             Add to My Ritual Plan
           </button> */}
         </div>
@@ -190,7 +191,7 @@ const DailyMenu = () => {
             <div
               key={idx}
               onClick={() => setSelectedMeal(meal)}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col cursor-pointer hover:-translate-y-1"
+              className="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col cursor-pointer hover:-translate-y-1"
             >
               <div className="relative pt-[80%] overflow-hidden bg-[#f9f7f4]">
                 <img
@@ -237,9 +238,12 @@ const DailyMenu = () => {
 
         {/* Bottom CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-brand-olive hover:bg-brand-sage text-white px-10 py-3 rounded-md text-sm transition-all duration-500 shadow-xl hover:shadow-2xl font-medium tracking-[2px] uppercase hover:-translate-y-1">
+          <Link
+            to="/start-ritual"
+            className="bg-brand-olive hover:bg-brand-sage text-white px-10 py-3 rounded-md text-sm transition-all duration-500 shadow-xl hover:shadow-2xl font-medium tracking-[2px] uppercase hover:-translate-y-1 block"
+          >
             Start My Ritual Plan
-          </button>
+          </Link>
         </div>
       </div>
 

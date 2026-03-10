@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import trioDeskImg from '../assets/ritual_trio_desk.jpeg';
 import glowShotImg from '../assets/glow_shot_concept.jpeg';
 import poolImg from '../assets/ritual_pool.jpeg';
@@ -34,6 +35,11 @@ const OurStory = () => {
 
   return (
     <div className="pb-16">
+      <SEO 
+        title="Our Story | The Ritual Philosophy" 
+        description="The story behind Ritual — a commitment to clean label nutrition, precision macros, and artisanal wellness in Chennai."
+        keywords="Ritual Story, Healthy Food Philosophy Chennai, Artisanal Meals"
+      />
       <PageHeader
         title="Our Story"
         subtitle="Cultivating wellness through conscious meals and mindful rituals."
@@ -117,7 +123,7 @@ const OurStory = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {milestones.map((item, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                <div key={idx} className="p-5 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                   <span className="text-[10px] uppercase tracking-widest font-bold text-brand-beige/50 block mb-3">{item.year}</span>
                   <p className="text-white font-serif text-lg mb-2">{item.event}</p>
                   <p className="text-[12px] text-brand-beige/60 font-light leading-relaxed">{item.detail}</p>
@@ -144,7 +150,7 @@ const OurStory = () => {
             <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-6">
               Our "Eat Your Skin Care" campaign is proof that what you consume manifests on the outside. Real wellness starts from within.
             </p>
-            <Link to="/functional-shots" className="inline-block bg-brand-olive text-white px-8 py-3 rounded-xl font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm">
+            <Link to="/functional-shots" className="inline-block bg-brand-olive text-white px-8 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm">
               Explore Functional Shots
             </Link>
           </div>
@@ -174,10 +180,10 @@ const OurStory = () => {
             Join hundreds of Chennaiites who've made wellness a daily habit. Choose a plan that fits your lifestyle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/#plans" className="inline-block bg-brand-olive text-white px-10 py-4 rounded-xl font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm">
+            <Link to="/#plans" className="inline-block bg-brand-olive text-white px-10 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm">
               View Plans
             </Link>
-            <Link to="/contact" className="inline-block bg-white text-brand-olive px-10 py-4 rounded-xl font-medium uppercase tracking-[2px] hover:bg-brand-beige/30 transition-all shadow-sm border border-brand-beige/30 text-sm">
+            <Link to="/contact" className="inline-block bg-white text-brand-olive px-10 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-brand-beige/30 transition-all shadow-sm border border-brand-beige/30 text-sm">
               Get in Touch
             </Link>
           </div>

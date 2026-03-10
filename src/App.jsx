@@ -18,11 +18,14 @@ import Admin from './pages/Admin';
 import AdminLogin from './pages/AdminLogin';
 import ProtectedRoute from './components/ProtectedRoute';
 
+import { HelmetProvider } from 'react-helmet-async';
+
 function App() {
   return (
-    <Layout>
-      <ScrollToTop />
-      <Routes>
+    <HelmetProvider>
+      <Layout>
+        <ScrollToTop />
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/story" element={<OurStory />} />
         <Route path="/nutrition" element={<Nutrition />} />
@@ -45,7 +48,8 @@ function App() {
           } 
         />
       </Routes>
-    </Layout>
+      </Layout>
+    </HelmetProvider>
   );
 }
 
