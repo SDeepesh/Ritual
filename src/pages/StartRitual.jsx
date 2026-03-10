@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Toast from '../components/Toast';
 import { enquiryStore } from '../utils/enquiryStore';
@@ -22,6 +23,7 @@ const DELIVERY_PINCODES = [
 
 // ─── Component ────────────────────────────────────────────────────────────────
 const StartRitual = () => {
+  const [searchParams] = useSearchParams();
   const [selectedPlan, setSelectedPlan] = useState(7);
   const [pincode, setPincode] = useState('');
   const [pincodeResult, setPincodeResult] = useState(null); // null | 'success' | 'error'
@@ -41,6 +43,27 @@ const StartRitual = () => {
     dietaryPreference: '',
     message: '',
   });
+
+  // Pre-fill from URL params
+  useEffect(() => {
+    const nameParam = searchParams.get('name');
+    const phoneParam = searchParams.get('phone');
+    const planParam = searchParams.get('plan');
+
+    if (nameParam || phoneParam || planParam) {
+      setForm(prev => ({
+        ...prev,
+        name: nameParam || prev.name,
+        phone: phoneParam || prev.phone,
+      }));
+      if (planParam) {
+        const p = parseInt(planParam);
+        if (PLANS.some(pl => pl.days === p)) {
+          setSelectedPlan(p);
+        }
+      }
+    }
+  }, [searchParams]);
 
   const currentPlan = PLANS.find(p => p.days === selectedPlan);
   const totalSavings = currentPlan.originalPrice - currentPlan.totalPrice;

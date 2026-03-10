@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import mealOats from '../assets/meal_oats.png';
-import mealTurkey from '../assets/meal_turkey.png';
-import mealFish from '../assets/meal_fish.png';
-import productBowl from '../assets/product_bowl.png';
+import { menuByDay } from './RitualMenuJson';
+import foodImages from '../utils/foodImages';
+import productBowl from '../assets/product_bowl.png'; // Fallback
 
 const MealModal = ({ meal, onClose }) => {
   if (!meal) return null;
@@ -37,19 +36,19 @@ const MealModal = ({ meal, onClose }) => {
         </div>
 
         {/* Right: Details */}
-        <div className="w-full md:w-1/2 p-4 md:p-14 flex flex-col">
+        <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col">
           <div className="inline-block px-3 py-1 bg-brand-sage/10 text-brand-sage text-[10px] font-bold tracking-[2px] uppercase rounded-full mb-4 md:mb-6 w-fit">
             {meal.type}
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif text-brand-olive mb-3 md:mb-6 leading-[1.1]">{meal.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-brand-olive mb-3 md:mb-4 leading-[1.1]">{meal.title}</h2>
 
-          <p className="text-brand-sage text-sm md:text-lg leading-relaxed mb-8 md:mb-10 font-serif opacity-80">
+          <p className="text-brand-sage text-sm md:text-lg mb-4 opacity-80">
             {meal.description}
           </p>
 
-          <div className="mb-8 md:10">
-            <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-3 md:mb-6 border-b border-brand-beige/30 pb-3">Nutritional Profile</h4>
+          <div className="mb-4">
+            <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-4 border-b border-brand-beige/30 pb-3">Nutritional Profile</h4>
             <div className="grid grid-cols-4 gap-4 text-center">
               <div className="bg-brand-beige/5 p-2 md:p-3 rounded-2xl border border-brand-beige/20">
                 <p className="text-[9px] text-brand-sage uppercase font-bold tracking-wider mb-1">Calories</p>
@@ -71,7 +70,7 @@ const MealModal = ({ meal, onClose }) => {
           </div>
 
           <div className="mb-4">
-            <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-3 md:mb-6 border-b border-brand-beige/30 pb-3">Artisanal Ingredients</h4>
+            <h4 className="text-[16px] text-brand-olive uppercase tracking-[2px] font-bold mb-4 border-b border-brand-beige/30 pb-3">Artisanal Ingredients</h4>
             <div className="flex flex-wrap gap-2">
               {meal.ingredients.map((ing, i) => (
                 <span key={i} className="text-[11px] px-4 py-2 bg-white text-brand-olive rounded-xl border border-brand-beige/40 shadow-sm font-medium">
@@ -113,58 +112,18 @@ const DailyMenu = () => {
 
   const dates = getDates();
 
-  // Mock data for 30 unique dishes (represented by 4 types for the portfolio display)
-  const menuItems = [
-    {
-      title: "Berry Oat Porridge",
-      type: "Vegan",
-      img: mealOats,
-      cal: 340, pro: 12, carb: 45, fat: 8,
-      description: "Slow-cooked steel-cut oats topped with a vibrant medley of farm-fresh blueberries and organic honey. A comforting, fiber-rich start to your day.",
-      ingredients: ["Steel-Cut Oats", "Blueberries", "Organic Honey", "Almond Milk", "Flax Seeds"]
-    },
-    {
-      title: "Turkey Veggie Stew",
-      type: "Veg",
-      img: mealTurkey,
-      cal: 420, pro: 38, carb: 22, fat: 12,
-      description: "Lean ground turkey simmered in a rich tomato and herb reduction with slow-roasted Mediterranean vegetables. High protein, low glycemic index.",
-      ingredients: ["Ground Turkey", "Bell Peppers", "Zucchini", "Thyme", "Tomato"]
-    },
-    {
-      title: "Herb Seared Fish",
-      type: "Non Veg",
-      img: mealFish,
-      cal: 380, pro: 42, carb: 10, fat: 14,
-      description: "Wild-caught seabass seared with fresh rosemary and lemon zest, served alongside a crisp asparagus spear bed. The ultimate light yet satisfying dinner.",
-      ingredients: ["Wild Seabass", "Rosemary", "Asparagus", "Lemon Zest", "Olive Oil"]
-    },
-    {
-      title: "Avocado Power Toast",
-      type: "Functional Shot",
-      img: productBowl,
-      cal: 290, pro: 8, carb: 28, fat: 16,
-      description: "Smashed Hass avocado on artisanal sourdough, topped with micro-greens and a hint of chili flakes. Rich in healthy fats and micronutrients.",
-      ingredients: ["Sourdough", "Hass Avocado", "Micro-greens", "Chili Flakes", "Sea Salt"]
-    }
-  ];
-
-  // Dynamically generate the rest of the 30 items for rotation
-  for (let i = 1; i <= 7; i++) {
-    menuItems.push(
-      { ...menuItems[0], title: `Berry Oat Porridge ${i + 1}`, cal: 340 + i, description: "A seasonal variation of our classic porridge." },
-      { ...menuItems[1], title: `Turkey Veggie Stew ${i + 1}`, cal: 420 + i, description: "Our signature stew with rotating seasonal greens." },
-      { ...menuItems[2], title: `Herb Seared Fish ${i + 1}`, cal: 380 + i, description: "Fresh catch of the day with garden herbs." },
-      { ...menuItems[3], title: `Avocado Power Toast ${i + 1}`, cal: 290 + i, description: "Artisan toast with fresh avocado and seeds." }
-    );
-  }
-
   const getDailyMeals = (date) => {
-    const day = date.getDate();
-    // Calculate a unique starting index for each day of the month
-    // Wraps back to the first item on the 31st day as requested
-    const startIndex = (((day - 1) % 30) * 4) % menuItems.length;
-    return menuItems.slice(startIndex, startIndex + 4);
+    const dayNum = date.getDate();
+    // Rotation logic: menuByDay has 28 days. Wrap around if month has 29, 30, or 31 days.
+    const menuDayKey = `Day ${((dayNum - 1) % 28) + 1}`;
+    const dayMeals = menuByDay[menuDayKey] || [];
+
+    return dayMeals.map((meal) => ({
+      ...meal,
+      // Map images: use the 'img' key from JSON to look up in our foodImages map
+      // e.g., if meal.img is "image1", foodImages["image1"] will be the imported asset
+      img: foodImages[meal.img] || productBowl
+    }));
   };
 
   const currentMeals = getDailyMeals(dates[selectedDayOffset]);
