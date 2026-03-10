@@ -74,11 +74,11 @@ const PlanCalculator = () => {
         />
       )}
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 relative z-10">
 
         {/* Left Side: Illustration & Title */}
         <div className="w-full lg:w-1/2 text-white">
-          <h2 className="text-white normal-case md:text-5xl text-4xl mb-8 leading-tight">
+          <h2 className="text-white normal-case md:text-5xl text-3xl mb-8 leading-tight">
             Choose Your <br /> Nourishment Cycle
           </h2>
           <div className="space-y-8">
@@ -94,17 +94,17 @@ const PlanCalculator = () => {
 
         {/* Right Side: Calculator Card */}
         <div className="w-full lg:w-[500px] bg-white rounded-[20px] shadow-2xl p-6 md:p-8">
-          <div className="flex justify-between items-start mb-8">
-            <div>
+          <div className="flex justify-between items-start mb-6 md:mb-8">
+            <div className='w-min'>
               <p className="text-brand-sage text-[10px] font-bold tracking-[2px] uppercase mb-2">Your Ritual Choice</p>
               <h3 className="text-3xl font-serif text-brand-olive">Personal Plan</h3>
             </div>
-            <div className="bg-brand-sage/10 text-brand-sage px-4 py-2 rounded-md text-[10px] font-bold tracking-widest uppercase">
+            <div className="bg-brand-sage/10 text-brand-sage p-2 rounded-md text-[10px] font-bold tracking-widest uppercase">
               Save {discountPercent}% Now
             </div>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <p className="text-brand-olive font-bold mb-5 text-[11px] uppercase tracking-widest flex items-center gap-2">
               Select duration: <span className="h-0.5 flex-grow bg-brand-beige/20"></span>
             </p>
@@ -134,7 +134,7 @@ const PlanCalculator = () => {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-brand-sage/5 border-none rounded-2xl px-6 py-5 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
+                  className="w-full bg-brand-sage/5 border-none rounded-md px-6 py-3 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
                   disabled={isSubmitting}
                 />
               </div>
@@ -145,7 +145,7 @@ const PlanCalculator = () => {
                   required
                   value={phone}
                   onChange={handlePhoneChange}
-                  className="w-full bg-brand-sage/5 border-none rounded-2xl px-6 py-5 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
+                  className="w-full bg-brand-sage/5 border-none rounded-md px-6 py-3 text-brand-olive placeholder-brand-sage/40 focus:ring-1 focus:ring-brand-sage transition-all outline-none"
                   disabled={isSubmitting}
                 />
               </div>

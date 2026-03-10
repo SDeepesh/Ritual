@@ -156,7 +156,7 @@ const Privacy = () => {
   ];
 
   return (
-    <div className="pb-16">
+    <div className="pb-12">
       <PageHeader
         title="Privacy Policy"
         subtitle="Your trust is our most important ingredient."
@@ -173,7 +173,7 @@ const Privacy = () => {
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="block text-sm text-brand-olive/60 hover:text-brand-olive transition-colors py-1 font-light"
+                    className="block text-sm text-brand-olive/60 hover:text-brand-olive transition-colors py-1 font-normal"
                   >
                     {section.title}
                   </a>
@@ -185,7 +185,7 @@ const Privacy = () => {
           {/* Main Content */}
           <div className="flex-1 space-y-10">
             <div className="bg-[#fcfaf7] rounded-[20px] p-6 md:p-8 border border-brand-beige/30">
-              <p className="text-sm text-brand-olive/80 font-light leading-relaxed">
+              <p className="text-sm text-brand-olive/80 font-normal leading-relaxed">
                 <span className="font-medium text-brand-olive">Effective Date:</span> March 1, 2025 &nbsp;•&nbsp;
                 <span className="font-medium text-brand-olive">Last Updated:</span> March 8, 2025 &nbsp;•&nbsp;
                 <span className="font-medium text-brand-olive">Jurisdiction:</span> Republic of India
@@ -196,12 +196,12 @@ const Privacy = () => {
               <div key={section.id} id={section.id} className="scroll-mt-32">
                 <h2 className="text-xl md:text-2xl text-brand-olive font-serif font-medium tracking-wider mb-4">{section.title}</h2>
                 {section.content.map((para, idx) => (
-                  <p key={idx} className="text-sm md:text-base text-brand-olive/70 font-light leading-relaxed mb-4">{para}</p>
+                  <p key={idx} className="text-sm md:text-base text-brand-olive/70 font-normal leading-relaxed mb-4">{para}</p>
                 ))}
                 {section.list && (
                   <ul className="space-y-3 mt-2">
                     {section.list.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-brand-olive/70 font-light leading-relaxed">
+                      <li key={idx} className="flex items-start gap-3 text-sm text-brand-olive/70 font-normal leading-relaxed">
                         <span className="w-1.5 h-1.5 bg-brand-sage/30 rounded-full mt-2 flex-shrink-0"></span>
                         <span>{item}</span>
                       </li>

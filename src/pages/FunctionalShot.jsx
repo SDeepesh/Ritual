@@ -56,9 +56,9 @@ const FunctionalShot = () => {
   ];
 
   return (
-    <div className="pb-16">
-      <SEO 
-        title="Functional Shot Therapy" 
+    <div className="pb-12">
+      <SEO
+        title="Functional Shot Therapy"
         description="Discover our cold-pressed functional shots designed for skin health, metabolism, and immunity. 100% natural, scientifically backed nutrition."
         keywords="Functional Drinks Chennai, Cold Pressed Shots, Immunity Boosters, Skin Health Drinks"
       />
@@ -94,19 +94,19 @@ const FunctionalShot = () => {
       </section>
 
       {/* What is a Functional Shot */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
           <div className="flex-1">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">The Concept</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-6">
               What is a <br /><span className="font-serif normal-case text-brand-sage">Functional Shot?</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-6">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-6">
               A functional shot is a concentrated 60ml elixir of cold-pressed, nutrient-dense ingredients designed to target specific health outcomes. Unlike regular juices, every drop is engineered for maximum bioavailability and absorption.
             </p>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal">
               At Ritual, we believe that true skin care starts from within. Our "Eat Your Skin Care" campaign is built on the science that what you consume directly impacts your skin's radiance, elasticity, and overall health. Each shot is a micro-dose of functional nutrition.
             </p>
           </div>
@@ -115,12 +115,12 @@ const FunctionalShot = () => {
               <div className="bg-[#fcfaf7] rounded-[20px] p-6 md:p-8 border border-brand-beige/30">
                 <span className="text-4xl font-serif font-bold text-brand-olive block mb-2">60ml</span>
                 <span className="text-[10px] uppercase tracking-[2px] text-brand-sage font-bold block mb-4">Per Serving</span>
-                <p className="text-brand-sage/80 text-sm font-light leading-relaxed">Each shot is precisely portioned at 60ml — the optimal volume for concentrated nutrient absorption without dilution.</p>
+                <p className="text-brand-sage/80 text-sm font-normal leading-relaxed">Each shot is precisely portioned at 60ml — the optimal volume for concentrated nutrient absorption without dilution.</p>
               </div>
               <div className="bg-[#fcfaf7] rounded-[20px] p-6 md:p-8 border border-brand-beige/30">
                 <span className="text-4xl font-serif font-bold text-brand-olive block mb-2">7</span>
                 <span className="text-[10px] uppercase tracking-[2px] text-brand-sage font-bold block mb-4">Weekly Rotation</span>
-                <p className="text-brand-sage/80 text-sm font-light leading-relaxed">5 unique formulations rotate through a 7-day cycle, targeting different health pillars each day for holistic wellness.</p>
+                <p className="text-brand-sage/80 text-sm font-normal leading-relaxed">5 unique formulations rotate through a 7-day cycle, targeting different health pillars each day for holistic wellness.</p>
               </div>
             </div>
           </div>
@@ -128,9 +128,9 @@ const FunctionalShot = () => {
       </section>
 
       {/* The 5 Shots */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="text-center mb-12">
-          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
             <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">The Collection</span>
           </div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
@@ -153,7 +153,7 @@ const FunctionalShot = () => {
                     <span key={i} className="text-[10px] bg-brand-sage/5 text-brand-sage px-2 py-1 rounded-full font-medium">{ing}</span>
                   ))}
                 </div>
-                <p className="text-sm text-brand-olive/70 font-light leading-relaxed">{shot.benefit}</p>
+                <p className="text-sm text-brand-olive/70 font-normal leading-relaxed">{shot.benefit}</p>
               </div>
             </div>
           ))}
@@ -161,7 +161,7 @@ const FunctionalShot = () => {
       </section>
 
       {/* Weekly Rotation Schedule */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="bg-brand-olive text-white p-8 md:p-12 rounded-[20px] shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
@@ -190,8 +190,8 @@ const FunctionalShot = () => {
       </section>
 
       {/* How It Works */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="text-center mb-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="text-center mb-8 md:mb-12">
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
             How It <span className="normal-case text-brand-sage">Works</span>
           </h3>
@@ -205,7 +205,7 @@ const FunctionalShot = () => {
             <div key={idx} className="bg-[#fcfaf7] p-8 rounded-[20px] border border-brand-beige/30 text-center hover:shadow-md transition-shadow">
               <span className="text-5xl font-serif font-bold text-brand-sage/20 block mb-4">{item.step}</span>
               <h4 className="text-xl font-serif text-brand-olive mb-3">{item.title}</h4>
-              <p className="text-sm text-brand-sage/80 font-light leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-brand-sage/80 font-normal leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

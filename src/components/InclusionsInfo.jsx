@@ -12,13 +12,13 @@ const InclusionsInfo = () => {
         {/* Section 1: The Lunch Ritual */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 mb-12 md:mb-16">
           <div className="flex-1 space-y-6 md:space-y-8 w-full text-left">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">The Lunch Ritual</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-4">
               One Balanced <br /> <span className="font-serif normal-case text-brand-sage">Ritual Each Day.</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light max-w-xl mb-4">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal max-w-xl mb-4">
               We focus exclusively on Lunch to ensure absolute freshness. Each delivery is a complete functional experience designed to fuel your peak performance.
             </p>
             <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 md:gap-6 pt-4">
@@ -56,7 +56,7 @@ const InclusionsInfo = () => {
             <h4 className="text-3xl font-serif text-brand-olive font-medium tracking-[1px] mb-4 leading-tight">
               Your Ritual, <span className="normal-case text-brand-sage">Your Way.</span>
             </h4>
-            <p className="text-brand-sage/80 mb-4 leading-relaxed font-sans font-light text-sm md:text-base">
+            <p className="text-brand-sage/80 mb-4 leading-relaxed font-sans font-normal text-sm md:text-base">
               We cater to all dietary preferences while maintaining the same nutritional integrity across every functional plan.
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 w-full">
@@ -79,13 +79,13 @@ const InclusionsInfo = () => {
         {/* Section 3: Inside The Shot */}
         <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-10 md:gap-16">
           <div className="flex-1 space-y-6 md:space-y-8 w-full text-left">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Inside The Shot</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-4">
               Eat Your <br /> <span className="font-serif normal-case text-brand-sage">Skin Care</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive leading-relaxed font-sans font-light mb-4">
+            <p className="text-base md:text-lg text-brand-olive leading-relaxed font-sans font-normal mb-4">
               Our signature campaign for a reason. Each 60ml shot is a potent elixir of functional ingredients, designed to manifest wellness from within.
             </p>
             <div className="space-y-3 md:space-y-4 mb-4">

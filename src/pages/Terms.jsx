@@ -228,7 +228,7 @@ const Terms = () => {
   ];
 
   return (
-    <div className="pb-16">
+    <div className="pb-12">
       <PageHeader
         title="Terms & Conditions"
         subtitle="Please read these terms carefully before using our services."
@@ -245,7 +245,7 @@ const Terms = () => {
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="block text-sm text-brand-olive/60 hover:text-brand-olive transition-colors py-1 font-light"
+                    className="block text-sm text-brand-olive/60 hover:text-brand-olive transition-colors py-1 font-normal"
                   >
                     {section.title}
                   </a>
@@ -257,7 +257,7 @@ const Terms = () => {
           {/* Main Content */}
           <div className="flex-1 space-y-10">
             <div className="bg-[#fcfaf7] rounded-[20px] p-6 md:p-8 border border-brand-beige/30">
-              <p className="text-sm text-brand-olive/80 font-light leading-relaxed">
+              <p className="text-sm text-brand-olive/80 font-normal leading-relaxed">
                 <span className="font-medium text-brand-olive">Effective Date:</span> March 1, 2025 &nbsp;•&nbsp;
                 <span className="font-medium text-brand-olive">Last Modified:</span> March 8, 2025 &nbsp;•&nbsp;
                 <span className="font-medium text-brand-olive">Jurisdiction:</span> Chennai, Tamil Nadu, India
@@ -269,17 +269,17 @@ const Terms = () => {
               <div className="bg-red-50 border border-red-200/50 rounded-[16px] p-5 text-center">
                 <svg className="w-6 h-6 text-red-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
                 <span className="text-sm font-serif font-medium text-red-800 block mb-1">No Cancellation</span>
-                <span className="text-[11px] text-red-600/70 font-light">Once purchased, plans cannot be cancelled</span>
+                <span className="text-[11px] text-red-600/70 font-normal">Once purchased, plans cannot be cancelled</span>
               </div>
               <div className="bg-red-50 border border-red-200/50 rounded-[16px] p-5 text-center">
                 <svg className="w-6 h-6 text-red-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span className="text-sm font-serif font-medium text-red-800 block mb-1">No Refunds</span>
-                <span className="text-[11px] text-red-600/70 font-light">All sales are final, no exceptions</span>
+                <span className="text-[11px] text-red-600/70 font-normal">All sales are final, no exceptions</span>
               </div>
               <div className="bg-amber-50 border border-amber-200/50 rounded-[16px] p-5 text-center">
                 <svg className="w-6 h-6 text-amber-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span className="text-sm font-serif font-medium text-amber-800 block mb-1">24hr Notice</span>
-                <span className="text-[11px] text-amber-600/70 font-light">Schedule changes need 24hr advance notice</span>
+                <span className="text-[11px] text-amber-600/70 font-normal">Schedule changes need 24hr advance notice</span>
               </div>
             </div>
 
@@ -287,7 +287,7 @@ const Terms = () => {
               <div key={section.id} id={section.id} className="scroll-mt-32">
                 <h2 className="text-xl md:text-2xl text-brand-olive font-serif font-medium tracking-wider mb-4">{section.title}</h2>
                 {section.content.map((para, idx) => (
-                  <p key={idx} className="text-sm md:text-base text-brand-olive/70 font-light leading-relaxed mb-4">{para}</p>
+                  <p key={idx} className="text-sm md:text-base text-brand-olive/70 font-normal leading-relaxed mb-4">{para}</p>
                 ))}
                 {section.highlights && section.highlights.map((highlight, idx) => (
                   <div key={idx} className="bg-red-50/60 border-l-4 border-red-400 rounded-r-xl p-4 mb-4">
@@ -298,7 +298,7 @@ const Terms = () => {
                 {section.list && (
                   <ul className="space-y-3 mt-2">
                     {section.list.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-brand-olive/70 font-light leading-relaxed">
+                      <li key={idx} className="flex items-start gap-3 text-sm text-brand-olive/70 font-normal leading-relaxed">
                         <span className="w-1.5 h-1.5 bg-brand-sage/30 rounded-full mt-2 flex-shrink-0"></span>
                         <span>{item}</span>
                       </li>

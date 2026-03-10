@@ -32,11 +32,11 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-olive font-serif font-medium tracking-[3px] leading-[1.1] mb-3 md:mb-6 drop-shadow-sm uppercase">
             RESET YOUR <br /> LUNCH RITUAL
           </h1>
-          <p className="text-lg text-brand-olive mb-3 md:mb-6 font-sans max-w-[250px] md:max-w-sm drop-shadow-sm font-light">
+          <p className="text-lg text-brand-olive mb-3 md:mb-6 font-sans max-w-[250px] md:max-w-sm drop-shadow-sm font-normal">
             Nutritionally balanced power bowls delivered fresh in Chennai
           </p>
-          <a 
-            href="/#menu" 
+          <a
+            href="/#menu"
             onClick={handleExploreClick}
             className="inline-block bg-brand-olive hover:bg-brand-sage text-white px-4 md:px-8 py-3 rounded-md text-sm transition-all duration-300 shadow-sm hover:shadow-md uppercase font-medium"
           >

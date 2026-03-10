@@ -157,7 +157,7 @@ const DailyMenu = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           <h2 className="text-brand-olive mb-2">Today's Ritual</h2>
           <p className="text-brand-sage font-serif">A unique rotation of 30 functional meals.</p>
         </div>
@@ -165,7 +165,7 @@ const DailyMenu = () => {
         {/* Dynamic Month Calendar Selector */}
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto mb-12 gap-3 no-scrollbar scroll-smooth mask-fade-edges"
+          className="flex overflow-x-auto mb-8 md:mb-12 gap-3 no-scrollbar scroll-smooth"
         >
           {dates.map((date, idx) => {
             const isActive = selectedDayOffset === idx;
@@ -176,7 +176,7 @@ const DailyMenu = () => {
               <button
                 key={idx}
                 onClick={() => setSelectedDayOffset(idx)}
-                className={`flex-shrink-0 w-[calc((100%-48px)/7)] min-w-[70px] h-10 flex items-center justify-center rounded transition-all duration-300 border text-sm font-medium tracking-widest ${isActive
+                className={`flex-shrink-0 w-[calc((100%-48px)/7)] min-w-[70px] h-10 flex items-center justify-center rounded transition-all duration-300 border text-xs md:text-sm font-medium tracking-widest ${isActive
                   ? 'bg-[#1a2e1a] text-white border-[#1a2e1a] shadow-md'
                   : 'bg-white text-[#6F785F] border-brand-beige/30 hover:border-brand-sage/50'
                   } ${isToday && !isActive ? 'ring-1 ring-brand-sage/20' : ''}`}
@@ -188,7 +188,7 @@ const DailyMenu = () => {
         </div>
 
         {/* 4-Meal Grid Portfolio */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 md:mb-12">
           {currentMeals.map((meal, idx) => (
             <div
               key={idx}

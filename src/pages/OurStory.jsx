@@ -35,9 +35,9 @@ const OurStory = () => {
   ];
 
   return (
-    <div className="pb-16">
-      <SEO 
-        title="Our Story | The Ritual Philosophy" 
+    <div className="pb-12">
+      <SEO
+        title="Our Story | The Ritual Philosophy"
         description="The story behind Ritual — a commitment to clean label nutrition, precision macros, and artisanal wellness in Chennai."
         keywords="Ritual Story, Healthy Food Philosophy Chennai, Artisanal Meals"
       />
@@ -48,18 +48,18 @@ const OurStory = () => {
 
       {/* Hero Split — Philosophy + Image */}
       <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 lg:gap-24">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24">
           <div className="flex-1 space-y-6 md:space-y-8 w-full text-left">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">The Philosophy</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-4">
               More Than <br /><span className="font-serif normal-case text-brand-sage">Just a Meal.</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-4">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-4">
               Ritual was born from a simple realization — in our fast-paced world, we've lost the sacred connection with what nourishes us. We view eating not as a necessity, but as a <span className="font-medium text-brand-olive">ritual of self-care</span>.
             </p>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal">
               Based in the heart of Chennai, we are redefining "healthy" by combining the wisdom of traditional ingredients with the precision of modern functional nutrition. No compromises — just pure, vibrant food.
             </p>
           </div>
@@ -73,9 +73,9 @@ const OurStory = () => {
       </section>
 
       {/* Values */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="text-center mb-12">
-          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
             <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Our Pillars</span>
           </div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
@@ -90,7 +90,7 @@ const OurStory = () => {
               <div className="p-8">
                 <span className="text-5xl font-serif font-bold text-brand-sage/15 block mb-4">{val.num}</span>
                 <h4 className="text-xl font-serif text-brand-olive mb-3">{val.title}</h4>
-                <p className="text-sm text-brand-olive/70 font-light leading-relaxed">{val.desc}</p>
+                <p className="text-sm text-brand-olive/70 font-normal leading-relaxed">{val.desc}</p>
               </div>
             </div>
           ))}
@@ -98,21 +98,21 @@ const OurStory = () => {
       </section>
 
       {/* Full Width Image Banner */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="rounded-[20px] overflow-hidden shadow-2xl relative group h-[300px] md:h-[450px]">
           <LazyImage src={poolImg} alt="Ritual — Wellness Lifestyle" className="w-full h-full group-hover:scale-[1.02] transition-transform duration-[2000ms]" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-olive/70 via-brand-olive/30 to-transparent flex items-center p-8 md:p-16">
             <div className="text-white max-w-lg">
               <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">Our Mission</span>
               <h3 className="text-2xl md:text-4xl font-serif mb-4">Make Wellness <br />the Easiest Choice.</h3>
-              <p className="text-sm md:text-base text-white font-light leading-relaxed">We remove every barrier between you and proper nutrition. Fresh, functional, and delivered — every single day.</p>
+              <p className="text-sm md:text-base text-white font-medium leading-relaxed">We remove every barrier between you and proper nutrition. Fresh, functional, and delivered — every single day.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* The Journey — Timeline */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="bg-brand-olive text-white p-8 md:p-12 rounded-[20px] shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
@@ -127,7 +127,7 @@ const OurStory = () => {
                 <div key={idx} className="p-5 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                   <span className="text-[10px] uppercase tracking-widest font-bold text-brand-beige/50 block mb-3">{item.year}</span>
                   <p className="text-white font-serif text-lg mb-2">{item.event}</p>
-                  <p className="text-[12px] text-brand-beige/60 font-light leading-relaxed">{item.detail}</p>
+                  <p className="text-[12px] text-brand-beige/60 font-normal leading-relaxed">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -136,19 +136,19 @@ const OurStory = () => {
       </section>
 
       {/* Shots + Meals Split */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 lg:gap-24">
           <div className="flex-1 space-y-6 md:space-y-8 w-full text-left">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Beyond Food</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-4">
               A Complete <br /><span className="font-serif normal-case text-brand-sage">Wellness System.</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-4">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-4">
               Every Ritual delivery is more than a meal. It's a calibrated system of a Power Bowl, a 60ml Functional Shot, and 350ml of herb-infused water — designed to work in harmony.
             </p>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-6">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-6">
               Our "Eat Your Skin Care" campaign is proof that what you consume manifests on the outside. Real wellness starts from within.
             </p>
             <Link to="/functional-shots" className="inline-block bg-brand-olive text-white px-8 py-3 rounded-md font-medium uppercase tracking-[2px] hover:bg-brand-sage transition-all shadow-lg text-sm">
@@ -171,13 +171,13 @@ const OurStory = () => {
       </section>
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="bg-[#fcfaf7] rounded-[20px] p-8 md:p-16 border border-brand-beige/30 text-center relative overflow-hidden">
           <div className="hidden sm:block absolute top-0 right-0 w-32 h-32 bg-brand-sage/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[1px] uppercase mb-4">
             Ready to Start <span className="normal-case text-brand-sage">Your Ritual?</span>
           </h3>
-          <p className="text-brand-sage/80 mb-8 leading-relaxed font-sans font-light text-sm md:text-base max-w-xl mx-auto">
+          <p className="text-brand-sage/80 mb-8 leading-relaxed font-sans font-normal text-sm md:text-base max-w-xl mx-auto">
             Join hundreds of Chennaiites who've made wellness a daily habit. Choose a plan that fits your lifestyle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

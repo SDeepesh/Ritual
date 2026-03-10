@@ -83,7 +83,7 @@ const ReferFriend = () => {
   ];
 
   return (
-    <div className="pb-16">
+    <div className="pb-12">
       <PageHeader
         title="Refer a Friend"
         subtitle="Good food is meant to be shared. Invite a friend and both get rewarded."
@@ -124,8 +124,8 @@ const ReferFriend = () => {
                 <button
                   onClick={handleCopy}
                   className={`px-8 py-3 rounded-md font-medium uppercase tracking-[2px] transition-all shadow-md text-sm flex items-center justify-center gap-2 ${copied
-                      ? 'bg-green-500 text-white'
-                      : 'bg-brand-beige text-brand-olive hover:bg-white'
+                    ? 'bg-green-500 text-white'
+                    : 'bg-brand-beige text-brand-olive hover:bg-white'
                     }`}
                 >
                   {copied ? (
@@ -149,9 +149,9 @@ const ReferFriend = () => {
       </section>
 
       {/* How It Works */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="text-center mb-12">
-          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
             <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Simple Process</span>
           </div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
@@ -168,7 +168,7 @@ const ReferFriend = () => {
                   {item.icon}
                 </div>
                 <h4 className="text-lg font-serif text-brand-olive mb-2">{item.title}</h4>
-                <p className="text-sm text-brand-olive/70 font-light leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-brand-olive/70 font-normal leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -176,17 +176,17 @@ const ReferFriend = () => {
       </section>
 
       {/* Referral Form */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Left — Info */}
           <div className="flex flex-col justify-center">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4 w-fit">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6 w-fit">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Refer Now</span>
             </div>
             <h3 className="text-3xl sm:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-6">
               Know Someone Who <br /><span className="font-serif normal-case text-brand-sage">Deserves Better Food?</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-8">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-8">
               Fill in your details and your friend's phone number. We'll reach out to them with the offer and credit your account once they subscribe.
             </p>
 
@@ -197,7 +197,7 @@ const ReferFriend = () => {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-[2px] font-bold text-brand-sage/50 block mb-1">Unlimited Referrals</span>
-                  <p className="text-sm text-brand-olive/80 font-light">Refer 10 friends? Get ₹5,000 in credits. No cap.</p>
+                  <p className="text-sm text-brand-olive/80 font-normal">Refer 10 friends? Get ₹5,000 in credits. No cap.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -206,7 +206,7 @@ const ReferFriend = () => {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-[2px] font-bold text-brand-sage/50 block mb-1">Instant Credit</span>
-                  <p className="text-sm text-brand-olive/80 font-light">Credits apply automatically to your next renewal cycle.</p>
+                  <p className="text-sm text-brand-olive/80 font-normal">Credits apply automatically to your next renewal cycle.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -215,7 +215,7 @@ const ReferFriend = () => {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-[2px] font-bold text-brand-sage/50 block mb-1">No Spam</span>
-                  <p className="text-sm text-brand-olive/80 font-light">We only reach out once, with a friendly invite. Nothing more.</p>
+                  <p className="text-sm text-brand-olive/80 font-normal">We only reach out once, with a friendly invite. Nothing more.</p>
                 </div>
               </div>
             </div>

@@ -38,6 +38,16 @@ const Header = () => {
     { name: 'FAQ', href: '/#faq' },
   ];
 
+  const navLinksMobile = [
+    { name: 'Our Story', href: '/story' },
+    { name: 'Plans', href: '/#plans' },
+    { name: 'Menu', href: '/#menu' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Nutrition', href: '/nutrition' },
+    { name: 'Delivery Area', href: '/delivery' },
+    { name: 'Functional Shots', href: '/functional-shots' },
+  ];
+
   const handleLinkClick = (href) => {
     setIsMobileMenuOpen(false);
     if (href.startsWith('/#') && location.pathname === '/') {
@@ -109,7 +119,7 @@ const Header = () => {
           }`}
       >
         <nav className="flex flex-col gap-8 mb-12">
-          {navLinks.map((link, idx) => (
+          {navLinksMobile.map((link, idx) => (
             <Link
               key={link.name}
               to={link.href}

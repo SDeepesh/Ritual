@@ -56,9 +56,9 @@ const Nutrition = () => {
   ];
 
   return (
-    <div className="pb-16">
-      <SEO 
-        title="Precision Nutrition & Macros" 
+    <div className="pb-12">
+      <SEO
+        title="Precision Nutrition & Macros"
         description="Learn about the Ritual nutrition standard. Precision macros, gut health, and clean label ingredients for optimal metabolic wellness."
         keywords="Precision Nutrition Chennai, Macro Balanced Meals, Gut Health Chennai, Clean Eating"
       />
@@ -78,7 +78,7 @@ const Nutrition = () => {
                   {item.icon}
                 </div>
                 <h4 className="text-lg font-serif text-brand-olive mb-2">{item.title}</h4>
-                <p className="text-sm text-brand-olive/70 font-light leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-brand-olive/70 font-normal leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -86,16 +86,16 @@ const Nutrition = () => {
       </section>
 
       {/* The Macro Standard */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
           <div className="flex-1">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Per Meal</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-6">
               The Macro <br /><span className="font-serif normal-case text-brand-sage">Standard.</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-8">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-8">
               Every Ritual bowl is designed to deliver a precise balance of macronutrients. Our nutritionists calibrate each recipe to fuel sustained energy, muscle recovery, and mental clarity — all within a single, satisfying meal.
             </p>
 
@@ -125,7 +125,7 @@ const Nutrition = () => {
                   <div className="w-full bg-brand-beige/10 rounded-full h-2 mb-2">
                     <div className={`h-2 rounded-full ${macro.color} opacity-70`} style={{ width: macro.percent }}></div>
                   </div>
-                  <p className="text-[11px] text-brand-sage/60 font-light">{macro.detail}</p>
+                  <p className="text-[11px] text-brand-sage/60 font-normal">{macro.detail}</p>
                 </div>
               ))}
             </div>
@@ -134,7 +134,7 @@ const Nutrition = () => {
       </section>
 
       {/* Clean Label Promise */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="bg-brand-olive text-white p-8 md:p-12 rounded-[20px] shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
@@ -149,7 +149,7 @@ const Nutrition = () => {
                     <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     <p className="text-white font-serif text-sm">{item.title}</p>
                   </div>
-                  <p className="text-[12px] text-brand-beige/60 font-light leading-relaxed">{item.desc}</p>
+                  <p className="text-[12px] text-brand-beige/60 font-normal leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -158,9 +158,9 @@ const Nutrition = () => {
       </section>
 
       {/* Dietary Options */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="text-center mb-12">
-          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
             <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">For Everyone</span>
           </div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
@@ -178,7 +178,7 @@ const Nutrition = () => {
               <div className={`w-16 h-1 ${option.accent} rounded-full mx-auto mb-6`}></div>
               <span className={`inline-block text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-4 ${option.accent}/10 text-brand-olive`}>{option.tag}</span>
               <h4 className="text-xl font-serif text-brand-olive mb-3">{option.title}</h4>
-              <p className="text-sm text-brand-sage/80 font-light leading-relaxed">{option.desc}</p>
+              <p className="text-sm text-brand-sage/80 font-normal leading-relaxed">{option.desc}</p>
             </div>
           ))}
         </div>

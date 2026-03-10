@@ -62,7 +62,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="pb-16">
+    <div className="pb-12">
       <PageHeader
         title="Contact Us"
         subtitle="We're here to help you on your wellness journey."

@@ -103,12 +103,12 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-brand-sage/10 py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <h2 className="text-brand-olive mb-4 text-3xl md:text-4xl">Our Community Loves Ritual</h2>
           <div className="w-24 h-1 bg-brand-sage mx-auto opacity-30"></div>
         </div>
 
-        <div className="mb-12 mx-[-12px] md:mx-[-16px]">
+        <div className="mb-8 md:mb-12 mx-[-12px] md:mx-[-16px]">
           <div
             className="flex items-stretch transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1)"
             style={{

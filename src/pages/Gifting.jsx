@@ -38,7 +38,7 @@ const Gifting = () => {
         />
       )}
 
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl text-brand-olive mb-8">Share the Ritual Experience</h2>
           <p className="text-brand-sage/80 text-lg font-serif italic mb-12">

@@ -72,7 +72,7 @@ const DeliveryArea = () => {
   ];
 
   return (
-    <div className="pb-16">
+    <div className="pb-12">
       <PageHeader
         title="Delivery Area"
         subtitle="Currently serving the vibrant neighborhoods of Chennai."

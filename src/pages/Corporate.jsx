@@ -77,7 +77,7 @@ const Corporate = () => {
   const teamSizes = ['5–15 employees', '15–50 employees', '50–100 employees', '100–250 employees', '250+ employees'];
 
   return (
-    <div className="pb-16">
+    <div className="pb-12">
       <PageHeader
         title="Corporate Plans"
         subtitle="Fuel your team's productivity with high-performance nourishment."
@@ -103,9 +103,9 @@ const Corporate = () => {
       </section>
 
       {/* Why Ritual for Teams */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
-        <div className="text-center mb-12">
-          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
             <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Why Ritual</span>
           </div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
@@ -120,7 +120,7 @@ const Corporate = () => {
               <div className="p-6">
                 <span className="text-4xl font-serif font-bold text-brand-sage/15 block mb-3">{item.num}</span>
                 <h4 className="text-lg font-serif text-brand-olive mb-2">{item.title}</h4>
-                <p className="text-sm text-brand-olive/70 font-light leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-brand-olive/70 font-normal leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -128,7 +128,7 @@ const Corporate = () => {
       </section>
 
       {/* How It Works */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="bg-brand-olive text-white p-8 md:p-12 rounded-[20px] shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
@@ -145,7 +145,7 @@ const Corporate = () => {
                 <div key={idx} className="p-5 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                   <span className="text-[10px] uppercase tracking-widest font-bold text-brand-beige/50 block mb-3">Step {item.step}</span>
                   <p className="text-white font-serif text-lg mb-2">{item.title}</p>
-                  <p className="text-[12px] text-brand-beige/60 font-light leading-relaxed">{item.desc}</p>
+                  <p className="text-[12px] text-brand-beige/60 font-normal leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -154,17 +154,17 @@ const Corporate = () => {
       </section>
 
       {/* Corporate Inquiry Form */}
-      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-16 md:mt-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-16 mt-12 md:mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Left — Info */}
           <div className="flex flex-col justify-center">
-            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4 w-fit">
+            <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6 w-fit">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Inquiry</span>
             </div>
             <h3 className="text-3xl sm:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-6">
               Ready to Fuel <br /><span className="font-serif normal-case text-brand-sage">Your Workplace?</span>
             </h3>
-            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-light mb-6">
+            <p className="text-base md:text-lg text-brand-olive/80 leading-relaxed font-sans font-normal mb-6">
               Fill in the details and our corporate wellness team will reach out within 2 hours with a customized proposal tailored to your organization's needs.
             </p>
 
@@ -173,25 +173,25 @@ const Corporate = () => {
                 <div className="w-8 h-8 rounded-lg bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </div>
-                <span className="text-sm text-brand-olive/80 font-light">No minimum contract duration</span>
+                <span className="text-sm text-brand-olive/80 font-normal">No minimum contract duration</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </div>
-                <span className="text-sm text-brand-olive/80 font-light">Flexible delivery schedules (Mon–Sat)</span>
+                <span className="text-sm text-brand-olive/80 font-normal">Flexible delivery schedules (Mon–Sat)</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </div>
-                <span className="text-sm text-brand-olive/80 font-light">Volume discounts for teams of 15+</span>
+                <span className="text-sm text-brand-olive/80 font-normal">Volume discounts for teams of 15+</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-brand-sage/10 flex items-center justify-center text-brand-sage flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </div>
-                <span className="text-sm text-brand-olive/80 font-light">Dedicated account manager</span>
+                <span className="text-sm text-brand-olive/80 font-normal">Dedicated account manager</span>
               </div>
             </div>
           </div>
