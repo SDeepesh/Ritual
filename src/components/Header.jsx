@@ -7,6 +7,12 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Pages where header overlays a dark hero image
+  const isTransparentHeader = !isScrolled && (
+    location.pathname.startsWith('/blog/') ||
+    location.pathname.startsWith('/ritual-admin')
+  );
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -72,7 +78,7 @@ const Header = () => {
           <img
             src={logoImg}
             alt="Ritual Logo"
-            className="object-contain transition-all w-[120px]"
+            className={`object-contain transition-all w-[120px] ${isTransparentHeader ? 'brightness-0 invert' : ''}`}
           />
         </Link>
 
@@ -83,7 +89,11 @@ const Header = () => {
               key={link.name}
               to={link.href}
               onClick={() => handleLinkClick(link.href)}
-              className="text-md font-medium tracking-[2px] text-brand-olive/70 hover:text-brand-olive transition-colors relative group"
+              className={`text-md font-medium tracking-[2px] transition-colors relative group ${
+                isTransparentHeader
+                  ? 'text-white/80 hover:text-white'
+                  : 'text-brand-olive/70 hover:text-brand-olive'
+              }`}
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-sage transition-all duration-300 group-hover:w-full"></span>
@@ -107,9 +117,9 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
-          <span className={`w-6 h-0.5 bg-brand-olive transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`w-6 h-0.5 bg-brand-olive transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`w-6 h-0.5 bg-brand-olive transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''} ${isTransparentHeader ? 'bg-white' : 'bg-brand-olive'}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''} ${isTransparentHeader ? 'bg-white' : 'bg-brand-olive'}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''} ${isTransparentHeader ? 'bg-white' : 'bg-brand-olive'}`}></span>
         </button>
       </div>
 

@@ -61,8 +61,7 @@ const BlogSection = () => {
 
   React.useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1280) setItemsPerView(4); // Extra large screens get 4
-      else if (window.innerWidth >= 1024) setItemsPerView(3);
+      if (window.innerWidth >= 1024) setItemsPerView(3);
       else if (window.innerWidth >= 768) setItemsPerView(2);
       else setItemsPerView(1);
     };
@@ -94,8 +93,8 @@ const BlogSection = () => {
             <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">RITUAL JOURNAL</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-serif text-brand-olive font-medium leading-tight">
-              Thoughts on <span className="text-brand-sage italic normal-case">Wellness</span>
+            <h2 className="text-brand-olive">
+              Thoughts on Wellness
             </h2>
             <p className="mt-4 text-brand-olive/80 text-lg">
               Science-backed insights on functional nutrition, hydration, and clean eating designed for the modern Chennai lifestyle.
@@ -126,14 +125,14 @@ const BlogSection = () => {
 
         <div className="mx-[-12px] md:mx-[-16px]">
           <div
-            className="flex items-stretch transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1)"
+            className="flex items-stretch pb-4 transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1)"
             style={{
               transform: `translateX(-${currentIndex * (100 / totalSlides)}%)`,
               width: `${(totalItems / itemsPerView) * 100}%`
             }}
           >
             {blogData.map((blog) => (
-              <BlogCard key={blog.id} {...blog} itemsPerView={itemsPerView} />
+              <BlogCard key={blog.id} {...blog} itemsPerView={totalItems} />
             ))}
           </div>
         </div>

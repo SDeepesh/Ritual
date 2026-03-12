@@ -5,60 +5,60 @@ import LazyImage from './LazyImage';
 
 const SHOT_ROTATION = [
   {
-    title: "Berry Glow Shot",
-    description: "Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin, finished with a refreshing touch of lemon.",
-    ingredients: ["Beetroot", "Pomegranate", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
-    glow: ["Beetroot", "Pomegranate"],
-    digest: ["Lemon Juice"],
-    hydrate: ["Vapor-Distilled Water"]
-  },
-  {
     title: "Coconut Hydration Shot",
     description: "Electrolyte-rich tender coconut water with lemon and mineral salt to replenish hydration and support daily energy balance.",
     ingredients: ["Tender Coconut Water", "Lemon Juice", "Raw Honey", "Pink Himalayan Salt"],
-    glow: ["Lemon Juice"],
-    digest: ["Lemon Juice"],
-    hydrate: ["Tender Coconut Water", "Pink Himalayan Salt"]
+    glow: ["Hydration"],
+    digest: ["Tender Coconut Water", "Lemon", "Pink Salt"],
+    hydrate: ["Electrolytes", "Mineral Balance"]
   },
   {
     title: "Green Detox Shot",
     description: "Refreshing detox blend of green apple, cucumber and mint designed to support digestion, hydration and clear glowing skin.",
     ingredients: ["Green Apple", "Cucumber", "Mint", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
-    glow: ["Green Apple", "Cucumber"],
-    digest: ["Mint", "Lemon Juice"],
-    hydrate: ["Cucumber", "Vapor-Distilled Water"]
+    glow: ["Daily Detox"],
+    digest: ["Green Apple", "Cucumber", "Mint", "Lemon"],
+    hydrate: ["Digestion Support", "Skin Cleanse"]
   },
   {
     title: "Blue Beauty Shot",
     description: "Antioxidant-rich pineapple and blue spirulina shot designed to support skin repair and cellular health.",
     ingredients: ["Pineapple", "Blue Spirulina", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
-    glow: ["Blue Spirulina", "Pineapple"],
-    digest: ["Pineapple", "Lemon Juice"],
-    hydrate: ["Vapor-Distilled Water"]
+    glow: ["Skin Repair"],
+    digest: ["Blue Spirulina", "Pineapple", "Lemon"],
+    hydrate: ["Antioxidants", "Cellular Protection"]
   },
   {
     title: "Golden Glow Shot",
     description: "Carrot, pineapple and turmeric blend designed to support skin glow, reduce inflammation and promote natural radiance.",
     ingredients: ["Carrot", "Pineapple", "Turmeric", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
-    glow: ["Carrot", "Turmeric"],
-    digest: ["Pineapple", "Lemon Juice"],
-    hydrate: ["Vapor-Distilled Water"]
+    glow: ["Radiance & Glow"],
+    digest: ["Carrot", "Pineapple", "Turmeric", "Lemon"],
+    hydrate: ["Anti-Inflammatory", "Vitamin Boost"]
   },
   {
     title: "Digestive Shot",
     description: "Pineapple and ginger digestive shot crafted to reduce bloating and support gut health.",
     ingredients: ["Pineapple", "Ginger", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
-    glow: ["Lemon Juice"],
-    digest: ["Ginger", "Pineapple"],
-    hydrate: ["Vapor-Distilled Water"]
+    glow: ["Gut Health"],
+    digest: ["Pineapple", "Ginger", "Lemon"],
+    hydrate: ["Digestive Enzymes", "Bloating Relief"]
   },
   {
     title: "Amla Immunity Shot",
     description: "Vitamin C rich amla shot blended with ginger, lemon and honey to strengthen immunity and support skin health.",
     ingredients: ["Amla", "Ginger", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
-    glow: ["Amla"],
-    digest: ["Ginger", "Lemon Juice"],
-    hydrate: ["Vapor-Distilled Water"]
+    glow: ["Immunity"],
+    digest: ["Amla", "Green Apple", "Lemon"],
+    hydrate: ["Vitamin C", "Skin Repair"]
+  },
+  {
+    title: "Berry Glow Shot",
+    description: "Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin, finished with a refreshing touch of lemon.",
+    ingredients: ["Beetroot", "Pomegranate", "Lemon Juice", "Raw Honey", "Vapor-Distilled Water"],
+    glow: ["Skin Glow"],
+    digest: ["Beetroot", "Pomegranate", "Lemon"],
+    hydrate: ["Antioxidants", "Circulation Support"]
   }
 ];
 
@@ -88,9 +88,9 @@ const InclusionsInfo = () => {
 
   const featuredShots = useMemo(() => {
     return {
-      glow: { title: 'Glow', desc: todaysShot.glow.join(' + ') },
-      digest: { title: 'Digest', desc: todaysShot.digest.join(' + ') },
-      hydrate: { title: 'Hydrate', desc: todaysShot.hydrate.join(' + ') }
+      glow: { title: 'Benefit', desc: todaysShot.glow.join(' + ') },
+      digest: { title: 'Key Ingredients', desc: todaysShot.digest.join(' + ') },
+      hydrate: { title: 'Functional Boost', desc: todaysShot.hydrate.join(' + ') }
     };
   }, [todaysShot]);
   return (
@@ -175,23 +175,23 @@ const InclusionsInfo = () => {
               <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Inside The Ritual Shot</span>
             </div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl text-brand-olive font-serif font-medium tracking-[2px] uppercase leading-tight mb-4">
-              Eat Your <br /> <span className="font-serif normal-case text-brand-sage">Skin Care</span>
+              Small Shot. <br /> <span className="font-serif normal-case text-brand-sage">Big Impact.</span>
             </h3>
             <p className="text-base md:text-lg text-brand-olive leading-relaxed font-sans font-normal mb-4">
               Each 60ml shot delivers a concentrated blend of functional ingredients to support glow, digestion, hydration, and daily wellness.
             </p>
             <div className="space-y-3 md:space-y-4 mb-4">
-              <div className="flex items-center justify-between py-2.5 md:py-3 border-b border-brand-beige/20">
+              <div className="flex items-center justify-between gap-6 py-2.5 md:py-3 border-b border-brand-beige/20">
                 <span className="text-brand-olive font-serif text-base md:text-lg">{featuredShots.glow.title}</span>
-                <span className="text-[12px] uppercase tracking-widest text-brand-sage font-bold">{featuredShots.glow.desc}</span>
+                <span className="text-[12px] uppercase tracking-widest text-brand-sage font-bold text-right">{featuredShots.glow.desc}</span>
               </div>
-              <div className="flex items-center justify-between py-2.5 md:py-3 border-b border-brand-beige/20">
+              <div className="flex items-center justify-between gap-6 py-2.5 md:py-3 border-b border-brand-beige/20">
                 <span className="text-brand-olive font-serif text-base md:text-lg">{featuredShots.digest.title}</span>
-                <span className="text-[12px] uppercase tracking-widest text-brand-sage font-bold">{featuredShots.digest.desc}</span>
+                <span className="text-[12px] uppercase tracking-widest text-brand-sage font-bold text-right">{featuredShots.digest.desc}</span>
               </div>
-              <div className="flex items-center justify-between py-2.5 md:py-3 border-b border-brand-beige/20">
+              <div className="flex items-center justify-between gap-6 py-2.5 md:py-3 border-b border-brand-beige/20">
                 <span className="text-brand-olive font-serif text-base md:text-lg">{featuredShots.hydrate.title}</span>
-                <span className="text-[12px] uppercase tracking-widest text-brand-sage font-bold">{featuredShots.hydrate.desc}</span>
+                <span className="text-[12px] uppercase tracking-widest text-brand-sage font-bold text-right">{featuredShots.hydrate.desc}</span>
               </div>
             </div>
             <div className="pt-4">

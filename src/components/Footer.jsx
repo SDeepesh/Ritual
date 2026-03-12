@@ -22,7 +22,7 @@ const Footer = () => {
     {
       title: 'Community',
       links: [
-        { name: 'Reviews', href: '/#community' },
+        { name: 'Journal', href: '/#community' },
         { name: 'Refer a Friend', href: '/refer' },
         { name: 'Corporate Plans', href: '/corporate' },
         { name: 'Our Story', href: '/story' },

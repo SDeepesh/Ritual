@@ -7,6 +7,7 @@ import DailyMenu from '../components/DailyMenu';
 import PlanCalculator from '../components/PlanCalculator';
 // import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
+import BrandStory from '../components/BrandStory';
 import FAQ from '../components/FAQ';
 import FooterCTA from '../components/FooterCTA';
 import InclusionsInfo from '../components/InclusionsInfo';
@@ -30,13 +31,14 @@ const Home = () => {
 
   return (
     <main>
-      <SEO 
-        title="Premium Wellness Bowls Chennai" 
+      <SEO
+        title="Premium Wellness Bowls Chennai"
         description="Premium Wellness Bowls & Functional Nutrition delivered fresh in Chennai. Precision macros, clean label, artisanal ingredients. Reset your ritual today."
         keywords="Meal Delivery Chennai, Healthy Food, Wellness Ritual, Keto Chennai, Vegan Meal Plan"
       />
       <div id="home"><Hero /></div>
       <Features />
+      <BrandStory />
       <InclusionsInfo />
       <div id="menu"><DailyMenu /></div>
       {/* <ProductMenu /> */}
