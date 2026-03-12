@@ -159,7 +159,7 @@ const DailyMenu = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-8 md:mb-12">
           <h2 className="text-brand-olive mb-2">Today's Ritual</h2>
-          <p className="text-brand-sage font-serif">A unique rotation of 30 functional meals.</p>
+          <p className="text-brand-sage">A rotating menu of balanced bowls crafted fresh each day.</p>
         </div>
 
         {/* Dynamic Month Calendar Selector */}
@@ -217,15 +217,15 @@ const DailyMenu = () => {
                 {/* Nutritional Details */}
                 <div className="grid grid-cols-3 gap-2 py-3 border-y border-brand-beige/20 mb-4">
                   <div className="text-center">
-                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Cal</p>
+                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Calories</p>
                     <p className="text-sm font-bold text-brand-olive">{meal.cal}</p>
                   </div>
                   <div className="text-center border-x border-brand-beige/10">
-                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Pro</p>
+                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Protein</p>
                     <p className="text-sm font-bold text-brand-olive">{meal.pro}g</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Carb</p>
+                    <p className="text-[10px] text-brand-sage uppercase tracking-tighter font-bold">Carbs</p>
                     <p className="text-sm font-bold text-brand-olive">{meal.carb}g</p>
                   </div>
                 </div>

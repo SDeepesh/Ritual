@@ -14,14 +14,6 @@ const Hero = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleExploreClick = (e) => {
-    e.preventDefault();
-    const element = document.getElementById('menu');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       className="pt-28 relative w-full h-[520px] md:h-auto md:min-h-[800px] flex items-start md:items-center bg-[#fdfaf6] bg-cover bg-top md:bg-center bg-no-repeat overflow-hidden px-4 md:px-16 lg:px-24 py-8 md:py-16"
@@ -29,18 +21,17 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto w-full flex flex-col items-start justify-between relative z-10">
         <div className="w-full md:w-1/2 max-w-lg text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-olive font-serif font-medium tracking-[3px] leading-[1.1] mb-3 md:mb-6 drop-shadow-sm uppercase">
-            RESET YOUR <br /> LUNCH RITUAL
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-olive font-serif font-medium tracking-[3px] leading-[1.1] mb-3 md:mb-4 drop-shadow-sm uppercase">
+            Start Your <br />Wellness Ritual
           </h1>
           <p className="text-lg text-brand-olive mb-3 md:mb-6 font-sans max-w-[250px] md:max-w-sm drop-shadow-sm font-normal">
-            Nutritionally balanced power bowls delivered fresh in Chennai
+            Functional wellness bowls designed for energy and glow
           </p>
           <a
-            href="/#menu"
-            onClick={handleExploreClick}
+            href="/start-ritual"
             className="inline-block bg-brand-olive hover:bg-brand-sage text-white px-4 md:px-8 py-3 rounded-md text-sm transition-all duration-300 shadow-sm hover:shadow-md uppercase font-medium"
           >
-            Explore Menu
+            Start My Ritual
           </a>
         </div>
       </div>

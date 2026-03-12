@@ -79,11 +79,11 @@ const PlanCalculator = () => {
         {/* Left Side: Illustration & Title */}
         <div className="w-full lg:w-1/2 text-white">
           <h2 className="text-white normal-case md:text-5xl text-3xl mb-8 leading-tight">
-            Choose Your <br /> Nourishment Cycle
+            Choose Your <br /> Ritual Plan
           </h2>
           <div className="space-y-8">
             <p className="text-brand-beige text-lg md:text-xl max-w-lg">
-              The secret to health is consistency. Select a ritual that fits your lifestyle and let us handle the nutrition.
+              Choose a Ritual plan that fits your lifestyle and let us take care of the nutrition.
             </p>
 
             <div>

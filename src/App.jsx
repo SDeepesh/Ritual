@@ -17,6 +17,7 @@ const Terms = lazy(() => import('./pages/Terms'));
 const DeliveryArea = lazy(() => import('./pages/DeliveryArea'));
 const FunctionalShot = lazy(() => import('./pages/FunctionalShot'));
 const StartRitual = lazy(() => import('./pages/StartRitual'));
+const BlogDetail = lazy(() => import('./pages/BlogDetail'));
 const Admin = lazy(() => import('./pages/Admin'));
 const AdminLogin = lazy(() => import('./pages/AdminLogin'));
 
@@ -48,6 +49,7 @@ function App() {
             <Route path="/delivery" element={<DeliveryArea />} />
             <Route path="/functional-shots" element={<FunctionalShot />} />
             <Route path="/start-ritual" element={<StartRitual />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/ritual-admin-auth" element={<AdminLogin />} />
             <Route 
               path="/ritual-admin-vault" 

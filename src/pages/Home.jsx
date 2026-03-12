@@ -5,7 +5,8 @@ import Features from '../components/Features';
 import DailyMenu from '../components/DailyMenu';
 // import ProductMenu from '../components/ProductMenu';
 import PlanCalculator from '../components/PlanCalculator';
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials';
+import BlogSection from '../components/BlogSection';
 import FAQ from '../components/FAQ';
 import FooterCTA from '../components/FooterCTA';
 import InclusionsInfo from '../components/InclusionsInfo';
@@ -40,7 +41,7 @@ const Home = () => {
       <div id="menu"><DailyMenu /></div>
       {/* <ProductMenu /> */}
       <div id="plans"><PlanCalculator /></div>
-      <div id="community"><Testimonials /></div>
+      <div id="community"><BlogSection /></div>
       <div id="faq"><FAQ /></div>
       <FooterCTA />
     </main>
