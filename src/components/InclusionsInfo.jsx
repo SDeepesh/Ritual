@@ -111,7 +111,6 @@ const InclusionsInfo = () => {
               Every Ritual meal is crafted with real, intentional ingredients.
               Freshly prepared daily with balanced grains, quality proteins, and locally sourced produce.
               Each Ritual includes a nourishing bowl, a functional wellness shot, and infused hydration.
-
             </p>
             <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 md:gap-6 pt-4">
               <div className="bg-brand-beige/5 p-3 md:p-6 rounded-2xl border border-brand-beige/30 hover:bg-white hover:shadow-md transition-all">
@@ -226,6 +225,7 @@ const InclusionsInfo = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

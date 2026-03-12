@@ -8,6 +8,7 @@ import PlanCalculator from '../components/PlanCalculator';
 // import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
 import BrandStory from '../components/BrandStory';
+import HowItWorks from '../components/HowItWorks';
 import FAQ from '../components/FAQ';
 import FooterCTA from '../components/FooterCTA';
 import InclusionsInfo from '../components/InclusionsInfo';
@@ -42,6 +43,7 @@ const Home = () => {
       <InclusionsInfo />
       <div id="menu"><DailyMenu /></div>
       {/* <ProductMenu /> */}
+      <HowItWorks />
       <div id="plans"><PlanCalculator /></div>
       <div id="community"><BlogSection /></div>
       <div id="faq"><FAQ /></div>

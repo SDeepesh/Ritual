@@ -1,61 +1,48 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import micro from '../assets/micro.jpg';
 
-const WHY_RITUAL = [
-  "Balanced bowls designed for daily wellness",
-  "Freshly prepared based on daily orders",
-  "Functional wellness shots included",
-  "Clean cooking with minimal oil",
-  "Real ingredients you can recognize",
-];
+// const WHY_RITUAL = [
+//   "Balanced bowls designed for daily wellness",
+//   "Freshly prepared based on daily orders",
+//   "Functional wellness shots included",
+//   "Clean cooking with minimal oil",
+//   "Real ingredients you can recognize",
+// ];
 
-const EVERY_RITUAL = [
-  { icon: "🥗", label: "A balanced wellness bowl" },
-  { icon: "⚗️", label: "A functional wellness shot" },
-  { icon: "💧", label: "Infused hydration water" },
-  { icon: "🔄", label: "Rotating seasonal recipes" },
-];
-
-const HOW_IT_WORKS = [
-  { step: "01", title: "Choose your Ritual meal", desc: "Pick a plan that fits your lifestyle — wellness bowl, shots, and hydration included." },
-  { step: "02", title: "We prepare it fresh daily", desc: "Every bowl is cooked to order using real, recognizable ingredients. No batch cooking." },
-  { step: "03", title: "Delivered within Chennai", desc: "Fresh delivery every morning to T Nagar and surrounding areas." },
-  { step: "04", title: "Enjoy your daily wellness ritual", desc: "A meal that supports skin, gut, and energy — every single day." },
-];
-
-const WHY_ACCORDION = [
-  {
-    title: "Balanced bowls designed for daily wellness",
-    body: "Each Ritual bowl is engineered with a precise ratio of protein, complex carbohydrates, healthy fats, and fiber to support sustained energy without mid-day crashes.",
-  },
-  {
-    title: "Freshly prepared based on daily orders",
-    body: "We only prepare what's ordered. No pre-cooked batches, no storing food overnight. Your bowl is made the morning of delivery.",
-  },
-  {
-    title: "Functional wellness shots included",
-    body: "Every plan includes a 60ml functional shot — formulated with ingredients like amla, ginger, and spirulina — that targets specific health benefits.",
-  },
-  {
-    title: "Clean cooking with minimal oil",
-    body: "We use only cold-pressed oils in small quantities. No refined seed oils, no excessive fat loading. Just clean, intentional cooking.",
-  },
-  {
-    title: "Real ingredients you can recognize",
-    body: "Every ingredient is traceable, seasonal, and meaningful. We don't hide anything behind proprietary blends or obscure additives.",
-  },
-];
+// const WHY_ACCORDION = [
+//   {
+//     title: "Balanced bowls designed for daily wellness",
+//     body: "Each Ritual bowl is engineered with a precise ratio of protein, complex carbohydrates, healthy fats, and fiber to support sustained energy without mid-day crashes.",
+//   },
+//   {
+//     title: "Freshly prepared based on daily orders",
+//     body: "We only prepare what's ordered. No pre-cooked batches, no storing food overnight. Your bowl is made the morning of delivery.",
+//   },
+//   {
+//     title: "Functional wellness shots included",
+//     body: "Every plan includes a 60ml functional shot — formulated with ingredients like amla, ginger, and spirulina — that targets specific health benefits.",
+//   },
+//   {
+//     title: "Clean cooking with minimal oil",
+//     body: "We use only cold-pressed oils in small quantities. No refined seed oils, no excessive fat loading. Just clean, intentional cooking.",
+//   },
+//   {
+//     title: "Real ingredients you can recognize",
+//     body: "Every ingredient is traceable, seasonal, and meaningful. We don't hide anything behind proprietary blends or obscure additives.",
+//   },
+// ];
 
 const BrandStory = () => {
-  const [openIdx, setOpenIdx] = useState(0);
+  // const [openIdx, setOpenIdx] = useState(0);
 
   return (
     <section className="w-full bg-[#fcfaf7] overflow-hidden">
 
       {/* ─── 1. WHY RITUAL — Accordion + Image ─── */}
-      <div className="bg-brand-olive py-16 md:py-24 px-4 md:px-16 relative overflow-hidden">
-        {/* Background blobs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      {/* <div className="bg-brand-olive py-16 md:py-24 px-4 md:px-16 relative overflow-hidden"> */}
+      {/* Background blobs */}
+      {/* <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -66,11 +53,11 @@ const BrandStory = () => {
             <h2 className="text-3xl md:text-5xl font-serif text-white font-medium leading-tight">
               What Makes Ritual <span className="text-brand-sage italic">Different</span>
             </h2>
-          </div>
+          </div> */}
 
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
-            {/* Accordion */}
-            <div className="flex-1 space-y-3">
+      {/* <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start"> */}
+      {/* Accordion */}
+      {/* <div className="flex-1 space-y-3">
               {WHY_ACCORDION.map((item, idx) => (
                 <div
                   key={idx}
@@ -102,13 +89,13 @@ const BrandStory = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
-            {/* Right — image + stat cards */}
-            <div className="lg:w-[420px] flex-shrink-0">
+      {/* Right — image + stat cards */}
+      {/* <div className="lg:w-[420px] flex-shrink-0">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src={micro}
                   alt="Fresh Ritual Bowl"
                   className="w-full h-full object-cover"
                 />
@@ -141,7 +128,7 @@ const BrandStory = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ─── 2. EAT YOUR SKINCARE ─── */}
       <div className="py-16 md:py-24 px-4 md:px-16">
@@ -150,7 +137,7 @@ const BrandStory = () => {
             <div className="lg:w-1/2 relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src={micro}
                   alt="Eat Your Skincare"
                   className="w-full h-full object-cover"
                 />
@@ -186,72 +173,6 @@ const BrandStory = () => {
         </div>
       </div>
 
-      {/* ─── 3. EVERY RITUAL INCLUDES + HOW IT WORKS ─── */}
-      <div className="bg-brand-beige/20 py-16 md:py-24 px-4 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-            {/* Every Ritual Includes */}
-            <div>
-              <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
-                <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Every Order</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-serif text-brand-olive font-medium mb-4">
-                What Goes Into Every Ritual
-              </h2>
-              <p className="text-brand-olive/70 mb-10 leading-relaxed">
-                Designed to nourish your body from within. Each Ritual is a complete wellness experience — not just a meal.
-              </p>
-              <div className="space-y-4">
-                {EVERY_RITUAL.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-5 bg-white rounded-xl px-6 py-5 border border-brand-beige/20 shadow-sm">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="text-brand-olive font-serif text-base md:text-lg">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* How It Works */}
-            <div>
-              <div className="inline-block px-3 py-1 bg-brand-olive/10 rounded-full mb-6">
-                <span className="text-[10px] text-brand-olive uppercase tracking-[3px] font-bold">Simple Process</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-serif text-brand-olive font-medium mb-4">
-                How Ritual Works
-              </h2>
-              <p className="text-brand-olive/70 mb-10 leading-relaxed">
-                A simple daily routine built around nourishment, designed to fit seamlessly into your Chennai lifestyle.
-              </p>
-              <div className="space-y-6">
-                {HOW_IT_WORKS.map((item, idx) => (
-                  <div key={idx} className="flex gap-5 items-start">
-                    <div className="w-12 h-12 flex-shrink-0 rounded-full bg-brand-olive text-white flex items-center justify-center font-serif font-bold text-sm">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="text-brand-olive font-serif text-base md:text-lg mb-1">{item.title}</h4>
-                      <p className="text-brand-olive/60 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-10">
-                <Link
-                  to="/#plans"
-                  className="inline-flex items-center gap-2 bg-brand-olive text-white px-8 py-4 rounded-md text-sm font-bold uppercase tracking-widest hover:bg-brand-sage transition-colors"
-                >
-                  View Plans
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
 
       {/* ─── 4. OUR PHILOSOPHY ─── */}
       {/* <div className="py-16 md:py-24 px-4 md:px-16">

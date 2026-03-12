@@ -1,3 +1,9 @@
+import skinCare from '../assets/skin-care.jpg';
+import micro from '../assets/micro.jpg';
+import spice from '../assets/spice.jpg';
+import omr from '../assets/omr.jpg';
+import summer from '../assets/summer.png';
+
 export const blogData = [
   {
     id: 1,
@@ -7,7 +13,7 @@ export const blogData = [
     author: "Ritual Wellness Team",
     date: "March 10, 2026",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: summer,
     tags: ["Hydration", "Summer Health", "Chennai"],
     seoKeywords: "Chennai summer hydration, electrolyte balance, tender coconut water benefits, how to stay hydrated in high humidity, Ritual Chennai",
     content: `
@@ -44,7 +50,7 @@ At Ritual, our **Coconut Hydration Shot** isn't just plain coconut water. We inf
     author: "Ritual Nutrition Desk",
     date: "March 5, 2026",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: omr,
     tags: ["Corporate Wellness", "Productivity", "Time Management"],
     seoKeywords: "Corporate meal delivery Chennai, healthy office lunch OMR, high protein diet for professionals, clean eating without cooking, Ritual meal prep",
     content: `
@@ -89,7 +95,7 @@ At Ritual, we designed our corporate plans specifically for the OMR professional
     author: "Ritual Culinary Team",
     date: "February 28, 2026",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: micro,
     tags: ["Nutrition", "Local Ingredients", "Millets"],
     seoKeywords: "Millet bowls Chennai, South Indian healthy diet, replacing white rice with millets, foxtail millet protein, high fiber diet Chennai",
     content: `
@@ -129,7 +135,7 @@ It's a meal that respects regional ingredients while delivering a macro-profile 
     author: "Ritual Wellness Team",
     date: "February 20, 2026",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: skinCare,
     tags: ["Skincare", "Antioxidants", "Wellness"],
     seoKeywords: "Healthy skin diet Chennai, anti-aging foods, eating antioxidants for skin glow, beetroot and pomegranate benefits, Ritual functional shots",
     content: `
@@ -171,7 +177,7 @@ As discussed in our hydration guide, without adequate cellular hydration, your s
     author: "Ritual Nutrition Desk",
     date: "February 12, 2026",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: spice,
     tags: ["Gut Health", "Digestion", "Spices"],
     seoKeywords: "Gut health diet Chennai, curing acidity naturally, healing spices vs inflammatory foods, digestive wellness bowls, Ritual organic meals",
     content: `

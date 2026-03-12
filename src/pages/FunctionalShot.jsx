@@ -9,50 +9,64 @@ import LazyImage from '../components/LazyImage';
 const FunctionalShot = () => {
   const shots = [
     {
-      name: 'Carrot Glow',
-      color: 'bg-orange-500',
-      tagline: 'Radiance from Within',
-      ingredients: ['Cold-Pressed Carrot', 'Turmeric', 'Black Pepper', 'Vitamin C'],
-      benefit: 'Brightens skin, fights inflammation, boosts collagen production.',
+      name: 'Coconut Hydration Shot',
+      color: 'bg-sky-400',
+      tagline: 'Hydration & Mineral Balance',
+      ingredients: ['Tender Coconut Water', 'Lemon Juice', 'Raw Honey', 'Pink Himalayan Salt'],
+      benefit: 'Electrolyte-rich tender coconut water with lemon and mineral salt to replenish hydration and support daily energy balance.',
     },
     {
-      name: 'Green Detox',
+      name: 'Green Detox Shot',
       color: 'bg-green-600',
-      tagline: 'Deep Cellular Cleanse',
-      ingredients: ['Green Apple', 'Wheatgrass', 'Chlorophyll', 'Lemon'],
-      benefit: 'Alkalizes the body, supports liver detox, clears skin impurities.',
+      tagline: 'Daily Detox & Skin Cleanse',
+      ingredients: ['Green Apple', 'Cucumber', 'Mint', 'Lemon Juice', 'Raw Honey', 'Vapor-Distilled Water'],
+      benefit: 'Refreshing detox blend designed to support digestion, hydration and clear glowing skin.',
     },
     {
-      name: 'Ginger Digest',
+      name: 'Blue Beauty Shot',
+      color: 'bg-blue-500',
+      tagline: 'Skin Repair & Cellular Protection',
+      ingredients: ['Pineapple', 'Blue Spirulina', 'Lemon Juice', 'Raw Honey', 'Vapor-Distilled Water'],
+      benefit: 'Antioxidant-rich pineapple and blue spirulina shot designed to support skin repair and cellular health.',
+    },
+    {
+      name: 'Golden Glow Shot',
+      color: 'bg-amber-500',
+      tagline: 'Radiance & Anti-Inflammatory',
+      ingredients: ['Carrot', 'Pineapple', 'Turmeric', 'Lemon Juice', 'Raw Honey', 'Vapor-Distilled Water'],
+      benefit: 'Carrot, pineapple and turmeric blend designed to support skin glow, reduce inflammation and promote natural radiance.',
+    },
+    {
+      name: 'Digestive Shot',
       color: 'bg-yellow-500',
-      tagline: 'Gut Reset Ritual',
-      ingredients: ['Fresh Ginger', 'Apple Cider Vinegar', 'Honey', 'Cayenne'],
-      benefit: 'Aids digestion, reduces bloating, stimulates metabolism.',
+      tagline: 'Gut Health & Bloating Relief',
+      ingredients: ['Pineapple', 'Ginger', 'Lemon Juice', 'Raw Honey', 'Vapor-Distilled Water'],
+      benefit: 'Pineapple and ginger digestive shot crafted to reduce bloating and support gut health.',
     },
     {
-      name: 'Spirulina Hydrate',
-      color: 'bg-teal-600',
-      tagline: 'Ocean Mineral Boost',
-      ingredients: ['Spirulina', 'Coconut Water', 'Cucumber', 'Mint'],
-      benefit: 'Deep hydration, rich in antioxidants, supports skin elasticity.',
+      name: 'Amla Immunity Shot',
+      color: 'bg-lime-600',
+      tagline: 'Immunity & Vitamin C Boost',
+      ingredients: ['Amla', 'Ginger', 'Lemon Juice', 'Raw Honey', 'Vapor-Distilled Water'],
+      benefit: 'Vitamin C rich amla shot blended with ginger, lemon and honey to strengthen immunity and support skin health.',
     },
     {
-      name: 'Beetroot Vitality',
-      color: 'bg-red-600',
-      tagline: 'Iron & Endurance',
-      ingredients: ['Cold-Pressed Beetroot', 'Pomegranate', 'Amla', 'Ginger'],
-      benefit: 'Boosts blood flow, increases stamina, enhances natural glow.',
+      name: 'Berry Glow Shot',
+      color: 'bg-rose-600',
+      tagline: 'Skin Glow & Circulation Support',
+      ingredients: ['Beetroot', 'Pomegranate', 'Lemon Juice', 'Raw Honey', 'Vapor-Distilled Water'],
+      benefit: 'Antioxidant-rich blend of beetroot and pomegranate designed to boost circulation and support radiant skin.',
     },
   ];
 
   const weeklyRotation = [
-    { day: 'Monday', shot: 'Carrot Glow', focus: 'Skin Radiance' },
+    { day: 'Monday', shot: 'Coconut Hydration', focus: 'Hydration' },
     { day: 'Tuesday', shot: 'Green Detox', focus: 'Detoxification' },
-    { day: 'Wednesday', shot: 'Ginger Digest', focus: 'Gut Health' },
-    { day: 'Thursday', shot: 'Spirulina Hydrate', focus: 'Hydration' },
-    { day: 'Friday', shot: 'Beetroot Vitality', focus: 'Energy' },
-    { day: 'Saturday', shot: 'Carrot Glow', focus: 'Skin Radiance' },
-    { day: 'Sunday', shot: 'Green Detox', focus: 'Detoxification' },
+    { day: 'Wednesday', shot: 'Blue Beauty', focus: 'Skin Repair' },
+    { day: 'Thursday', shot: 'Golden Glow', focus: 'Radiance' },
+    { day: 'Friday', shot: 'Digestive Shot', focus: 'Gut Health' },
+    { day: 'Saturday', shot: 'Amla Immunity', focus: 'Immunity' },
+    { day: 'Sunday', shot: 'Berry Glow', focus: 'Skin Glow' },
   ];
 
   return (
@@ -119,8 +133,8 @@ const FunctionalShot = () => {
               </div>
               <div className="bg-[#fcfaf7] rounded-[20px] p-6 md:p-8 border border-brand-beige/30">
                 <span className="text-4xl font-serif font-bold text-brand-olive block mb-2">7</span>
-                <span className="text-[10px] uppercase tracking-[2px] text-brand-sage font-bold block mb-4">Weekly Rotation</span>
-                <p className="text-brand-sage/80 text-sm font-normal leading-relaxed">5 unique formulations rotate through a 7-day cycle, targeting different health pillars each day for holistic wellness.</p>
+                <span className="text-[10px] uppercase tracking-[2px] text-brand-sage font-bold block mb-4">Shot Varieties</span>
+                <p className="text-brand-sage/80 text-sm font-normal leading-relaxed">7 unique formulations rotate across the week, targeting different health pillars each day for holistic wellness.</p>
               </div>
             </div>
           </div>
@@ -134,11 +148,11 @@ const FunctionalShot = () => {
             <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">The Collection</span>
           </div>
           <h3 className="text-3xl md:text-4xl text-brand-olive font-serif font-medium tracking-[2px] uppercase">
-            5 Shots. 5 <span className="normal-case text-brand-sage">Purposes.</span>
+            7 Shots. 7 <span className="normal-case text-brand-sage">Purposes.</span>
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {shots.map((shot, idx) => (
             <div key={idx} className="bg-white rounded-[20px] border border-brand-beige/20 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
               <div className={`h-2 ${shot.color}`}></div>
