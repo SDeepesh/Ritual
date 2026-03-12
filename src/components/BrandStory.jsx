@@ -131,11 +131,11 @@ const BrandStory = () => {
       </div> */}
 
       {/* ─── 2. EAT YOUR SKINCARE ─── */}
-      <div className="py-16 md:py-24 px-4 md:px-16">
+      <div className="py-12 md:py-16 px-4 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
-            <div className="lg:w-1/2 relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
+            <div className="lg:w-[40%] relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src={micro}
                   alt="Eat Your Skincare"
@@ -148,17 +148,17 @@ const BrandStory = () => {
                 <span className="text-[10px] uppercase tracking-widest">Starts Within</span>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-6">
+            <div className="lg:w-[60%]">
+              <div className="inline-block px-3 py-1 bg-brand-sage/10 rounded-full mb-4">
                 <span className="text-[10px] text-brand-sage uppercase tracking-[3px] font-bold">Our Concept</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-serif text-brand-olive font-medium leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif text-brand-olive font-medium leading-tight mb-4">
                 Eat Your <span className="text-brand-sage italic">Skincare</span>
               </h2>
               <p className="text-brand-olive/80 text-lg leading-relaxed mb-4">
                 Healthy skin begins with what you eat. Ritual meals are built with ingredients that support skin health, gut balance, and overall wellness.
               </p>
-              <p className="text-brand-olive/70 leading-relaxed mb-8">
+              <p className="text-brand-olive/70 leading-relaxed mb-4">
                 Our recipes are built using ingredients known to support skin glow, gut balance, and natural wellness — from antioxidant vegetables to nutrient-rich grains and healthy fats. Because the best skincare routine starts on your plate.
               </p>
               <div className="flex flex-wrap gap-3">

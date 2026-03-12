@@ -7,7 +7,7 @@ import DailyMenu from '../components/DailyMenu';
 import PlanCalculator from '../components/PlanCalculator';
 // import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
-import BrandStory from '../components/BrandStory';
+// import BrandStory from '../components/BrandStory';
 import HowItWorks from '../components/HowItWorks';
 import FAQ from '../components/FAQ';
 import FooterCTA from '../components/FooterCTA';
@@ -39,7 +39,7 @@ const Home = () => {
       />
       <div id="home"><Hero /></div>
       <Features />
-      <BrandStory />
+      {/* <BrandStory /> */}
       <InclusionsInfo />
       <div id="menu"><DailyMenu /></div>
       {/* <ProductMenu /> */}
