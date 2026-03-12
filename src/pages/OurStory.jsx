@@ -161,7 +161,7 @@ const OurStory = () => {
               <LazyImage src={shotsImg} alt="Ritual — Functional Shots Collection" className="w-full h-full group-hover:scale-105 transition-transform duration-[2000ms]" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/50 via-transparent to-transparent flex items-end p-6 md:p-12">
                 <div>
-                  <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">5 Formulations</span>
+                  <span className="text-white text-[10px] uppercase tracking-[4px] font-bold block mb-2">7 Formulations</span>
                   <h4 className="text-white text-3xl md:text-4xl font-serif">The Ritual Shots</h4>
                 </div>
               </div>
