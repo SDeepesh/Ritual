@@ -220,7 +220,7 @@ const Terms = () => {
       ],
       list: [
         'Email: hello@ritualwellness.in',
-        'Phone: +91 98400 12345',
+        'Phone: +91 98401 86878',
         'WhatsApp: Available during business hours (Mon–Sat, 8 AM – 8 PM)',
         'Website: ritualwellness.in/contact',
       ],

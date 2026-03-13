@@ -148,7 +148,7 @@ const Privacy = () => {
       ],
       list: [
         'Email: hello@ritualwellness.in',
-        'Phone: +91 98400 12345',
+        'Phone: +91 98401 86878',
         'Instagram: @ritualwellness.in',
         'Address: Chennai, Tamil Nadu, India',
       ],
