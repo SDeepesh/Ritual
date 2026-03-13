@@ -21,6 +21,7 @@ const BlogDetail = lazy(() => import('./pages/BlogDetail'));
 const FAQPage = lazy(() => import('./pages/FAQPage'));
 const Admin = lazy(() => import('./pages/Admin'));
 const AdminLogin = lazy(() => import('./pages/AdminLogin'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Simple loading fallback
 const PageLoader = () => (
@@ -61,6 +62,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </Layout>
