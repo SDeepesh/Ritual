@@ -52,10 +52,14 @@ const BlogDetail = () => {
         <title>{blog.title} | Ritual Wellness</title>
         <meta name="description" content={blog.excerpt} />
         <meta name="keywords" content={blog.seoKeywords} />
-        <meta property="og:title" content={blog.title} />
+        <meta property="og:title" content={`${blog.title} | Ritual Wellness`} />
         <meta property="og:description" content={blog.excerpt} />
         <meta property="og:image" content={blog.image} />
         <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${blog.title} | Ritual Wellness`} />
+        <meta name="twitter:description" content={blog.excerpt} />
+        <meta name="twitter:image" content={blog.image} />
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
         <style>{`
           .blog-h2 { font-family: Georgia, serif; font-size: 1.75rem; color: #3a4a38; margin: 2.5rem 0 1rem; line-height: 1.3; border-left: 3px solid #7a9e7a; padding-left: 1rem; }

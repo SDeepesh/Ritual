@@ -176,9 +176,9 @@ const StartRitual = () => {
   return (
     <div className="pb-20 bg-[#faf8f5] min-h-screen">
       <SEO 
-        title="Start Your Ritual | Chennai Meal Delivery" 
-        description="Choose your nourishment cycle and start your wellness ritual today. Premium healthy meal delivery in Chennai with localized delivery tracking."
-        keywords="Start Ritual, Meal Plan Subscription Chennai, Healthy Delivery"
+        title="Start Your Ritual | Functional Meal Delivery Chennai" 
+        description="Choose your nourishment cycle and start your wellness ritual today. Premium healthy meal delivery in Chennai featuring balanced bowls and functional shots."
+        keywords="Start Ritual, Meal Plan Subscription Chennai, Functional Meal Delivery, Wellness Delivery, Eat Your Skincare"
       />
       {showToast && <Toast message={toastMsg} onClose={() => setShowToast(false)} />}
 

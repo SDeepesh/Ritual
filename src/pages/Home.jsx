@@ -33,9 +33,9 @@ const Home = () => {
   return (
     <main>
       <SEO
-        title="Premium Wellness Bowls Chennai"
-        description="Premium Wellness Bowls & Functional Nutrition delivered fresh in Chennai. Precision macros, clean label, artisanal ingredients. Reset your ritual today."
-        keywords="Meal Delivery Chennai, Healthy Food, Wellness Ritual, Keto Chennai, Vegan Meal Plan"
+        title="Ritual Wellness | Functional Meals Delivered Fresh in Chennai"
+        description="Premium wellness bowls, functional shots, and infused hydration delivered fresh daily in Chennai. Build healthy habits with our curated meal subscription."
+        keywords="Meal Delivery Chennai, Functional Meals, Wellness Bowls, Eat Your Skincare, Healthy Food Subscription, Ritual Chennai"
       />
       <div id="home"><Hero /></div>
       <Features />

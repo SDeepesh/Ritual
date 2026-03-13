@@ -58,9 +58,9 @@ const Nutrition = () => {
   return (
     <div className="pb-12">
       <SEO
-        title="Precision Nutrition & Macros"
-        description="Learn about the Ritual nutrition standard. Precision macros, gut health, and clean label ingredients for optimal metabolic wellness."
-        keywords="Precision Nutrition Chennai, Macro Balanced Meals, Gut Health Chennai, Clean Eating"
+        title="Nutrition & Macros | Ritual Wellness"
+        description="Learn about the Ritual nutrition standard. Precision macros, gut healing ingredients, and clean label meals for optimal metabolic wellness in Chennai."
+        keywords="Precision Nutrition Chennai, Macro Balanced Meals, Gut Health Chennai, Clean Eating, Functional Food"
       />
       <PageHeader
         title="Nutrition"

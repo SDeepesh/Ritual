@@ -171,9 +171,9 @@ const FAQPage = () => {
   return (
     <div className="pb-12 md:pb-14">
       <SEO
-        title="Frequently Asked Questions"
-        description="Everything you need to know about Ritual — subscriptions, delivery, meals, and support. Get answers to all your questions."
-        keywords="Ritual FAQ, Wellness Meal FAQ Chennai, Subscription Questions, Delivery FAQ"
+        title="FAQ & Support | Ritual Wellness Chennai"
+        description="Everything you need to know about Ritual — subscriptions, functional meals, delivery schedules, and nutrition support in Chennai."
+        keywords="Ritual FAQ, Wellness Meal FAQ Chennai, Subscription Questions, Delivery Time Chennai, Functional Meal Plans"
       />
       <PageHeader
         title="FAQ"

@@ -37,9 +37,9 @@ const OurStory = () => {
   return (
     <div className="pb-12">
       <SEO
-        title="Our Story | The Ritual Philosophy"
-        description="The story behind Ritual — a commitment to clean label nutrition, precision macros, and artisanal wellness in Chennai."
-        keywords="Ritual Story, Healthy Food Philosophy Chennai, Artisanal Meals"
+        title="Our Story | Ritual Wellness Philosophy"
+        description="The story behind Ritual — redefining healthy eating in Chennai. Clean label nutrition, precision macros, and artisanal functional meals."
+        keywords="Ritual Story, Healthy Food Philosophy Chennai, Artisanal Meals, Functional Nutrition, Eat Your Skincare"
       />
       <PageHeader
         title="Our Story"
