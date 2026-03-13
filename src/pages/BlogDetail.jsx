@@ -52,6 +52,8 @@ const BlogDetail = () => {
         <title>{blog.title} | Ritual Wellness</title>
         <meta name="description" content={blog.excerpt} />
         <meta name="keywords" content={blog.seoKeywords} />
+        <link rel="canonical" href={window.location.href} />
+        <meta property="og:url" content={window.location.href} />
         <meta property="og:title" content={`${blog.title} | Ritual Wellness`} />
         <meta property="og:description" content={blog.excerpt} />
         <meta property="og:image" content={blog.image} />
