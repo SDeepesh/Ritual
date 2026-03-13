@@ -1,5 +1,6 @@
 import { supabase } from './supabaseClient';
 import { emailService } from '../services/emailService';
+import DOMPurify from 'dompurify';
 
 /**
  * Enhanced storage utility to manage enquiries with Supabase.
@@ -55,10 +56,10 @@ export const enquiryStore = {
 
       const dbEntry = {
         type: enquiry.type,
-        name: displayName,
-        email: enquiry.email || null,
-        phone_number: enquiry.phoneNumber || enquiry.phone || null,
-        message: fullMessage,
+        name: displayName ? DOMPurify.sanitize(displayName) : null,
+        email: enquiry.email ? DOMPurify.sanitize(enquiry.email) : null,
+        phone_number: (enquiry.phoneNumber || enquiry.phone) ? DOMPurify.sanitize(enquiry.phoneNumber || enquiry.phone) : null,
+        message: fullMessage ? DOMPurify.sanitize(fullMessage) : null,
         plan_days: enquiry.planDays || null,
         amount: enquiry.amount || null,
         status: 'new'
@@ -135,18 +136,18 @@ export const enquiryStore = {
   // Save a new ritual signup to the dedicated ritual_signups table
   saveRitualSignup: async (data) => {
     const dbEntry = {
-      name: data.name,
-      phone: data.phone,
-      email: data.email || null,
+      name: DOMPurify.sanitize(data.name),
+      phone: DOMPurify.sanitize(data.phone),
+      email: data.email ? DOMPurify.sanitize(data.email) : null,
       pincode: data.pincode || null,
-      address: data.address || null,
+      address: data.address ? DOMPurify.sanitize(data.address) : null,
       latitude: data.latitude || null,
       longitude: data.longitude || null,
       plan_days: data.planDays || null,
       amount: data.amount || null,
-      dietary_preference: data.dietaryPreference || null,
-      goals: data.goals || null,
-      message: data.message || null,
+      dietary_preference: data.dietaryPreference ? DOMPurify.sanitize(data.dietaryPreference) : null,
+      goals: data.goals ? DOMPurify.sanitize(data.goals) : null,
+      message: data.message ? DOMPurify.sanitize(data.message) : null,
       status: 'new'
     };
 

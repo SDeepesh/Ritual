@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 import { enquiryStore } from '../utils/enquiryStore';
 
@@ -63,6 +64,10 @@ const Contact = () => {
 
   return (
     <div className="pb-12">
+      <SEO 
+        title="Contact Us | Ritual Wellness Support" 
+        description="Have questions about our wellness meal plans? Reach out to the Ritual team in Chennai for support, inquiries, and customizations."
+      />
       <PageHeader
         title="Contact Us"
         subtitle="We're here to help you on your wellness journey."

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 import PincodeChecker from '../components/PincodeChecker';
 import { enquiryStore } from '../utils/enquiryStore';
@@ -73,6 +74,10 @@ const DeliveryArea = () => {
 
   return (
     <div className="pb-12">
+      <SEO 
+        title="Delivery Areas | Serviceable Pincodes in Chennai" 
+        description="Check if Ritual delivers wellness meals to your doorstep in Chennai. View our serviceable areas including T. Nagar, Anna Nagar, Alwarpet, and more."
+      />
       <PageHeader
         title="Delivery Area"
         subtitle="Currently serving the vibrant neighborhoods of Chennai."

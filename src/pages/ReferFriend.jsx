@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 import { enquiryStore } from '../utils/enquiryStore';
 
@@ -84,6 +85,10 @@ const ReferFriend = () => {
 
   return (
     <div className="pb-12">
+      <SEO 
+        title="Refer a Friend | Get ₹500 Reward Credit" 
+        description="Invite your friends to the Ritual circle. Give them ₹500 off their first wellness meal plan, and get ₹500 credit for yourself."
+      />
       <PageHeader
         title="Refer a Friend"
         subtitle="Good food is meant to be shared. Invite a friend and both get rewarded."

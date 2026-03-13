@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 
 const Privacy = () => {
   const sections = [
@@ -157,6 +158,10 @@ const Privacy = () => {
 
   return (
     <div className="pb-12">
+      <SEO 
+        title="Privacy Policy | Ritual Wellness Data Protection" 
+        description="Learn how Ritual Wellness handles your personal data and protects your privacy in accordance with Indian regulations."
+      />
       <PageHeader
         title="Privacy Policy"
         subtitle="Your trust is our most important ingredient."

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 import { enquiryStore } from '../utils/enquiryStore';
 
@@ -26,6 +27,10 @@ const Gifting = () => {
 
   return (
     <div className="pb-24">
+      <SEO 
+        title="Gift Wellness | Ritual Meal Subscriptions & Gift Cards" 
+        description="Share the gift of health. Surprise your loved ones with Ritual's functional meal subscriptions or flexible wellness gift cards."
+      />
       <PageHeader
         title="Gifting"
         subtitle="Give the gift of wellness and mindful nourishment."

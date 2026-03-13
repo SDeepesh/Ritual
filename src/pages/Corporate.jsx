@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 import { enquiryStore } from '../utils/enquiryStore';
 
@@ -78,6 +79,10 @@ const Corporate = () => {
 
   return (
     <div className="pb-12">
+      <SEO 
+        title="Corporate Wellness Plans | Healthy Office Catering Chennai" 
+        description="Boost employee productivity with Ritual's corporate meal plans. Premium office catering and wellness solutions for modern teams in Chennai."
+      />
       <PageHeader
         title="Corporate Plans"
         subtitle="Fuel your team's productivity with high-performance nourishment."

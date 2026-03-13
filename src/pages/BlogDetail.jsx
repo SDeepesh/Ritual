@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogData } from '../data/blogData';
 import LazyImage from '../components/LazyImage';
+import DOMPurify from 'dompurify';
 
 const BlogDetail = () => {
   const { slug } = useParams();
@@ -37,14 +38,14 @@ const BlogDetail = () => {
     "keywords": blog.seoKeywords
   };
 
-  const htmlContent = blog.content
+  const htmlContent = DOMPurify.sanitize(blog.content
     .replace(/^### (.*)/gm, '<h3 class="blog-h3">$1</h3>')
     .replace(/^## (.*)/gm, '<h2 class="blog-h2">$1</h2>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>')
     .replace(/^\* (.*)/gm, '<li class="blog-li">$1</li>')
     .replace(/(<li[\s\S]*?<\/li>)/g, '<ul class="blog-ul">$1</ul>')
-    .replace(/\n\n/g, '</p><p class="blog-p">');
+    .replace(/\n\n/g, '</p><p class="blog-p">'));
 
   return (
     <article className="min-h-screen bg-[#fcfaf7]">

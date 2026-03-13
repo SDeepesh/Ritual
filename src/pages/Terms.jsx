@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
 
 const Terms = () => {
   const sections = [
@@ -229,6 +230,10 @@ const Terms = () => {
 
   return (
     <div className="pb-12">
+      <SEO 
+        title="Terms & Conditions | Ritual Wellness Service Agreement" 
+        description="Review the terms and conditions for using Ritual Wellness's meal delivery services in Chennai."
+      />
       <PageHeader
         title="Terms & Conditions"
         subtitle="Please read these terms carefully before using our services."
