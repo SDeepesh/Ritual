@@ -59,6 +59,8 @@ const BlogDetail = () => {
         <meta property="og:image" content={blog.image} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ritualwellness" />
+        <meta name="twitter:creator" content="@ritualwellness" />
         <meta name="twitter:title" content={`${blog.title} | Ritual Wellness`} />
         <meta name="twitter:description" content={blog.excerpt} />
         <meta name="twitter:image" content={blog.image} />

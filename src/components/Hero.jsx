@@ -16,6 +16,7 @@ const Hero = () => {
 
   return (
     <section
+      id="home"
       className="pt-28 relative w-full h-[520px] md:h-auto md:min-h-[800px] flex items-start md:items-center bg-[#fdfaf6] bg-cover bg-top md:bg-center bg-no-repeat overflow-hidden px-4 md:px-16 lg:px-24 py-8 md:py-16"
       style={{ backgroundImage: `url(${bgImage})` }}
     >

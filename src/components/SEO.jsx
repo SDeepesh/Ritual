@@ -31,6 +31,8 @@ const SEO = ({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ritualwellness" />
+      <meta name="twitter:creator" content="@ritualwellness" />
       <meta name="twitter:title" content={ogTitle || fullTitle} />
       <meta name="twitter:description" content={ogDescription || metaDescription} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}

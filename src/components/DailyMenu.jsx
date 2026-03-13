@@ -32,6 +32,8 @@ const MealModal = ({ meal, onClose }) => {
           <LazyImage
             src={meal.img}
             alt={meal.title}
+            width={600}
+            height={600}
             className="absolute inset-0 w-full h-full"
             objectFit="cover"
           />
@@ -152,7 +154,7 @@ const DailyMenu = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#fdfaf6] py-12 md:py-16 px-4 md:px-16 relative overflow-hidden">
+    <section id="menu" className="w-full bg-[#fdfaf6] py-12 md:py-16 px-4 md:px-16 relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
 
@@ -199,6 +201,8 @@ const DailyMenu = () => {
                 <LazyImage
                   src={meal.img}
                   alt={meal.title}
+                  width={400}
+                  height={320}
                   className="absolute inset-0 w-full h-full group-hover:scale-110 transition-transform duration-700"
                   objectFit="cover"
                 />

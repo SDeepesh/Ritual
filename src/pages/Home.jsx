@@ -37,16 +37,16 @@ const Home = () => {
         description="Premium wellness bowls, functional shots, and infused hydration delivered fresh daily in Chennai. Build healthy habits with our curated meal subscription."
         keywords="Meal Delivery Chennai, Functional Meals, Wellness Bowls, Eat Your Skincare, Healthy Food Subscription, Ritual Chennai"
       />
-      <div id="home"><Hero /></div>
+      <Hero />
       <Features />
       {/* <BrandStory /> */}
       <InclusionsInfo />
-      <div id="menu"><DailyMenu /></div>
+      <DailyMenu />
       {/* <ProductMenu /> */}
       <HowItWorks />
-      <div id="plans"><PlanCalculator /></div>
-      <div id="community"><BlogSection /></div>
-      <div id="faq"><FAQ /></div>
+      <PlanCalculator />
+      <BlogSection />
+      <FAQ />
       <FooterCTA />
     </main>
   );

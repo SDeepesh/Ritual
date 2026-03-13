@@ -14,6 +14,8 @@ const BlogCard = ({ slug, title, excerpt, image, author, date, readTime, itemsPe
         <LazyImage
           src={image}
           alt={title}
+          width={400}
+          height={250}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] uppercase tracking-widest text-brand-olive font-bold">
@@ -85,7 +87,7 @@ const BlogSection = () => {
   };
 
   return (
-    <section className="w-full bg-brand-beige/20 py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
+    <section id="community" className="w-full bg-brand-beige/20 py-12 md:py-16 px-4 md:px-16 overflow-hidden relative">
       <div className="max-w-7xl mx-auto">
 
         <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-6">

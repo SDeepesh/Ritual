@@ -62,7 +62,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="w-full bg-[#fef2f4] py-12 md:py-16 px-4 md:px-16 overflow-hidden">
+    <section id="faq" className="w-full bg-[#fef2f4] py-12 md:py-16 px-4 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 md:gap-16">
 
         {/* Left Side: Title */}

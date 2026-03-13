@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const LazyImage = ({ src, alt, className, placeholder = 'bg-brand-beige/10', objectFit = 'cover' }) => {
+const LazyImage = ({ 
+  src, 
+  alt, 
+  className, 
+  placeholder = 'bg-brand-beige/10', 
+  objectFit = 'cover',
+  width,
+  height
+}) => {
   const [loaded, setLoaded] = useState(false);
   const [inView, setInView] = useState(false);
   const imgRef = useRef(null);
@@ -46,6 +54,8 @@ const LazyImage = ({ src, alt, className, placeholder = 'bg-brand-beige/10', obj
         <img
           src={src}
           alt={alt}
+          width={width}
+          height={height}
           onLoad={() => setLoaded(true)}
           className={`w-full h-full ${objectFitClass} transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
           loading="lazy"
