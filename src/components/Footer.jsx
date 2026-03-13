@@ -31,7 +31,7 @@ const Footer = () => {
     {
       title: 'Support',
       links: [
-        { name: 'FAQ', href: '/#faq' },
+        { name: 'FAQ', href: '/faq' },
         { name: 'Delivery Area', href: '/delivery' },
         { name: 'Contact Us', href: '/contact' },
         { name: 'Terms of Service', href: '/terms' },

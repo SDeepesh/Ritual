@@ -41,14 +41,14 @@ const Header = () => {
     { name: 'Menu', href: '/#menu' },
     { name: 'Functional Shots', href: '/functional-shots' },
     { name: 'Plans', href: '/#plans' },
-    { name: 'FAQ', href: '/#faq' },
+    { name: 'FAQ', href: '/faq' },
   ];
 
   const navLinksMobile = [
     { name: 'Our Story', href: '/story' },
     { name: 'Plans', href: '/#plans' },
     { name: 'Menu', href: '/#menu' },
-    { name: 'FAQ', href: '/#faq' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Nutrition', href: '/nutrition' },
     { name: 'Delivery Area', href: '/delivery' },
     { name: 'Functional Shots', href: '/functional-shots' },
@@ -89,11 +89,10 @@ const Header = () => {
               key={link.name}
               to={link.href}
               onClick={() => handleLinkClick(link.href)}
-              className={`text-md font-medium tracking-[2px] transition-colors relative group ${
-                isTransparentHeader
+              className={`text-md font-medium tracking-[2px] transition-colors relative group ${isTransparentHeader
                   ? 'text-white/80 hover:text-white'
                   : 'text-brand-olive/70 hover:text-brand-olive'
-              }`}
+                }`}
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-sage transition-all duration-300 group-hover:w-full"></span>
